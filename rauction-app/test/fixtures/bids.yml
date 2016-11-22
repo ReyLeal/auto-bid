@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bid_amount: 1
+  time_added: 2016-11-22 18:04:32
+  user: one
+  auction: one
+  dealer: one
+
+two:
+  bid_amount: 1
+  time_added: 2016-11-22 18:04:32
+  user: two
+  auction: two
+  dealer: two

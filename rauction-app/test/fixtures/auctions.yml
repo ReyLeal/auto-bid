@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  max_price: 1
+  title: MyString
+  year: 1
+  make: MyString
+  model: MyString
+  miles_from: 1
+  address: MyString
+  color: MyString
+  features: MyText
+  expiration_date: 2016-11-22 18:03:07
+  user: one
+
+two:
+  max_price: 1
+  title: MyString
+  year: 1
+  make: MyString
+  model: MyString
+  miles_from: 1
+  address: MyString
+  color: MyString
+  features: MyText
+  expiration_date: 2016-11-22 18:03:07
+  user: two
