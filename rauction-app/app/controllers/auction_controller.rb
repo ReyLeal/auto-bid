@@ -1,2 +1,0 @@
-class AuctionController < ApplicationController
-end
