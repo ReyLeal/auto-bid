@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  
-  def index
 
+  def index
+    @user = User.find_by(@current_user)
   end
 
   def new

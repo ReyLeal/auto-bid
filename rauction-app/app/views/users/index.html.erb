@@ -8,15 +8,35 @@
       </ul>
     </nav>
   </div>
+  <% if @user == current_user %>
+  <div class="call-to-action-top col-md-12 text-center">
+    <button class="top-cta-button" type="button">Create Auction</button>
+    <button class="top-cta-button" type="button">Edit Profile</button>
+    <button class="top-cta-button" type="button">View Auctions</button>
+  </div>
+  <% else %>
   <div class="call-to-action-top col-md-12 text-center">
     <button class="top-cta-button" type="button">Signup</button>
     <button class="top-cta-button" type="button">Login</button>
   </div>
-
+  <% end %>
   <div class="car-photo-display">
   </div>
 
   <div class="call-to-action-bot">
+    <% if @user == current_user %>
+    <div class="call-to-action-bot">
+      <button class="top-cta-button" type="button">Create Auction</button>
+      <button class="top-cta-button" type="button">Edit Profile</button>
+      <button class="top-cta-button" type="button">View Auctions</button>
+    </div>
+    <% else %>
+    <div class="call-to-action-bot">
+      <button class="top-cta-button" type="button">Signup</button>
+      <button class="top-cta-button" type="button">Login</button>
+    </div>
+    <% end %>
+
   </div>
 
   <footer>

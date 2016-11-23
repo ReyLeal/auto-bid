@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
+
   # get 'users/index'
   #
   # get 'users/new'
