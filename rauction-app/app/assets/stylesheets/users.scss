@@ -1,3 +1,59 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  height: 150vh;
+  background-color: lightgray;
+}
+#home-container {
+  background-color: white;
+}
+.container {
+  height: 100vh;
+  padding: 0;
+
+}
+.nav-pills {
+  background-color: white;
+  height: 6rem;
+  padding-top: 1rem;
+  }
+.login {
+  vertical-align: middle;
+  height: 4rem;
+}
+.signup {
+  vertical-align: middle;
+  height: 4rem;
+}
+.nav-pills li a:hover {
+  background-color: transparent;
+}
+
+
+.top-image {
+  background-image: url(BMW.jpeg);
+  height: 50rem;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.call-to-action-top {
+  height: 25rem;
+  border-bottom: solid black .01rem;
+  padding-top: 10rem;
+}
+button {
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(51,122,183);
+  height: 7rem;
+  width: 20rem;
+  font-size: 2rem;
+  color: white;
+  vertical-align: middle;
+}
+
+.top-cta-button {
+vertical-align: middle;
+}

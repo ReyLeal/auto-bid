@@ -1,5 +1,7 @@
 class AuctionsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     @auction = Auction.all
   end
@@ -33,5 +35,6 @@ class AuctionsController < ApplicationController
   def auction_params
     params.require(:auction).permit(:max_price, :title, :year, :make, :model, :miles_from, :address, :color, :features, :expiration_date)
   end
+
 
 end

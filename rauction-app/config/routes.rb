@@ -5,11 +5,13 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
+
   # get 'users/index'
   #
   # get 'users/new'
 resources :users
 
+root "users#index"
 get '/signup' => 'users#new'
 post '/users' => 'users#create'
 

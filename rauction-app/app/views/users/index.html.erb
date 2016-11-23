@@ -1,2 +1,49 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container" id="home-container">
+  <div class="top-image container">
+    <nav class="navbar-fixed-top container">
+      <ul class="nav nav-pills">
+        <li role="presentation" class=" col-md-9"><a href="#">Logo</a></li>
+        <li role="presentation"class="active col-md-1"><a href="#">Login</a></li>
+        <li role="presentation" class=" col-md-1"><a href="#">Signup</a></li>
+      </ul>
+    </nav>
+  </div>
+  <% if @user == current_user %>
+  <div class="call-to-action-top col-md-12 text-center">
+    <button class="top-cta-button" type="button">Create Auction</button>
+    <button class="top-cta-button" type="button">Edit Profile</button>
+    <button class="top-cta-button" type="button">View Auctions</button>
+  </div>
+  <% else %>
+  <div class="call-to-action-top col-md-12 text-center">
+    <button class="top-cta-button" type="button">Signup</button>
+    <button class="top-cta-button" type="button">Login</button>
+  </div>
+  <% end %>
+  <div class="car-photo-display">
+  </div>
+
+  <div class="call-to-action-bot">
+    <% if @user == current_user %>
+    <div class="call-to-action-bot">
+      <button class="top-cta-button" type="button">Create Auction</button>
+      <button class="top-cta-button" type="button">Edit Profile</button>
+      <button class="top-cta-button" type="button">View Auctions</button>
+    </div>
+    <% else %>
+    <div class="call-to-action-bot">
+      <button class="top-cta-button" type="button">Signup</button>
+      <button class="top-cta-button" type="button">Login</button>
+    </div>
+    <% end %>
+
+  </div>
+
+  <footer>
+
+    <div class="footer-div">
+    </div>
+
+  </footer>
+
+</div>
