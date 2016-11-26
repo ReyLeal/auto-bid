@@ -5,13 +5,13 @@ body {
 }
 #home-container {
   background-color: white;
+  padding: 0;
 }
 .container {
   height: 100vh;
   padding: 0;
-
 }
-.nav-pills {
+nav {
   background-color: white;
   height: 6rem;
   padding-top: 1rem;
@@ -31,11 +31,13 @@ body {
 
 .top-image {
   background-image: url(BMW.jpeg);
-  height: 50rem;
+  height: 75vh;
   width: 100%;
-  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 100px;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 }
 
 .call-to-action-top {
@@ -44,6 +46,7 @@ body {
   padding-top: 10rem;
 }
 button {
+  text-align: center;
   border: none;
   border-radius: 10px;
   background-color: rgb(51,122,183);
@@ -56,4 +59,13 @@ button {
 
 .top-cta-button {
 vertical-align: middle;
+}
+
+.carsss {
+  background-image: url(BMW.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30rem;
+
 }
