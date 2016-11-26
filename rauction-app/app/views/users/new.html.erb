@@ -1,11 +1,63 @@
-<h1>Signup!</h1>
+<div class="container-fluid" id="home-container">
+  <div class="top-image">
+    <nav class="navbar-fixed-top">
+      <div class="col-md-10">
+        <ul class="nav nav-pills">
+          <li class="logo" role="presentation"><a href="/"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <ul class="nav nav-pills">
+          <% if current_user %>
+          <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
+          <% else %>
 
-<%= form_for :user, url: '/users' do |f| %>
+          <li role="presentation"class="active "><a href="/login">Login</a></li>
+          <li role="presentation"><a class="nav-link" href="/signup">Signup</a></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+  </div>
+ <div class="row row-centered">
+  <div class="col-md-4 col-centered">
+    <%= render partial: "form", locals: {zone: @user} %>
+  </div>
+</div>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
 
-<% end %>
+  <div class="car-photo-display-top col-md-12">
+    <div>
+      <div class="col-md-4 carsss">
+      </div>
+      <div class="col-md-4 carsss">
+      </div>
+      <div class="col-md-4 carsss">
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  <div class="car-photo-display-bot col-md-12">
+    <div>
+      <div class="col-md-4 carsss">
+      </div>
+      <div class="col-md-4 carsss">
+      </div>
+      <div class="col-md-4 carsss">
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+  <footer>
+
+    <div class="footer-div col-md-12 vcenter text-center">
+      <div class='col-md-4 tall-footer'><p class='vcenter'>about us</p></div>
+      <div class='col-md-4'><p class='vcenter'>about us</p></div>
+      <div class='col-md-4'><p class='vcenter'>about us</p></div>
+    </div>
+
+  </footer>
+
+</div>

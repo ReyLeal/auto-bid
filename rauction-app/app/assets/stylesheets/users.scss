@@ -15,10 +15,25 @@ nav {
   background-color: white;
   height: 6rem;
   padding-top: 1rem;
-  }
+}
+li.logo a {
+  height: 4.5rem;
+  width: 7rem;
+}
+li.logo  {
+  padding-left: 2rem;
+  background-image: url(temp-logo);
+  height: 4.5rem;
+  width: 7rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .login {
   vertical-align: middle;
   height: 4rem;
+}
+a.nav-link:hover{
+  color: rgb(51,122,183);
 }
 .signup {
   vertical-align: middle;
@@ -28,11 +43,22 @@ nav {
   background-color: transparent;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+a.nav-link {
+  color: rgb(51,122,183);
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
 
 .top-image {
   background-image: url(BMW.jpeg);
   height: 75vh;
-  width: 100%;
+  max-width: 100%;
   background-attachment: fixed;
   background-position-y: 100px;
   background-size: 100%;
@@ -41,8 +67,8 @@ nav {
 }
 
 .call-to-action-top {
-  height: 25rem;
-  border-bottom: solid black .01rem;
+  height: 25vh;
+  // border-bottom: solid black .01rem;
   padding-top: 10rem;
 }
 button {
@@ -58,14 +84,52 @@ button {
 }
 
 .top-cta-button {
-vertical-align: middle;
+  vertical-align: middle;
 }
-
+.car-photo-display-top {
+  height: 30vh;
+}
+.car-photo-display-bot {
+  height: 30vh;
+}
 .carsss {
   background-image: url(BMW.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 30rem;
+  height: 30vh;
+}
 
+.call-to-action-bot {
+  height: 30vh;
+  padding: 0;
+  // border-bottom: solid black .01rem;
+  padding-top: 10rem;
+}
+.car-photo-display-top.col-md-12 {
+  padding: 0;
+}
+.car-photo-display-bot.col-md-12 {
+  padding: 0;
+}
+button.marg-left {
+  margin-left: 2rem;
+}
+footer{
+    height: 20rem;
+}
+.row-centered {
+    text-align:center;
+    height: 25vh;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+form {
+  height: 25vh;
+  vertical-align: middle;
+  margin: auto 0;
 }
