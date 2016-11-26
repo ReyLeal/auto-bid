@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ .clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+ }

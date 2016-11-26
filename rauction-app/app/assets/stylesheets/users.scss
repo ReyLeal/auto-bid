@@ -1,14 +1,12 @@
-
-body {
-  height: 150vh;
-  background-color: lightgray;
+.body {
+  height: 100%;
 }
 #home-container {
   background-color: white;
   padding: 0;
 }
 .container {
-  height: 100vh;
+  height: 100%;
   padding: 0;
 }
 nav {
@@ -115,12 +113,13 @@ button {
 button.marg-left {
   margin-left: 2rem;
 }
-footer{
+.footer-div {
+    background-color: gray;
     height: 20rem;
 }
 .row-centered {
     text-align:center;
-    height: 25vh;
+    height: 35vh;
 }
 .col-centered {
     display:inline-block;
@@ -128,8 +127,7 @@ footer{
     text-align:left;
     margin-right:-4px;
 }
-form {
-  height: 25vh;
-  vertical-align: middle;
-  margin: auto 0;
+
+input {
+  width: 100%
 }
