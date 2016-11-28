@@ -1,0 +1,11 @@
+<%= form_for :dealer, url: '/dealers' do |f| %>
+
+  Name: <%= f.text_field :dealer_name %>
+  Company Name <%= f.text_field :company_name %>
+  Address <%= f.text_field :address %>
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.submit "Submit" %>
+
+<% end %>

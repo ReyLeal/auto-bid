@@ -11,12 +11,12 @@ class AuctionsController < ApplicationController
   end
 
   def create
-    @auction.new(auction_params)
+    @auction = Auction.new(auction_params)
+    @auction.user = current_user
     if @auction.save
-      # session[:dealer_id] = dealer.id
-      redirect_to @auction
+      redirect_to '/'
     else
-      render 'new'
+      redirect_to new_user_auction_url(current_user)
     end
   end
 
@@ -33,8 +33,6 @@ class AuctionsController < ApplicationController
 
   private
   def auction_params
-    params.require(:auction).permit(:max_price, :title, :year, :make, :model, :miles_from, :address, :color, :features, :expiration_date)
+    params.require(:auction).permit(:max_price, :title, :year, :make, :model, :miles_from, :address, :color, :features, :expiration_date, :user_id)
   end
-
-
 end

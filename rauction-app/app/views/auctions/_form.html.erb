@@ -1,0 +1,15 @@
+
+<div class="col-md-12 clearfix">
+  <%= form_for(auction) do |f| %>
+  Title: <%= f.text_field :title %><br/>
+  Year: <%= f.number_field :year %><br/>
+  Make: <%= f.text_field :make %><br/>
+  Model: <%= f.text_field :model %><br/>
+  Distance(in miles): <%= f.number_field :miles_from %><br/>
+  Color: <%= f.text_field :color %><br/>
+  Address: <%= f.text_field :address %><br/>
+  Features: <%= f.text_area :features %><br/>
+  Expiration Date: <%= f.datetime_local_field :expiration_date %><br/>
+  <%= f.submit "Submit" %>
+  <% end %>
+</div>
