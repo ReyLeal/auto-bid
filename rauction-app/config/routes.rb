@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   # get 'users/new'
   resources :users
 
-  resources :users do
-    resources :auctions
-  end
+
+resources :users do
+  resources :auctions
+end
+
 
   post '/auctions' => 'auctions#create'
   root "users#index"
@@ -24,5 +26,13 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+post '/auctions' => 'auctions#create'
 
+
+get '/auctions' => 'auctions#index'
+get '/auctions/new' => 'auctions#new'
+
+resources :dealers
+
+get '/register' => 'dealers#new'
 end

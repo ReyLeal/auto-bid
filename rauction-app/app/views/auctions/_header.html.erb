@@ -1,20 +1,21 @@
-  <div class="top-image">
-    <nav class="navbar-fixed-top">
-      <div class="col-md-10">
-        <ul class="nav nav-pills">
-          <li class="logo" role="presentation"><a href="/"></a></li>
-        </ul>
-      </div>
-      <div class="col-md-2">
-        <ul class="nav nav-pills">
-          <% if current_user %>
-          <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
-          <% else %>
 
-          <li role="presentation"class="active "><a href="/login">Login</a></li>
-          <li role="presentation"><a class="nav-link" href="/signup">Signup</a></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
-  </div>
+<div class="top-image">
+   <nav class="navbar-fixed-top">
+     <div class="col-md-10">
+       <ul class="nav nav-pills">
+         <li class="logo" role="presentation"><a href="/"></a></li>
+       </ul>
+     </div>
+     <div class="col-md-2">
+       <ul class="nav nav-pills">
+         <% if current_user %>
+         <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
+         <% else %>
+
+         <li role="presentation"class="active "><a href="/login">Login</a></li>
+         <li role="presentation"><a class="nav-link" href="/signup">Signup</a></li>
+         <% end %>
+       </ul>
+     </div>
+   </nav>
+ </div>
