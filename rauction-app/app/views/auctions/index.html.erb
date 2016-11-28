@@ -1,0 +1,13 @@
+<div class="container-fluid" id="home-container">
+  <%= render partial: "header" %>
+
+
+
+<% @auction.each do |f| %>
+Auction: <%= f.title %>
+<% end %>
+
+
+<%= render partial: "footer" %>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid" id="home-container">
+  <%= render partial: "header" %>
+
+  <div class="auctions-row row-centered clearfix">
+    <h1> Create Auction</h1>
+    <div class="col-md-4 col-centered clearfix">
+      <%= render "form", auction: @auction %>
+    </div>
+  </div>
+
+  <%= render partial: "car-photos" %>
+
+  <%= render partial: "footer" %>
+
+</div>
