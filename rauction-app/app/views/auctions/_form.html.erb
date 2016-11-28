@@ -3,7 +3,7 @@
 <div class="col-md-12 clearfix">
   <%= form_for(auction) do |f| %>
   Title: <%= f.text_field :title %><br/>
-  Year: <%= f.number_field :year %><br/>
+  Year: <%= f.number_field :year, placeholder: "year", value: 100 %><br/>
   Make: <%= f.text_field :make %><br/>
   Model: <%= f.text_field :model %><br/>
   Distance(in miles): <%= f.number_field :miles_from %><br/>

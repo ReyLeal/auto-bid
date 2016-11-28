@@ -1,8 +1,8 @@
-.body {
+body {
   height: 100%;
 }
 #home-container {
-  background-color: white;
+  background-color: #ECEFF1;
   padding: 0;
 }
 .container {
@@ -10,7 +10,7 @@
   padding: 0;
 }
 nav {
-  background-color: white;
+  background-color: #ECEFF1;
   height: 6rem;
   padding-top: 1rem;
 }
@@ -31,7 +31,7 @@ li.logo  {
   height: 4rem;
 }
 a.nav-link:hover{
-  color: rgb(51,122,183);
+  color: rgb(43,61,118);
 }
 .signup {
   vertical-align: middle;
@@ -40,13 +40,15 @@ a.nav-link:hover{
 .nav-pills li a:hover {
   background-color: transparent;
 }
-
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #263238;
+}
 a {
   text-decoration: none;
   color: white;
 }
 a.nav-link {
-  color: rgb(51,122,183);
+  color: rgb(43,61,118);
 }
 a:hover {
   text-decoration: none;
@@ -55,11 +57,10 @@ a:hover {
 
 .top-image {
   background-image: url(BMW.jpeg);
-  height: 75vh;
-  max-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
   background-attachment: fixed;
-  background-position-y: 100px;
-  background-size: 100%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: bottom;
 }
@@ -73,7 +74,7 @@ button {
   text-align: center;
   border: none;
   border-radius: 10px;
-  background-color: rgb(51,122,183);
+  background-color: #263238;
   height: 7rem;
   width: 20rem;
   font-size: 2rem;
@@ -114,7 +115,8 @@ button.marg-left {
   margin-left: 2rem;
 }
 .footer-div {
-    background-color: gray;
+    background-color: #263238;
+    color: #FFAB40;
     height: 20rem;
 }
 .row-centered {
