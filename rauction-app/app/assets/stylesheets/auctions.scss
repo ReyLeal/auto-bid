@@ -2,6 +2,7 @@
   height: 100%;
   padding: 5rem;
   background-color: #002023;
+  color: rgb(174, 188, 225);
 }
 .col-md-4.col-centered.clearfix {
   text-align: center;
@@ -9,6 +10,7 @@
 input#auction_title {
   height: 5rem;
   font-size: 2rem;
+  color: rgb(174, 188, 225);
   border: none;
   border-bottom: solid rgb(174, 188, 225);
   background-color: #002023;
@@ -18,6 +20,7 @@ select#auction_year {
   border: none;
   height: 5rem;
   font-size: 2rem;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   border-radius: 0px;
   background-color: #002023;
@@ -27,6 +30,7 @@ select#auction_make {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
   width: 100%;
@@ -35,6 +39,7 @@ select#auction_model {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
   width: 100%;
@@ -43,6 +48,7 @@ select#auction_miles_from {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
   width: 100%;
@@ -51,6 +57,7 @@ input#auction_color {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
 }
@@ -58,6 +65,7 @@ input#auction_address {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
 }
@@ -66,6 +74,7 @@ textarea#auction_features {
   font-size: 2rem;
   width: 100%;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
   resize: none;
@@ -84,6 +93,7 @@ input#auction_expiration_date {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
 }
@@ -91,6 +101,7 @@ input#auction_max_price {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  color: rgb(174, 188, 225);
   border-bottom: solid;
   background-color: #002023;
 }
@@ -112,4 +123,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     -webkit-text-fill-color: rgb(174, 188, 225);
     -webkit-box-shadow: rgb(174, 188, 225);
     transition: background-color 5000s ease-in-out 0s;
+}
+
+.auction{
+  color: rgb(1, 70, 76);
 }
