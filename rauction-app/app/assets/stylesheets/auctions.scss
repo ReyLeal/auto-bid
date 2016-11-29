@@ -5,3 +5,19 @@
 .auction{
   color: rgb(1, 70, 76);
 }
+
+.top-image-auction {
+  background-image: url(BMW.jpeg);
+  height: 100vh;
+  max-width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: rgb(1, 70, 76);
+}
+
+.nav-pills.auc-p li a:hover {
+  background-color: transparent;
+}
