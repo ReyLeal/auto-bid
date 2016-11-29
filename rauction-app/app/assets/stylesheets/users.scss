@@ -3,7 +3,7 @@ body {
   color: rgb(174, 188, 225);
 }
 #home-container {
-  background-color: #ECEFF1;
+  // background-color: #ECEFF1;
   padding: 0;
 }
 .container {
@@ -61,6 +61,7 @@ a:hover {
   background-image: url(BMW.jpeg);
   height: 100vh;
   max-width: 100%;
+  background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -68,10 +69,7 @@ a:hover {
   color: rgb(1, 70, 76);
 }
 
-.call-to-action-top {
-  height: 30vh;
-  padding-top: 10rem;
-}
+
 button {
   text-align: center;
   border: none;
@@ -178,9 +176,9 @@ li{
 
 .start{
   font-size:30px;
-  padding-left: 25rem;
   height: 15rem;
   margin: 5rem 0;
+  background-color: white;
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
   padding-top: 4rem;
