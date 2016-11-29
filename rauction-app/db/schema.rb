@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129010812) do
+ActiveRecord::Schema.define(version: 20161129162327) do
 
   create_table "auctions", force: :cascade do |t|
     t.integer  "max_price"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20161129010812) do
     t.datetime "updated_at",      null: false
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "year"
+    t.integer  "year"
     t.index ["user_id"], name: "index_auctions_on_user_id"
   end
 

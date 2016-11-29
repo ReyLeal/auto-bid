@@ -1,3 +1,115 @@
 .auctions-row.row-centered.clearfix {
-  height: 60rem;
+  height: 100%;
+  padding: 5rem;
+  background-color: #002023;
+}
+.col-md-4.col-centered.clearfix {
+  text-align: center;
+}
+input#auction_title {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid rgb(174, 188, 225);
+  background-color: #002023;
+}
+
+select#auction_year {
+  border: none;
+  height: 5rem;
+  font-size: 2rem;
+  border-bottom: solid;
+  border-radius: 0px;
+  background-color: #002023;
+  width: 100%;
+}
+select#auction_make {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+  width: 100%;
+}
+select#auction_model {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+  width: 100%;
+}
+select#auction_miles_from {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+  width: 100%;
+}
+input#auction_color {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+}
+input#auction_address {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+}
+textarea#auction_features {
+  height: 5rem;
+  font-size: 2rem;
+  width: 100%;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+  resize: none;
+  padding-top: 1rem;
+}
+input:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+input#auction_expiration_date {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+}
+input#auction_max_price {
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  border-bottom: solid;
+  background-color: #002023;
+}
+input[type="submit"] {
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+  border: none;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgb(174, 188, 225);
+  color: #002023;
+}
+::-webkit-input-placeholder {
+   color: rgb(174, 188, 225);
+   padding-left: 6px;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(174, 188, 225);
+    -webkit-box-shadow: rgb(174, 188, 225);
+    transition: background-color 5000s ease-in-out 0s;
 }
