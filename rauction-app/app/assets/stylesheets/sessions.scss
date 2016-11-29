@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sessions-row-centered {
     text-align:center;
-    height: 25rem;
+    height: 30rem;
+    background-color: #002023;
+    color: rgb(174, 188, 225);
 }
 .sessions-col-centered {
     display:inline-block;
@@ -18,5 +20,32 @@
 }
 
 .row.sessions-row-centered.clearfix.login{
-  height: 25rem;
+  height: 30rem;
+}
+
+input#email{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#password{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+form{
+  text-align: center;
+}
+
+.login-title{
+  color: rgb(174, 188, 225);
+  padding-top: 2rem;
 }

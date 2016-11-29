@@ -34,7 +34,8 @@ a.nav-link:hover{
 .signup {
   vertical-align: middle;
   height: 4rem;
-  color: rgb(1, 70, 76);
+  background-color: #002023;
+  color: rgb(174, 188, 225);
 }
 .nav-pills li a:hover {
   background-color: transparent;
@@ -212,4 +213,40 @@ img{
 
 #github{
   color:black;
+}
+
+input#user_name{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_email{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_password{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_password_confirmation{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
 }

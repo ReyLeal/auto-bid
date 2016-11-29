@@ -1,4 +1,62 @@
+.row.row-centered.clearfix.dealer{
+  height: 50rem;
+}
 
 .dealer{
-  color: rgb(1, 70, 76);
+  background-color: #002023;
+  color: rgb(174, 188, 225);
+}
+
+input#dealer_dealer_name{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#dealer_company_name{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#dealer_address{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#dealer_email{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#dealer_password{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#dealer_password_confirmation{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
 }
