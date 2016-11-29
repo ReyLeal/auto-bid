@@ -1,61 +1,51 @@
-window.onload = function() {
-  console.log("document is loaded");
-}
-//
-// $('input#auction_year').onchange('input', function() {
-//   console.log($('input#auction_year')["0"].value);
-//   console.log($(this).val());
-// });
+$(document).on('turbolinks:load', function() {
+  // console.log("document is loaded");
+  carYear = ""
+
+  $('select#auction_year').on('input', function() {
+    var inputYear = $('select#auction_year')["0"].value
+    makeAjaxRequest(inputYear);
+    carYear = inputYear
+  });
+
+  function makeAjaxRequest(year) {
+    $.get('http://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,  function(data) {
+      parseMake(data);
+    });
+  }
+
+  function parseMake(carMakes) {
+    var optionsHtml = "";
+    var displayName;
+    carMakes['Makes'].forEach(function(eachCar) {
+      displayName = eachCar.make_display
+      optionsHtml += ("<option value='" + displayName + "'>" + displayName + "</option>");
+    });
+    $('#auction_make').empty().append(optionsHtml);
+  }
 
 
-var input = document.querySelector('#auction_year');
+  $('select#auction_make').on('input', function() {
+    var inputMake = $('select#auction_make')[0].value
+    console.log(inputMake)
+    console.log(carYear)
+    makeAjaxRequestForMakes(inputMake, carYear);
+  })
 
-input.addEventListener('input', function()
-{
-    console.log('input changed to: ', input.value);
+  function makeAjaxRequestForMakes(make, year) {
+    $.get('http://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
+      parseModel(data);
+      console.log(data)
+    });
+  }
+  function parseModel(carModels) {
+    var optionsHtml = "";
+    var modelName;
+    carModels['Models'].forEach(function(eachCar) {
+      modelName = eachCar.model_name
+      optionsHtml += ("<option value='" + modelName + "'>" + modelName + "</option>");
+    });
+    $('#auction_model').empty().append(optionsHtml);
+  }
+
 });
-
-getMake()
-console.log("document is loaded");
-
-function getMake(year){
-  makeAjaxRequest()
-  function makeAjaxRequest() {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        parseMake(httpRequest);
-      }
-    }
-    httpRequest.open('GET', 'http://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year , true);
-    httpRequest.send(null);
-  }
-  function parseMake(httpRequest) {
-    var jsonResponse = JSON.parse(httpRequest.responseText);
-    // console.log(jsonResponse['Makes'][0]['make_display']);
-    jsonResponse['Makes'].forEach(function(eachCar) {
-      console.log(eachCar['make_display']);
-    })
-  }
-}
-getModel()
-function getModel(make){
-  makeAjaxRequest()
-  function makeAjaxRequest() {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        parseMake(httpRequest);
-      }
-    }
-    httpRequest.open('GET', 'http://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, true);
-    httpRequest.send(null);
-  }
-  function parseModel(httpRequest) {
-    var jsonResponse = JSON.parse(httpRequest.responseText);
-    // console.log(jsonResponse['Makes'][0]['make_display']);
-    jsonResponse['Models'].forEach(function(eachCar) {
-      console.log(eachCar['model_name']);
-    })
-  }
-}

@@ -1,11 +1,19 @@
 <% require_relative '../../test.rb' %>
 
+<% year_array = ['select'] %>
+<%year = 1940 %>
+<% while year <= 2016 do%>
+<%  year_array << year %>
+<% year += 1 %>
+<% end %>
+
+
 <div class="col-md-12 clearfix">
   <%= form_for(auction) do |f| %>
   Title: <%= f.text_field :title %><br/>
-  Year: <%= f.number_field :year, placeholder: "year", value: 100 %><br/>
-  Make: <%= f.text_field :make %><br/>
-  Model: <%= f.text_field :model %><br/>
+  Year: <%= f.select :year, year_array%><br/>
+  Make: <%= f.select :make, [] %><br/>
+  Model: <%= f.select :model, [] %><br/>
   Distance(in miles): <%= f.number_field :miles_from %><br/>
   Color: <%= f.text_field :color %><br/>
   Address: <%= f.text_field :address %><br/>
