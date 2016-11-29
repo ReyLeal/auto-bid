@@ -1,0 +1,19 @@
+
+  <div class="container-fluid" id="home-container">
+    <%= render partial: "header" %>
+
+  <div class="user_info">
+    <p><%= current_user.name %></p>
+    <p><%= current_user.email %></p>
+  </div>
+
+  <%= @auction.title%>
+
+
+  <div class="col-md-12 text-center">
+    <a href="/"><button id="back" type="button">Back</button></a>
+  </div>
+
+  <%= render partial: "footer" %>
+
+  </div>
