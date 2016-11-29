@@ -1,5 +1,6 @@
 <div class="auction">
-  <% year_array = ['select'] %>
+
+  <% year_array = ['Year'] %>
   <% year = 1940 %>
   <% while year <= 2016 do%>
   <%  year_array << year %>
@@ -10,15 +11,19 @@
   <div class="col-md-12 clearfix">
     <%= form_for(auction) do |f| %>
     <%= f.text_field :title, placeholder: "Title" %><br/>
-    Year: <%= f.select :year, year_array %><br/>
-    Make: <%= f.select :make, [] %><br/>
-    Model: <%= f.select :model, [] %><br/>
-    <%= f.select :miles_from, [5,10,25,50], placeholder: "Dealership Distance" %><br/>
+    <%= f.select :year, year_array %><br/>
+    <%= f.select :make, ['Make'] %><br/>
+    <%= f.select :model, ['Model'] %><br/>
+    <%= f.select :miles_from, ['Select Dealership Range (in miles)',5,10,25,50], placeholder: "Dealership Distance" %><br/>
     <%= f.text_field :color , placeholder: "Color"%><br/>
-    <%= f.text_field :address , placeholder: "Address"%><br/>
     <%= f.text_area :features , placeholder: "Features"%><br/>
+    <%= f.text_field :max_price, placeholder: "Maximum Price" %><br/>
+    <%= f.text_field :address , placeholder: "Address"%><br/>
     <%= f.date_field :expiration_date, placeholder: "Expiration Date" %><br/>
     <%= f.submit "Submit" %>
     <% end %>
+
+
   </div>
+
 </div>

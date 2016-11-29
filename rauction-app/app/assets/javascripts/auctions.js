@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function() {
   // console.log("document is loaded");
   carYear = ""
 
-  $('select#auction_year').on('input', function() {
+  $('select#auction_year').on('change', function() {
     var inputYear = $('select#auction_year')["0"].value
     makeAjaxRequest(inputYear);
     carYear = inputYear
