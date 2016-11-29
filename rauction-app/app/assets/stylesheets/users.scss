@@ -1,9 +1,9 @@
-.body {
+body {
   height: 100%;
   color: rgb(174, 188, 225);
 }
 #home-container {
-  background-color: white;
+  background-color: #ECEFF1;
   padding: 0;
 }
 .container {
@@ -11,7 +11,7 @@
   padding: 0;
 }
 nav {
-  background-color: white;
+  background-color: #ECEFF1;
   height: 6rem;
   padding-top: 1rem;
   color: rgb(1, 70, 76);
@@ -33,7 +33,7 @@ li.logo  {
   height: 4rem;
 }
 a.nav-link:hover{
-  color: rgb(51,122,183);
+  color: rgb(43,61,118);
 }
 .signup {
   vertical-align: middle;
@@ -42,7 +42,9 @@ a.nav-link:hover{
 .nav-pills li a:hover {
   background-color: transparent;
 }
-
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #263238;
+}
 a {
   text-decoration: none;
   color: white;
@@ -60,8 +62,7 @@ a:hover {
   height: 100vh;
   max-width: 100%;
   background-attachment: fixed;
-  background-position-y: 100px;
-  background-size: 100%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: bottom;
   color: rgb(1, 70, 76);
@@ -69,8 +70,7 @@ a:hover {
 
 .call-to-action-top {
   height: 30vh;
-  // border-bottom: solid black .01rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 button {
   text-align: center;
@@ -88,7 +88,7 @@ button {
   vertical-align: middle;
 }
 .car-photo-display-top {
-  height: 35vh;
+  height: 30vh;
 }
 .car-photo-display-bot {
   height: 30vh;
@@ -104,8 +104,7 @@ button {
 .call-to-action-bot {
   height: 30vh;
   padding: 0;
-  // border-bottom: solid black .01rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 .car-photo-display-top.col-md-12 {
   padding: 0;
@@ -117,8 +116,10 @@ button.marg-left {
   margin-left: 2rem;
 }
 .footer-div {
+
   background-color: rgb(0, 32, 35);
   color: rgb(102, 142, 146);
+
     height: 20rem;
 }
 .row-centered {

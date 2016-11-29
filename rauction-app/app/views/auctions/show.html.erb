@@ -7,10 +7,8 @@
     <p><%= current_user.email %></p>
   </div>
 
-  <% @auctions.each do |f| %>
-  Auction: <%= f.title %>
-  <%= link_to 'show', user_auction_path(current_user, f.id) %>
-  <% end %>
+  <%= @auction.title%>
+
 
   <div class="col-md-12 text-center">
     <a href="/"><button id="back" type="button">Back</button></a>
