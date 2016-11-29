@@ -7,8 +7,9 @@
     <p><%= current_user.email %></p>
   </div>
 
-  <% @auction.each do |f| %>
+  <% @auctions.each do |f| %>
   Auction: <%= f.title %>
+  <%= link_to 'show', user_auction_path(current_user, f.id) %>
   <% end %>
 
   <div class="col-md-12 text-center">

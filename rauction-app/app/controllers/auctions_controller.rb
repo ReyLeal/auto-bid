@@ -2,7 +2,7 @@ class AuctionsController < ApplicationController
   before_filter :authorize
 
   def index
-    @auction = Auction.all
+    @auctions = Auction.all
   end
 
   def new
