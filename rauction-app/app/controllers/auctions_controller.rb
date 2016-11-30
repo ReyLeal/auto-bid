@@ -27,7 +27,7 @@ class AuctionsController < ApplicationController
     @auction = Auction.find(params[:id])
     @auction.destroy
 
-    redirect_to auctions_path
+    redirect_to user_auctions_url
   end
 
   private

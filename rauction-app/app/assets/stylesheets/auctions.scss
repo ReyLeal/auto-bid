@@ -1,4 +1,4 @@
-.auctions-row.row-centered.clearfix {
+.auctions-row.row-centered.clearfix.auction {
   height: 100%;
   padding: 5rem;
   background-color: #002023;
@@ -58,15 +58,15 @@ input#auction_color {
   font-size: 2rem;
   border: none;
   color: rgb(174, 188, 225);
-  border-bottom: solid;
+  border-bottom: solid rgb(174, 188, 225);
   background-color: #002023;
 }
 input#auction_address {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  border-bottom: solid rgb(174, 188, 225);
   color: rgb(174, 188, 225);
-  border-bottom: solid;
   background-color: #002023;
 }
 textarea#auction_features {
@@ -82,12 +82,15 @@ textarea#auction_features {
 }
 input:focus {
   outline: none;
+  border-bottom: solid white!important;
 }
 select:focus {
   outline: none;
+  border-bottom: solid white!important;
 }
 textarea:focus {
   outline: none;
+  border-bottom: solid white!important;
 }
 input#auction_expiration_date {
   height: 5rem;
@@ -101,8 +104,8 @@ input#auction_max_price {
   height: 5rem;
   font-size: 2rem;
   border: none;
+  border-bottom: solid rgb(174, 188, 225);
   color: rgb(174, 188, 225);
-  border-bottom: solid;
   background-color: #002023;
 }
 input[type="submit"] {
@@ -116,15 +119,110 @@ input[type="submit"] {
   color: #002023;
 }
 ::-webkit-input-placeholder {
-   color: rgb(174, 188, 225);
-   padding-left: 6px;
+  color: rgb(174, 188, 225);
+  padding-left: 6px;
 }
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgb(174, 188, 225);
-    -webkit-box-shadow: rgb(174, 188, 225);
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: rgb(174, 188, 225);
+  -webkit-box-shadow: rgb(174, 188, 225);
+  transition: background-color 5000s ease-in-out 0s;
+}
+#back-new {
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: -.5rem;
+  margin-left: 2rem;
+  border: none;
+  width: 30%;
+  border-radius: 10px;
+  background-color: rgb(174, 188, 225);
+  color: #002023;
+}
+#back-new:focus{
+  outline: none;
 }
 
 .auction{
   color: rgb(1, 70, 76);
+}
+.auctions-index {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  min-height: 10rem;
+  background-color: white;
+  color: black;
+}
+
+a#destroy {
+  color: black;
+}
+a#back {
+  color: black;
+}
+.show-auction-info.text-center {
+  color: black;
+  height: 20rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.panel-row {
+  display: block;
+}
+
+.clickable .glyphicon {
+  padding: 6px 12px;
+  border-radius: 4px
+}
+
+.panel-heading span {
+  margin-top: -23px;
+  font-size: 15px;
+  margin-right: -9px;
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+
+.panel-center {
+  margin: 5rem 50rem;
+}
+.panel-heading.clickable {
+  background-color: #002023;
+}
+.panel-warning {
+  margin-top: 3rem;
+  color: #002023;
+  background-color: rgb(200, 202, 203);
+}
+.panel-warning>.panel-heading {
+  color: rgb(174, 188, 225);
+  background-image: none;
+}
+.panel.panel-warning {
+  border-radius: 12px;
+}
+.panel-heading.clickable.panel-collapsed {
+  border-radius: 12px;
+}.panel-heading.clickable {
+  border-radius: 12px;
+}
+.panel-info {
+  font-size: 1.75rem;
+  margin-top: 1.2rem;
+}
+a.new-class {
+  color: rgb(174, 188, 225);
+}
+.col-md-4.new-class-div {
+  font-size: 1.75rem;
+  height: 5rem;
+  width: 10rem;
+  border: none;
+  background-color: #002023;
+  color: rgb(174, 188, 225);
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 1.2rem;
 }
