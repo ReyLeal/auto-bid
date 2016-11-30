@@ -24,7 +24,8 @@ end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
+  get '/logout' => 'sessions#destroy_user'
+  get '/logout_dealer' => 'sessions#destroy_dealer'
 
 post '/auctions' => 'auctions#create'
 

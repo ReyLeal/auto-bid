@@ -10,10 +10,10 @@ class DealersController < ApplicationController
   def create
     @dealer = Dealer.new(dealer_params)
      if @dealer.save
-       session[:dealer_id] = dealer.id
-       redirect_to @dealer
+       session[:dealer_id] = @dealer.id
+       redirect_to '/'
      else
-       redirect_to '/signup'
+       redirect_to '/register'
      end
   end
 
@@ -40,6 +40,6 @@ class DealersController < ApplicationController
 
   private
   def dealer_params
-    params.require(:dealer).permit(:company_name, :dealer_name, :address, :email, :phone, :photo)
+    params.require(:dealer).permit(:company_name, :dealer_name, :address, :email, :phone, :photo, :password, :password_confirmation)
   end
 end

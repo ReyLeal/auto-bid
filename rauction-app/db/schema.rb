@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129162327) do
+ActiveRecord::Schema.define(version: 20161130012438) do
 
   create_table "auctions", force: :cascade do |t|
     t.integer  "max_price"
@@ -51,10 +51,11 @@ ActiveRecord::Schema.define(version: 20161129162327) do
     t.string   "email"
     t.integer  "phone"
     t.string   "photo"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "password_digest"
   end
 
   create_table "users", force: :cascade do |t|

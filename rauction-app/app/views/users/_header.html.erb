@@ -10,6 +10,15 @@
     <div class="col-md-1">
       <ul class="nav nav-pills">
         <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
+        <% elsif current_dealer %>
+        <div class="col-md-11">
+          <ul class="nav nav-pills">
+            <li class="logo" role="presentation"><a href="/"></a></li>
+          </ul>
+        </div>
+        <div class="col-md-1">
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active "><a class="nav-link" href="/logout_dealer">Logout</a></li>
         <% else %>
         <div class="col-md-9">
           <ul class="nav nav-pills">
