@@ -2,7 +2,6 @@
   <nav class="navbar-fixed-top">
 
     <% if current_user %>
-<<<<<<< HEAD
       <div class="col-md-11">
         <ul class="nav nav-pills">
           <li class="logo" role="presentation"><a href="/"></a></li>
@@ -13,20 +12,9 @@
           <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
         </ul>
       </div>
-    <% else %>
-        <div class="col-md-10">
-=======
-    <div class="col-md-11">
-      <ul class="nav nav-pills">
-        <li class="logo" role="presentation"><a href="/"></a></li>
-      </ul>
-    </div>
-    <div class="col-md-1">
-      <ul class="nav nav-pills">
-        <li role="presentation" class="active "><a id="login" class="nav-link" href="/logout">Logout</a></li>
+
         <% else %>
-        <div class="col-md-9">
->>>>>>> ac83fb0b65601e7dc2613b0093f1310dcab103f9
+        <div class="col-md-10">
           <ul class="nav nav-pills">
             <li class="logo" role="presentation"><a href="/"></a></li>
           </ul>
@@ -35,11 +23,11 @@
           <ul class="nav nav-pills">
 
             <!-- Button trigger modal -->
-              <li><button type="button" class="btn btn-primary btn-lg hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModallogin">
+              <li><button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModallogin">
               Login
               </button></li>
 
-            <li><button type="button" class="btn btn-primary btn-lg text-center hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModalregister">
+            <li><button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModalregister">
             Register
             </button></li>
 
