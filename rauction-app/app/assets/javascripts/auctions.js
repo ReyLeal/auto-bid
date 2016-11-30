@@ -25,8 +25,8 @@ $(document).on('turbolinks:load', function() {
   }
 
 
-  $('select#auction_make').on('input', function() {
-    var inputMake = $('select#auction_make')[0].value
+  $('select#auction_make').on('change', function() {
+    var inputMake = $('select#auction_make')[1].value
     makeAjaxRequestForMakes(inputMake, carYear);
   })
 
