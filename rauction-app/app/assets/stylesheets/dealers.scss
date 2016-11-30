@@ -1,4 +1,4 @@
-.row.row-centered.clearfix.dealer{
+.row.row-centered.clearfix{
   height: 50rem;
 }
 
@@ -11,52 +11,57 @@ input#dealer_dealer_name{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#dealer_company_name{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#dealer_address{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#dealer_email{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#dealer_password{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#dealer_password_confirmation{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
+}
+
+::-webkit-input-placeholder {
+   color: #002023;
+   padding-left: 6px;
 }

@@ -5,7 +5,7 @@
     text-align:center;
     height: 30rem;
     background-color: #002023;
-    color: rgb(174, 188, 225);
+    color: #002023;
 }
 .sessions-col-centered {
     display:inline-block;
@@ -16,7 +16,7 @@
 
 
 .login{
-  color: rgb(1, 70, 76);
+  color: #002023;
 }
 
 .row.sessions-row-centered.clearfix.login{
@@ -27,18 +27,18 @@ input#email{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#password{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 form{
@@ -46,6 +46,6 @@ form{
 }
 
 .login-title{
-  color: rgb(174, 188, 225);
+  color: #002023;
   padding-top: 2rem;
 }
