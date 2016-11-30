@@ -9,7 +9,7 @@
 
 
   <div class="auction-all clearfix">
-    <%= form_for(auction) do |f| %>
+    <%= form_for @auction do |f| %>
     <%= f.text_field :title, placeholder: "Title" %><br/>
     <%= f.select :year, year_array %><br/>
     <%= f.select :make, ['Make'] %><br/>

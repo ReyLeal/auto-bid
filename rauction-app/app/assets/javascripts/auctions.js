@@ -1,11 +1,11 @@
 $(document).on('turbolinks:load', function() {
-  // console.log("document is loaded");
+  console.log("document is loaded");
   carYear = ""
 
   $('select#auction_year').on('change', function() {
-    var inputYear = $('select#auction_year')["0"].value
-    makeAjaxRequest(inputYear);
+    var inputYear = $('select#auction_year')[1].value
     carYear = inputYear
+    makeAjaxRequest(inputYear);
   });
 
   function makeAjaxRequest(year) {
@@ -21,21 +21,18 @@ $(document).on('turbolinks:load', function() {
       displayName = eachCar.make_display
       optionsHtml += ("<option value='" + displayName + "'>" + displayName + "</option>");
     });
-    $('#auction_make').empty().append(optionsHtml);
+    $('select#auction_make').empty().append(optionsHtml);
   }
 
 
   $('select#auction_make').on('input', function() {
     var inputMake = $('select#auction_make')[0].value
-    console.log(inputMake)
-    console.log(carYear)
     makeAjaxRequestForMakes(inputMake, carYear);
   })
 
   function makeAjaxRequestForMakes(make, year) {
     $.get('http://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
       parseModel(data);
-      console.log(data)
     });
   }
   function parseModel(carModels) {
@@ -45,7 +42,7 @@ $(document).on('turbolinks:load', function() {
       modelName = eachCar.model_name
       optionsHtml += ("<option value='" + modelName + "'>" + modelName + "</option>");
     });
-    $('#auction_model').empty().append(optionsHtml);
+    $('select#auction_model').empty().append(optionsHtml);
   }
 
 });
