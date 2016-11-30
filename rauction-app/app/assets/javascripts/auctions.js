@@ -3,7 +3,7 @@ $(document).on('turbolinks:load', function() {
   carYear = ""
 
   $('select#auction_year').on('change', function() {
-    var inputYear = $('select#auction_year')[1].value
+    var inputYear = $('select#auction_year')[0].value
     carYear = inputYear
     makeAjaxRequest(inputYear);
   });
@@ -26,7 +26,7 @@ $(document).on('turbolinks:load', function() {
 
 
   $('select#auction_make').on('change', function() {
-    var inputMake = $('select#auction_make')[1].value
+    var inputMake = $('select#auction_make')[0].value
     makeAjaxRequestForMakes(inputMake, carYear);
   })
 
