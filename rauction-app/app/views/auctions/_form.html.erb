@@ -8,7 +8,7 @@
   <% end %>
 
 
-  <div class="col-md-12 ">
+  <div class="auction-all clearfix">
     <%= form_for(auction) do |f| %>
     <%= f.text_field :title, placeholder: "Title" %><br/>
     <%= f.select :year, year_array %><br/>
@@ -20,7 +20,7 @@
     <%= f.text_field :max_price, placeholder: "Maximum Price" %><br/>
     <%= f.text_field :address , placeholder: "Address"%><br/>
     <%= f.date_field :expiration_date, placeholder: "Expiration Date" %><br/>
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit" %> <a href="/"><button type="button" id="back-new"name="button">Back</button></a>
     <% end %>
 
 

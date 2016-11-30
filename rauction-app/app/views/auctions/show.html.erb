@@ -1,15 +1,18 @@
 
-  <div class="container-fluid" id="home-container">
-    <%= render partial: "header" %>
+<div class="container-fluid" id="home-container">
+  <%= render partial: "header" %>
 
 
-  <%= @auction.title%>
-
-
-  <div class="col-md-12 text-center">
-    <a href="/"><button id="back" type="button">Back</button></a>
+  <div class="show-auction-info text-center">
+    <%= @auction.title%> <br/>
+    <% if @auction.user_id = current_user %>
+    <%= link_to 'Delete Auction', user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
+    <% end %>
+    <%= link_to 'Back', user_auctions_url(current_user), id:"back" %>
   </div>
+
+  <%= render partial: "bot-about-us-pictures" %>
 
   <%= render partial: "footer" %>
 
-  </div>
+</div>

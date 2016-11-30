@@ -1,21 +1,43 @@
 
-  <div class="container-fluid" id="home-container">
-    <%= render partial: "header" %>
+<div class="container-fluid" id="home-container">
+  <%= render partial: "header" %>
 
-  <div class="user_info">
-    <p><%= current_user.name %></p>
-    <p><%= current_user.email %></p>
-  </div>
-
+  <div class="panel-center ">
   <% @auctions.each do |f| %>
-  Auction: <%= f.title %>
-  <%= link_to 'show', user_auction_path(current_user, f.id) %>
-  <% end %>
+      <div class="panel panel-warning">
+        <div class="panel-heading clickable">
+          <h3 class="panel-title"><%= f.title.capitalize %></h3>
+            <span class="pull-right "><i class="glyphicon glyphicon-minus"></i></span>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-4 panel-info">
+            <%= f.make %>
+            </div>
+            <div class="col-md-4 panel-info">
+            <%= f.model %>
+            </div>
+            <div class="col-md-4 new-class-div">
+            <%= link_to 'Show', user_auction_path(current_user, f.id), class:"new-class"  %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
 
-  <div class="col-md-12 text-center">
-    <a href="/"><button id="back" type="button">Back</button></a>
+
+      <!-- <div class="auctions-index text-center">
+      <% @auctions.each do |f| %>
+      <%= link_to user_auction_path(current_user, f.id), class:"col-md-3 new-class list-group-item" do %>
+
+      <% end %>
+      <% end %>
+      <a href="/"><button id="back" type="button">Back</button></a>
+    </div> -->
+
   </div>
+
+  <%= render partial: "bot-about-us-pictures" %>
 
   <%= render partial: "footer" %>
 
-  </div>
+</div>
