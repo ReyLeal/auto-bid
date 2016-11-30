@@ -29,7 +29,7 @@ li.logo  {
 }
 
 a.nav-link:hover{
-  color: rgb(43,61,118);
+  color: #002023;
 }
 .signup {
   vertical-align: middle;
@@ -46,7 +46,7 @@ a.nav-link:hover{
 }
 
 a.nav-link {
-  color: rgb(1, 70, 76);
+  color: #002023;
 }
 a:hover {
   text-decoration: none;
@@ -65,18 +65,19 @@ a:hover {
   color: rgb(1, 70, 76);
 }
 
-
-button {
+button.btn.btn-primary.btn-lg{
   text-align: center;
   border: none;
-  border-radius: 10px;
-  background-color: rgb(1, 70, 76);
-  height: 7rem;
-  width: 20rem;
-  font-size: 2rem;
+  border-radius: 4px;
+  background-color: #002023;
+  height: 40px;
+  width: 74px;
+  font-size: 14px;
   color: white;
   vertical-align: middle;
+
 }
+
 
 .top-cta-button {
   vertical-align: middle;
@@ -219,34 +220,87 @@ input#user_name{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#user_email{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#user_password{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 
 input#user_password_confirmation{
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #002023;
   border-bottom: solid;
+  background-color: white;
+}
+
+.modal-body{
+  background-color: white;
+}
+
+.modal-header{
+
+  font-size: 30px;
+}
+
+button.close{
+  font-size: 50px;
+  padding-bottom: 7rem;
+  padding-left: 10rem;
+}
+
+.modal-title{
+  color:#002023;
+  font-size: 30px;
+  padding-top: 1rem;
+}
+
+::-webkit-input-placeholder {
+   color: #002023;
+   padding-left: 6px;
+}
+
+.user-reg{
+  color: #002023;
+}
+
+.dealer-reg{
+  color: #002023;
+}
+
+li.btn.btn-primary.btn-lg{
+  display: inline;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus{
+  -webkit-text-fill-color:#002023;
+}
+
+.btn-primary{
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-color: #002023;
+}
+
+button.top-cta-button.home-b{
   background-color: #002023;
 }

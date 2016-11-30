@@ -2,27 +2,78 @@
   <nav class="navbar-fixed-top">
 
     <% if current_user %>
-    <div class="col-md-11">
-      <ul class="nav nav-pills">
-        <li class="logo" role="presentation"><a href="/"></a></li>
-      </ul>
-    </div>
-    <div class="col-md-1">
-      <ul class="nav nav-pills">
-        <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
-        <% else %>
-        <div class="col-md-9">
+      <div class="col-md-11">
+        <ul class="nav nav-pills">
+          <li class="logo" role="presentation"><a href="/"></a></li>
+        </ul>
+      </div>
+      <div class="col-md-1">
+        <ul class="nav nav-pills">
+          <li role="presentation" class="active "><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    <% else %>
+        <div class="col-md-10">
           <ul class="nav nav-pills">
             <li class="logo" role="presentation"><a href="/"></a></li>
           </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <ul class="nav nav-pills">
-            <li role="presentation"class="active "><a href="/login">Login</a></li>
-            <li role="presentation"><a class="nav-link" href="/signup">Signup</a></li>
-            <li role="presentation"><a class="nav-link" href="/register">Dealer Register</a></li>
-            <% end %>
+            <!-- Button trigger modal -->
+              <li><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModallogin">
+              Login
+              </button></li>
+
+            <li><button type="button" class="btn btn-primary btn-lg text-center" data-toggle="modal" data-target="#myModalregister">
+            Register
+            </button></li>
+
           </ul>
         </div>
-      </nav>
-    </div>
+      <% end %>
+    </nav>
+</div>
+
+      <div class="modal fade" id="myModalregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Register</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+                <li class="nav active user-reg"><a class="user-reg" href="#A" data-toggle="tab">User Registration</a></li>
+                <li class="nav dealer-reg"><a class="user-reg" href="#B" data-toggle="tab">Dealer Registration</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="A"><%=render partial: "form"%></div>
+                <div class="tab-pane fade" id="B"><%= render partial: "dealers/form" %></div>
+                <div style="clear:both !important;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div id="myModallogin" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+              <%= render "sessions/form" %>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
