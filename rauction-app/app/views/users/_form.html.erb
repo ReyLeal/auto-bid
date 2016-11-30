@@ -1,9 +1,9 @@
 <div class="col-md-12 clearfix signup">
   <%= form_for :user, url: '/users' do |f| %>
-  Name: <%= f.text_field :name %><br/>
-  Email: <%= f.text_field :email %><br/>
-  Password: <%= f.password_field :password %><br/>
-  Password Confirmation: <%= f.password_field :password_confirmation %><br/>
+  <%= f.text_field :name, placeholder: "Name" %><br/>
+  <%= f.text_field :email, placeholder: "Email" %><br/>
+  <%= f.password_field :password, placeholder: "Password" %><br/>
+  <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %><br/>
   <%= f.submit "Submit" %>
   <% end %>
 </div>

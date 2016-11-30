@@ -1,12 +1,12 @@
 <div class="dealer">
 <%= form_for :dealer, url: '/dealers' do |f| %>
 
-  Name: <%= f.text_field :dealer_name %>
-  Company Name <%= f.text_field :company_name %>
-  Address <%= f.text_field :address %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <%= f.text_field :dealer_name, placeholder: "Name" %>
+  <%= f.text_field :company_name, placeholder: "Company Name" %>
+  <%= f.text_field :address, placeholder: "Address" %>
+  <%= f.text_field :email, placeholder: "Email" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
   <%= f.submit "Submit" %>
 
 <% end %>

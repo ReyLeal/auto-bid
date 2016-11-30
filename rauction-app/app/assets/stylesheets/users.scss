@@ -3,7 +3,6 @@ body {
   color: rgb(174, 188, 225);
 }
 #home-container {
-  // background-color: #ECEFF1;
   padding: 0;
 }
 .container {
@@ -28,27 +27,24 @@ li.logo  {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.login {
-  vertical-align: middle;
-  height: 4rem;
-}
+
 a.nav-link:hover{
   color: rgb(43,61,118);
 }
 .signup {
   vertical-align: middle;
   height: 4rem;
+  background-color: #002023;
+  color: rgb(174, 188, 225);
 }
 .nav-pills li a:hover {
   background-color: transparent;
 }
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-  background-color: #263238;
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+  background-color: rgb(1, 70, 76);
 }
-a {
-  text-decoration: none;
-  color: white;
-}
+
 a.nav-link {
   color: rgb(1, 70, 76);
 }
@@ -99,11 +95,6 @@ button {
   height: 30vh;
 }
 
-.call-to-action-bot {
-  height: 30vh;
-  padding: 0;
-  padding-top: 10rem;
-}
 .car-photo-display-top.col-md-12 {
   padding: 0;
 }
@@ -114,11 +105,9 @@ button.marg-left {
   margin-left: 2rem;
 }
 .footer-div {
-
   background-color: rgb(0, 32, 35);
   color: rgb(102, 142, 146);
-
-    height: 20rem;
+  height: 20rem;
 }
 .row-centered {
     text-align:center;
@@ -131,17 +120,8 @@ button.marg-left {
     margin-right:-4px;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
-  background-color: rgb(1, 70, 76);
-}
-
 input {
   width: 100%
-}
-
-#back{
-  height: 4rem;
-  width: 10rem;
 }
 
 li{
@@ -174,7 +154,7 @@ li{
 }
 
 .text{
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .start{
@@ -193,6 +173,8 @@ li{
 .home-b{
   height:6rem;
   margin-left: 10rem;
+  text-decoration: none;
+  color: white;
 }
 
 img{
@@ -214,6 +196,57 @@ img{
   padding-bottom: 2rem;
 }
 
-.signup{
-  color: rgb(1, 70, 76);
+.social-buttons{
+  font-size: 3rem;
+  display: inline;
+  padding: 1rem;
+  list-style: none
+}
+
+#twitter{
+  color:#1da1f2;
+}
+
+#linkedin{
+  color:#4875B4;
+}
+
+#github{
+  color:black;
+}
+
+input#user_name{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_email{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_password{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
+}
+
+input#user_password_confirmation{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: rgb(174, 188, 225);
+  border-bottom: solid;
+  background-color: #002023;
 }
