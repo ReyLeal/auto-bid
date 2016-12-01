@@ -457,19 +457,20 @@ button.top-cta-button.btn-user{
     background-repeat: none;
     opacity: 0;
     z-index: 0;
-    animation: imageAnimation 18s linear infinite 0s;
+    overflow: hidden;
+    animation: imageAnimation 6s linear infinite 0s ;
+    animation-delay: 2s;
 }
 
 span.sp1 {
-    background-image: url(BMW.jpeg)
+    background-image: url(BMW.jpeg);
 }
 span.sp2 {
     background-image: url(car2.jpg);
-    animation-delay: 6s;
+
 }
 span.sp3 {
     background-image: url(car1.jpg);
-    animation-delay: 12s;
 }
 
 @keyframes imageAnimation {
