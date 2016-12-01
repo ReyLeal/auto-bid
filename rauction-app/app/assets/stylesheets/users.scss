@@ -55,14 +55,14 @@ a:hover {
 }
 
 .top-image {
-  background-image: url(BMW.jpeg);
-  height: 100vh;
+  background-image: url(Viper.jpg);
+  height: 50vh;
   max-width: 100%;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-position: bottom;
+  // background-position: bottom;
   color: rgb(1, 70, 76);
 }
 
