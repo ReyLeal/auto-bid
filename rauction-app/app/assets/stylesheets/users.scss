@@ -56,13 +56,13 @@ a:hover {
 
 .top-image {
   background-image: url(Viper.jpg);
-  height: 50vh;
+  height: 60vh;
   max-width: 100%;
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
   background-repeat: no-repeat;
-  // background-position: bottom;
+  background-position: center;
   color: rgb(1, 70, 76);
 }
 
