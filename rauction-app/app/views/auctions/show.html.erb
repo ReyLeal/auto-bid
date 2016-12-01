@@ -5,17 +5,59 @@
 
 
   <div class="show-auction-info text-center">
-    <%= @auction.title%> <br/>
+
     <% if @auction.user_id = current_user %>
     <%= link_to 'Delete Auction', user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
     <%= link_to 'Back', user_auctions_url(current_user), id:"back" %>
     <% end %>
+
+
+      <div class="auction-show container">
+        <h1><%= @auction.title.capitalize%></h1>
+        <h5><%= @auction.year%> |
+        <%= @auction.make%> |
+        <%= @auction.model%> |
+        <%= @auction.max_price%> |
+        <%= @auction.color%> |
+        <%= @auction.features%></h5>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Company Name</th>
+              <th>Company Dealer Name</th>
+              <th>Current Bid</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>Anna</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>Debbie</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>Anna</td>
+              <td>John</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
-  <%= render partial: "bot-about-us-pictures" %>
-
-  <%= render partial: "footer" %>
+<%= render partial: "footer" %>
 <% end %>
-
-
 </div>
