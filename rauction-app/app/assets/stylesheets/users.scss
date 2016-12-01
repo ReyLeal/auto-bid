@@ -379,16 +379,19 @@ button.btn.hvr-shutter-out-horizontal a {
   border-radius: 10px;
   background-color: #01464c;
   height: 7rem;
-  width: 10rem;
+  width: 15rem;
   font-size: 2rem;
   color: white;
   vertical-align: middle;
   opacity:1;
   margin: 0 auto;
+  display: inline;
+  align-items: center;
 }
 
 .font-a-top {
-  font-size: 70px;
+  font-size: 10rem;
+  padding-top: 3rem;
   color: #01464c;
   opacity: 1;
   margin: 0 auto;
@@ -430,8 +433,8 @@ button.top-cta-button.btn-user{
   border-radius: 10px;
   background-color: #01464c;
   height: 7rem;
-  width: 10rem;
-  font-size: 15px;
+  width: 20rem;
+  font-size: 2rem;
   color: white;
   vertical-align: middle;
   outline: none;
@@ -516,4 +519,9 @@ span.sp3 {
 
 #welcome-msg{
   font-size: 100px;
+}
+
+.footer-div {
+  position: relative;
+  top: 100vh;
 }
