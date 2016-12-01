@@ -1,7 +1,7 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "header" %>
 
-  <div class="panel-center ">
+  <div class="panel-center">
     <% @auctions.each_with_index do |f, idx| %>
     <% if @distances[idx] <= f.miles_from %>
     <div class="panel panel-warning">
@@ -17,7 +17,7 @@
           <%= f.model %>
         </div>
         <div class="col-md-4 new-class-div">
-          <%= link_to 'Show', user_auction_path(current_dealer, f.id), class:"new-class"  %>
+          <%= link_to 'Show', user_auction_path(f.user_id, f.id), class:"new-class"  %>
         </div>
       </div>
     </div>

@@ -211,8 +211,11 @@ a.clickable:hover { text-decoration:none; }
 }
 .panel-heading.clickable.panel-collapsed {
   border-radius: 12px;
-}.panel-heading.clickable {
-  border-radius: 12px;
+
+}
+.panel-heading.clickable {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .panel-info {
   font-size: 1.75rem;
@@ -247,4 +250,12 @@ a.new-class {
 
 .nav-pills.auc-p li a:hover {
   background-color: transparent;
+}
+span.pull-right {
+  position: relative;
+  top: -10px;
+}
+h3.panel-title {
+  position: relative;
+  top: 9px;
 }

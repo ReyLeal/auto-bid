@@ -2,6 +2,7 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "header" %>
 
+<% if @auctions != nil %>
   <div class="panel-center ">
   <% @auctions.each do |f| %>
       <div class="panel panel-warning">
@@ -22,6 +23,12 @@
           </div>
         </div>
       <% end %>
+      <% else %>
+      <div class="">
+        You havent posted any auctions yet!!
+      </div>
+      <% end %>
+
     </div>
 
 
