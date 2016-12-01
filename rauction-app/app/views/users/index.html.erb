@@ -1,37 +1,40 @@
 <div id="home-container">
   <%= render partial: "header" %>
 
+
   <% if current_user %>
   <div class="top-current text-center">
-    <h2 id="welcome"> Hello <%= current_user.name %> </h2>
-    <h3 id= "welcome">What would you like to do?</h3>
-    <div class="list-current text-center" >
-      <div class="sign-up-top col-md-4 text-center">
+    <span class="cb-slideshow sp1">Image 01</span>
+    <span class="cb-slideshow sp2">Image 02</span>
+    <span class="cb-slideshow sp3">Image 03</span>
+
+    <div class="list-current text-center cleafix" >
+      <div class="sign-up-top text-center">
         <div class="font-a-top">
           <i class="fa fa-user" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <button type="button" class="top-cta-button" data-toggle="modal" data-target="#myModaledit">
+          <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModaledit">
             Edit
           </button>
         </div>
       </div>
 
-      <div class="create-auction col-md-4 text-center">
+      <div class="create-auction text-center">
         <div class="font-a-top">
           <i class="fa fa-check-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <%=link_to "<button class='top-cta-button' type='button'>Create Auction</button>".html_safe, new_user_auction_url(current_user)%>
+          <%=link_to "<button class='top-cta-button btn-user' type='button'>Create Auction</button>".html_safe, new_user_auction_url(current_user)%>
         </div>
       </div>
 
-      <div class="wait col-md-4 text-center">
+      <div class="wait text-center">
         <div class="font-a-top">
           <i class="fa fa-magic" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <%=link_to "<button class='top-cta-button marg-left' type='button'>View Auctions</button>".html_safe, user_auctions_url(current_user)%>
+          <%=link_to "<button class='top-cta-button btn-user' type='button'>View Auctions</button>".html_safe, user_auctions_url(current_user)%>
         </div>
       </div>
     </div>
@@ -90,7 +93,7 @@
     <%= render partial: "bot-about-us-pictures" %>
 
     <% end %>
-  <%= render partial: "footer" %>
+
 
 </div>
 
