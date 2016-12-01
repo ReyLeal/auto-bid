@@ -10,17 +10,17 @@
 
   <div class="auction-all clearfix">
     <%= form_for @auction do |f| %>
-    <%= f.text_field :title, placeholder: "Title" %><br/>
+    <%= f.text_field :title, placeholder: "Title", class:"auction-form" %><br/>
     <%= f.select :year, year_array %><br/>
     <%= f.select :make, ['Make'] %><br/>
     <%= f.select :model, ['Model'] %><br/>
     <%= f.select :miles_from, ['Select Dealership Range (in miles)',5,10,25,50], placeholder: "Dealership Distance" %><br/>
-    <%= f.text_field :color , placeholder: "Color"%><br/>
-    <%= f.text_area :features , placeholder: "Features"%><br/>
-    <%= f.text_field :max_price, placeholder: "Maximum Price" %><br/>
-    <%= f.text_field :address , placeholder: "Address"%><br/>
-    <%= f.date_field :expiration_date, placeholder: "Expiration Date" %><br/>
-    <%= f.submit "Submit" %> <a href="/"><button type="button" id="back-new"name="button">Back</button></a>
+    <%= f.text_field :color , placeholder: "Color", class:"auction-form"%><br/>
+    <%= f.text_area :features , placeholder: "Features", class:"auction-form"%><br/>
+    <%= f.text_field :max_price, placeholder: "Maximum Price", class:"auction-form" %><br/>
+    <%= f.text_field :address , placeholder: "Address", class:"auction-form"%><br/>
+    <%= f.date_field :expiration_date, placeholder: "Expiration Date", class:"auction-form" %><br/>
+    <%= f.submit "Submit", class:"auc-form-btn btn2" %> <a href="/"><button type="button" class="auc-form-btn btn2"name="button">Back</button></a>
     <% end %>
 
 

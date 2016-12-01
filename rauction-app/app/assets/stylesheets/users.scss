@@ -89,6 +89,7 @@ button.top-cta-button {
   font-size: 2rem;
   color: white;
   vertical-align: middle;
+  outline: none;
 }
 button.top-cta-button.marg-left {
   text-align: center;
@@ -100,6 +101,7 @@ button.top-cta-button.marg-left {
   font-size: 2rem;
   color: white;
   vertical-align: middle;
+  outline: none;
 }
 .car-photo-display-top {
   height: 30vh;
@@ -262,6 +264,7 @@ input#user_password{
   background-color: white;
 }
 
+
 input#user_password_confirmation{
   height: 5rem;
   font-size: 2rem;
@@ -293,7 +296,7 @@ button.close{
   padding-top: 1rem;
 }
 
-::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
    color: #01464c;
    padding-left: 6px;
 }
@@ -344,8 +347,80 @@ button.btn.hvr-shutter-out-horizontal a {
 
 .h3, h3{
   font-size: 33px;
+  padding-bottom: 2rem;
+
 }
 
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active{
   outline: none;
+}
+
+.top-current{
+  background-image: url(BMW.jpeg);
+  height: 100vh;
+  max-width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  padding-top: 8rem;
+}
+
+.list-current{
+  padding-top: 3rem;
+  height:35rem;
+  width: 70%;
+  min-height: 35rem;
+  background-color: rgba(255,255,255,0.5);
+  margin: 0 auto;
+}
+
+.text-top{
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #01464c;
+  height: 7rem;
+  width: 20rem;
+  font-size: 2rem;
+  color: white;
+  vertical-align: middle;
+  opacity:1;
+  margin: 0 auto;
+}
+
+.font-a-top {
+  font-size: 130px;
+  color: #01464c;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+#welcome{
+  font-size: 45px;
+  color: white;
+  text-shadow: 4px 3px 2px #000000;
+  font-weight: bold;
+}
+
+h4.modal-title{
+  color:#01464c;
+}
+
+.user-form-btn{
+  background-color:#01464c;
+  color:white;
+}
+
+.btn2{
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: 2rem;
+  border: none;
+  width: 30%;
+  border-radius: 10px;
+
 }

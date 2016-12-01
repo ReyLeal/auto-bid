@@ -10,7 +10,7 @@
 input#auction_title {
   height: 5rem;
   font-size: 2rem;
-  color: rgb(174, 188, 225);
+  color: #aebce1;
   border: none;
   border-bottom: solid rgb(174, 188, 225);
   background-color: #002023;
@@ -74,7 +74,7 @@ textarea#auction_features {
   font-size: 2rem;
   width: 100%;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #aebce1;
   border-bottom: solid;
   background-color: #002023;
   resize: none;
@@ -108,24 +108,15 @@ input#auction_max_price {
   color: rgb(174, 188, 225);
   background-color: #002023;
 }
-input[type="submit"] {
+.auc-form-btn {
   height: 4rem;
   font-size: 2rem;
   margin-top: 2rem;
   border: none;
   width: 30%;
   border-radius: 10px;
-  background-color: #002023;
-  color: white;
-}
-::-webkit-input-placeholder {
-  color: rgb(174, 188, 225);
-  padding-left: 6px;
-}
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-  -webkit-text-fill-color: rgb(174, 188, 225);
-  -webkit-box-shadow: rgb(174, 188, 225);
-  transition: background-color 5000s ease-in-out 0s;
+  background-color: rgb(174, 188, 225);
+  color: #002023;
 }
 #back-new {
   height: 4rem;
@@ -137,6 +128,20 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   border-radius: 10px;
   background-color: rgb(174, 188, 225);
   color: #002023;
+}
+
+input.auction-form::-webkit-input-placeholder {
+  color: #aebce1;
+  padding-left: 6px;
+}
+textarea::-webkit-input-placeholder {
+  color: #aebce1;
+  padding-left: 6px;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(174, 188, 225);
+  -webkit-box-shadow: rgb(174, 188, 225);
+  transition: background-color 5000s ease-in-out 0s;
 }
 #back-new:focus{
   outline: none;
