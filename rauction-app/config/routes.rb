@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   resources :users
 
 
-resources :users do
-  resources :auctions
-end
+  resources :users do
+    resources :auctions
+  end
+  get '/dealers/:id/auctions' => 'dealers#index'
 
 
   post '/auctions' => 'auctions#create'
@@ -27,13 +28,13 @@ end
   get '/logout' => 'sessions#destroy_user'
   get '/logout_dealer' => 'sessions#destroy_dealer'
 
-post '/auctions' => 'auctions#create'
+  post '/auctions' => 'auctions#create'
 
 
-get '/auctions' => 'auctions#index'
-get '/auctions/new' => 'auctions#new'
+  get '/auctions' => 'auctions#index'
+  get '/auctions/new' => 'auctions#new'
 
-resources :dealers
+  resources :dealers
 
-get '/register' => 'dealers#new'
+  get '/register' => 'dealers#new'
 end

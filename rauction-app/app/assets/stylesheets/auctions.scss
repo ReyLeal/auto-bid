@@ -15,7 +15,9 @@ input#auction_title {
   border-bottom: solid rgb(174, 188, 225);
   background-color: #002023;
 }
-
+.container-fluid {
+  padding: 0;
+}
 select#auction_year {
   border: none;
   height: 5rem;

@@ -12,6 +12,7 @@ class CreateAuctions < ActiveRecord::Migration[5.0]
       t.text :features
       t.datetime :expiration_date
       t.references :user, foreign_key: true
+      t.references :dealer, foreign_key: true
 
       t.timestamps
     end

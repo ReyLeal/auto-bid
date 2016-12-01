@@ -1,4 +1,4 @@
-
+<div class="top-image">
   <nav class="navbar-fixed-top">
 
     <% if current_user %>
@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-1">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active "><button type="button" class="btn hvr-shutter-out-horizontal" name="button"><a href="/logout">Logout</a></button></li>
+        <li role="presentation" class="active "><a href="/logout"><button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button></a></li>
       </ul>
     </div>
     <% elsif current_dealer %>
@@ -20,7 +20,7 @@
     </div>
     <div class="col-md-1">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active "><button type="button" class="btn hvr-shutter-out-horizontal" name="button"><a href="/logout_dealer">Logout</a></button></li>
+        <li role="presentation" class="active "><a href="/logout_dealer"><button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button></a></li>
       </ul>
     </div>
     <% else %>
@@ -45,7 +45,7 @@
     </div>
     <% end %>
   </nav>
-
+</div>
 
 <div class="modal fade" id="myModalregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -62,7 +62,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane fade in active" id="A"><%=render partial: "form"%></div>
+          <div class="tab-pane fade in active" id="A"><%=render partial: "users/form"%></div>
           <div class="tab-pane fade" id="B"><%= render partial: "dealers/form" %></div>
           <div style="clear:both !important;"></div>
         </div>
@@ -86,5 +86,6 @@
       </div>
 
     </div>
+
   </div>
 </div>

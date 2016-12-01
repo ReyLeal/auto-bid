@@ -9,6 +9,15 @@ class AuctionsController < ApplicationController
     @auction = Auction.new
   end
 
+  def dealer_index
+    @auctions = Auction.all
+
+  end
+
+  def dealer_show
+
+  end
+
   def create
     @auction = Auction.new(auction_params)
     @auction.user = current_user
@@ -34,4 +43,5 @@ class AuctionsController < ApplicationController
   def auction_params
     params.require(:auction).permit(:max_price, :title, :year, :make, :model, :miles_from, :address, :color, :features, :expiration_date, :user_id)
   end
+
 end

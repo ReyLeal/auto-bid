@@ -3,6 +3,7 @@ class Dealer < ApplicationRecord
   validates :email, presence: true
   validates :password, presence: true
 
+  has_many :auctions
   has_many :bids, through: :auctions
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?

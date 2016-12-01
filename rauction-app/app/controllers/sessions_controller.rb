@@ -9,10 +9,10 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     elsif dealer && dealer.authenticate(params[:password])
-      session[:user_id] = dealer.id
+      session[:dealer_id] = dealer.id
       redirect_to '/'
     else
-      redirect_to '/login'
+      redirect_to '/'
     end
   end
 

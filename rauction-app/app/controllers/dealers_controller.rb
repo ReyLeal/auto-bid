@@ -1,10 +1,16 @@
 class DealersController < ApplicationController
-  def index
 
+  def index
+    @auctions = Auction.all
+    @dealer = Dealer.find(params[:id])
+    @distances = @auctions.map do |auct|
+      MapsRequest.new(auct.latitude, auct.longitude, @dealer.latitude, @dealer.longitude).distance.delete(",").split(" ").first.to_f
+    end
   end
 
   def new
     @dealer = Dealer.new
+
   end
 
   def create

@@ -47,6 +47,26 @@ $(document).on('turbolinks:load', function() {
 
 });
 
+// $(document).ready(function(){
+//   if($('#googleapi-call').length > 0) {
+//   console.log('api');
+//     console.log('api');
+//
+//     function makeAjaxRequest(orgLatitude, orgLongitude, destLatitude, destLongitude) {
+//       $.get('https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=25.6852342,-80.4175613&destinations=25.7583541,-80.3440679&key=AIzaSyAbs34ta5k34QdfBQUf-6nR0x5I5GMnWqY') {
+//         parseMake(data);
+//       });
+//     }
+//
+//     function parseMake(carMakes) {
+//       var optionsHtml = "";
+//       var displayName;
+//       // $('select#auction_make').empty().append(optionsHtml);
+//     }
+//   }
+// });
+
+
 $(document).on('click', '.panel-heading span.clickable', function (e) {
   var $this = $(this);
   if (!$this.hasClass('panel-collapsed')) {

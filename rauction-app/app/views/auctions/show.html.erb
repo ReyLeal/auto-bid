@@ -1,5 +1,6 @@
 
 <div class="container-fluid" id="home-container">
+  <% if current_user %>
   <%= render partial: "header" %>
 
 
@@ -14,5 +15,6 @@
   <%= render partial: "bot-about-us-pictures" %>
 
   <%= render partial: "footer" %>
+<% end %>
 
 </div>

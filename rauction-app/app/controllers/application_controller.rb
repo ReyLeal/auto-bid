@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_dealer
 
   def authorize
-    redirect_to '/login' unless current_user || current_dealer
+    redirect_to '/' unless current_user || current_dealer
   end
 
 end
