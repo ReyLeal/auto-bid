@@ -473,9 +473,9 @@ span.sp3 {
 }
 
 @keyframes imageAnimation {
-    0% { opacity: 0; animation-timing-function: ease-in; }
-    8% { opacity: 1 }
-    17% { opacity: 1 }
-    25% { opacity: 1 }
-    100% { opacity: 0; animation-timing-function: ease-out;  }
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  16% { opacity: 1; animation-timing-function: ease-out; }
+  33% { opacity: 1 }
+  50% { opacity: 0 }
+  100% { opacity: 0 }
 }
