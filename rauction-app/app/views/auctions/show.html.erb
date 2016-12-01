@@ -6,6 +6,13 @@
 
   <div class="show-auction-info text-center">
     <%= @auction.title%> <br/>
+    <%= @auction.year%> <br/>
+    <%= @auction.make%> <br/>
+    <%= @auction.model%> <br/>
+    <%= @auction.max_price%> <br/>
+    <%= @auction.color%> <br/>
+    <%= @auction.features%> <br/>
+
     <% if @auction.user_id = current_user %>
     <%= link_to 'Delete Auction', user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
     <%= link_to 'Back', user_auctions_url(current_user), id:"back" %>
