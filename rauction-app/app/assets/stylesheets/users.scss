@@ -458,8 +458,7 @@ button.top-cta-button.btn-user{
     opacity: 0;
     z-index: 0;
     overflow: hidden;
-    animation: imageAnimation 6s linear infinite 0s ;
-    animation-delay: 2s;
+    animation: imageAnimation 18s linear infinite 0s ;
 }
 
 span.sp1 {
@@ -467,10 +466,11 @@ span.sp1 {
 }
 span.sp2 {
     background-image: url(car2.jpg);
-
+    animation-delay: 6s;
 }
 span.sp3 {
     background-image: url(car1.jpg);
+    animation-delay: 12s;
 }
 
 @keyframes imageAnimation {
