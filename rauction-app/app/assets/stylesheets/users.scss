@@ -338,6 +338,7 @@ button.top-cta-button.home-b{
 
 button.btn.hvr-shutter-out-horizontal a {
   color: inherit;
+  height: 6rem;
 }
 
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
@@ -362,6 +363,9 @@ button.btn.hvr-shutter-out-horizontal a {
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active{
   outline: none;
 }
+.hvr-shutter-out-horizontal {
+  height: 6rem;
+}
 
 
 .list-current{
@@ -379,16 +383,19 @@ button.btn.hvr-shutter-out-horizontal a {
   border-radius: 10px;
   background-color: #01464c;
   height: 7rem;
-  width: 10rem;
+  width: 15rem;
   font-size: 2rem;
   color: white;
   vertical-align: middle;
   opacity:1;
   margin: 0 auto;
+  display: inline;
+  align-items: center;
 }
 
 .font-a-top {
-  font-size: 70px;
+  font-size: 10rem;
+  padding-top: 3rem;
   color: #01464c;
   opacity: 1;
   margin: 0 auto;
@@ -421,7 +428,6 @@ h4.modal-title{
   border-radius: 10px;
 
 }
-
 .btn-user{
   width: 10rem;
 }
@@ -432,8 +438,8 @@ button.top-cta-button.btn-user{
   border-radius: 10px;
   background-color: #01464c;
   height: 7rem;
-  width: 10rem;
-  font-size: 15px;
+  width: 20rem;
+  font-size: 2rem;
   color: white;
   vertical-align: middle;
   outline: none;
@@ -518,4 +524,9 @@ span.sp3 {
 
 #welcome-msg{
   font-size: 100px;
+}
+
+.footer-home {
+  position: relative;
+  top: 100vh;
 }
