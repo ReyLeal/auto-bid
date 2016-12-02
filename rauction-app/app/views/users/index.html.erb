@@ -10,7 +10,7 @@
 
     <div class="list-current text-center cleafix" >
       <div class="sign-up-top text-center">
-        <div class="font-a-top">
+        <div class="font-a-user">
           <i class="fa fa-user" aria-hidden="true"></i>
         </div>
         <div class="text-top">
@@ -21,7 +21,7 @@
       </div>
 
       <div class="create-auction text-center">
-        <div class="font-a-top">
+        <div class="font-a-user">
           <i class="fa fa-check-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
@@ -32,7 +32,7 @@
       </div>
 
       <div class="wait text-center">
-        <div class="font-a-top">
+        <div class="font-a-user">
           <i class="fa fa-magic" aria-hidden="true"></i>
         </div>
         <div class="text-top">
@@ -47,7 +47,40 @@
     </div>
   </div>
 
+  <% elsif current_dealer%>
+  <div class="top-current text-center">
+    <span class="cb-slideshow-login sp1">Image 01</span>
+    <span class="cb-slideshow-login sp2">Image 02</span>
+    <span class="cb-slideshow-login sp3">Image 03</span>
 
+    <div class="list-current text-center cleafix" >
+      <div class="sign-up-top text-center">
+        <div class="font-a-dealer">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="text-top">
+          <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModaleditdealer">
+            Edit
+          </button></a>
+        </div>
+      </div>
+
+      <div class="wait text-center">
+        <div class="font-a-dealer">
+          <i class="fa fa-magic" aria-hidden="true"></i>
+        </div>
+        <div class="text-top">
+          <%=link_to "<button class='top-cta-button btn-user' type='button'>View Auctions</button>".html_safe, "/dealers/#{current_dealer.id}/auctions"%>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="welcome">
+      <p id="welcome-msg"> Welcome </p>
+      <span class="username"><%=current_dealer.dealer_name.capitalize%>!</span>
+    </div>
+  </div>
   <% else %>
 
   <div class="top-current text-center ">
@@ -125,6 +158,22 @@
       </div>
       <div class="modal-body">
         <%= render "users/form" %>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="myModaleditdealer" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Profile</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "dealers/form" %>
       </div>
 
     </div>
