@@ -10,10 +10,10 @@
 input#auction_title {
   height: 5rem;
   font-size: 2rem;
-  color: #aebce1;
   border: none;
-  border-bottom: solid rgb(174, 188, 225);
-  background-color: #002023;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
 }
 .container-fluid {
   padding: 0;
@@ -23,9 +23,10 @@ select#auction_year {
   height: 5rem;
   font-size: 2rem;
   color: rgb(174, 188, 225);
+  color: #01464c;
   border-bottom: solid;
+  background-color: white;
   border-radius: 0px;
-  background-color: #002023;
   width: 100%;
 }
 select#auction_make {
@@ -33,8 +34,9 @@ select#auction_make {
   font-size: 2rem;
   border: none;
   color: rgb(174, 188, 225);
+  color: #01464c;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
   width: 100%;
 }
 select#auction_model {
@@ -43,7 +45,9 @@ select#auction_model {
   border: none;
   color: rgb(174, 188, 225);
   border-bottom: solid;
-  background-color: #002023;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
   width: 100%;
 }
 select#auction_miles_from {
@@ -51,8 +55,9 @@ select#auction_miles_from {
   font-size: 2rem;
   border: none;
   color: rgb(174, 188, 225);
+  color: #01464c;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
   width: 100%;
 }
 input#auction_color {
@@ -60,25 +65,26 @@ input#auction_color {
   font-size: 2rem;
   border: none;
   color: rgb(174, 188, 225);
-  border-bottom: solid rgb(174, 188, 225);
-  background-color: #002023;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
 }
 input#auction_address {
   height: 5rem;
   font-size: 2rem;
   border: none;
-  border-bottom: solid rgb(174, 188, 225);
-  color: rgb(174, 188, 225);
-  background-color: #002023;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
 }
 textarea#auction_features {
   height: 5rem;
   font-size: 2rem;
   width: 100%;
   border: none;
-  color: #aebce1;
+  color: #01464c;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
   resize: none;
   padding-top: 1rem;
 }
@@ -98,17 +104,17 @@ input#auction_expiration_date {
   height: 5rem;
   font-size: 2rem;
   border: none;
-  color: rgb(174, 188, 225);
+  color: #01464c;
   border-bottom: solid;
-  background-color: #002023;
+  background-color: white;
 }
 input#auction_max_price {
   height: 5rem;
   font-size: 2rem;
   border: none;
-  border-bottom: solid rgb(174, 188, 225);
-  color: rgb(174, 188, 225);
-  background-color: #002023;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
 }
 .auc-form-btn {
   height: 4rem;
@@ -117,8 +123,8 @@ input#auction_max_price {
   border: none;
   width: 30%;
   border-radius: 10px;
-  background-color: rgb(174, 188, 225);
-  color: #002023;
+  background-color:#01464c;
+  color:white;
 }
 #back-new {
   height: 4rem;
@@ -128,16 +134,16 @@ input#auction_max_price {
   border: none;
   width: 30%;
   border-radius: 10px;
-  background-color: rgb(174, 188, 225);
-  color: #002023;
+  background-color:#01464c;
+  color:white;
 }
 
 input.auction-form::-webkit-input-placeholder {
-  color: #aebce1;
+  color: #01464c;
   padding-left: 6px;
 }
 textarea::-webkit-input-placeholder {
-  color: #aebce1;
+  color: #01464c;
   padding-left: 6px;
 }
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {

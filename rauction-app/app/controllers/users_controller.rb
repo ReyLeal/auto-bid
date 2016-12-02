@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @user = User.find_by(@current_user)
+    @auction = Auction.new
   end
 
   def new

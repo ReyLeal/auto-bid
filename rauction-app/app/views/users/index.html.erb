@@ -16,7 +16,7 @@
         <div class="text-top">
           <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModaledit">
             Edit
-          </button>
+          </button></a>
         </div>
       </div>
 
@@ -25,7 +25,9 @@
           <i class="fa fa-check-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <%=link_to "<button class='top-cta-button btn-user' type='button'>Create Auction</button>".html_safe, new_user_auction_url(current_user)%>
+          <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModalauction">
+            Create Auction
+          </button>
         </div>
       </div>
 
@@ -120,6 +122,23 @@
       </div>
       <div class="modal-body">
         <%= render "users/form" %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="myModalauction" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create Auction</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "auctions/form" %>
       </div>
 
     </div>
