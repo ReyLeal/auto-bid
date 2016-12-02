@@ -50,8 +50,8 @@
         </table>
 
         <% if @auction.user_id = current_user %>
-        <%= link_to "<button class='top-cta-button btn-user' type='button'>Delete Auction</button>".html_safe,user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
-        <%= link_to "<button class='top-cta-button btn-user' type='button'>Back</button>".html_safe, user_auctions_url(current_user), id:"back" %>
+        <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Delete Auction</button>".html_safe,user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
+        <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, user_auctions_url(current_user), id:"back" %>
         <% end %>
       </div>
 

@@ -290,7 +290,6 @@ input#user_password_confirmation{
 }
 
 .modal-header{
-
   font-size: 30px;
 }
 
@@ -552,6 +551,29 @@ span.sp3 {
   text-align: justify;
   padding: 0rem 2rem;
 }
-.slideshow-div {
-  background-color: black!important;
+
+button.top-cta-button.btn-user-auc{
+
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #002023;
+  height:9vh;
+  width: 50vh;
+  font-size: 2rem;
+  color: white;
+  vertical-align: middle;
+  outline: none;
+}
+
+.logo-white{
+  height: 17rem;
+  width: 17rem;
+  width: 17rem;
+  max-height: 25rem;
+  border-radius: 50%;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+  margin-left: -2rem;
+>>>>>>> 2bb465ad898fa9f162c045e2503ddc81f582f816
 }

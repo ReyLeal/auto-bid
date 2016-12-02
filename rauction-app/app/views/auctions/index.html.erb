@@ -3,7 +3,7 @@
   <%= render partial: "layouts/deal_auc_header" %>
 
 
-<% if @auctions != nil %>
+<% if @auctions.length > 0 %>
   <div class="panel-center col-md-12">
 
   <% @auctions.each do |f| %>
@@ -38,7 +38,11 @@
             </div>
           </div>
         </div>
-      <% end %>
+        <% end %>
+
+      </div>
+      
+
       <% else %>
       <div class="bot-box text-center">
         <h3>It looks like you haven't created an auction yet</h3>
@@ -47,9 +51,8 @@
         Create Auction
         </button></a>
       </div>
-      <% end %>
 
-    </div>
+      <% end %>
 
   </div>
 
