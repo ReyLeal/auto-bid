@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to '/'
     else
-      redirect_to '/signup'
+      redirect_to '/'
     end
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user
     else
-      render 'edit'
+      render '/'
     end
   end
 

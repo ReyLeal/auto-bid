@@ -22,9 +22,9 @@ class AuctionsController < ApplicationController
     @auction = Auction.new(auction_params)
     @auction.user = current_user
     if @auction.save
-      redirect_to '/'
+      redirect_to user_auctions_url(current_user)
     else
-      redirect_to new_user_auction_url(current_user)
+      redirect_to '/'
     end
   end
 

@@ -151,7 +151,7 @@ li{
   display: inline;
 }
 
-.font-a {
+.font-a-user {
   font-size: 130px;
   color: rgb(174, 188, 225);
 }
@@ -393,9 +393,17 @@ button.btn.hvr-shutter-out-horizontal a {
   align-items: center;
 }
 
-.font-a-top {
-  font-size: 10rem;
-  padding-top: 3rem;
+.font-a-user {
+  font-size: 10vh;
+  padding-top: 2rem;
+  color: #01464c;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+.font-a-dealer {
+  font-size: 10vh;
+  padding-top: 6rem;
   color: #01464c;
   opacity: 1;
   margin: 0 auto;
@@ -437,8 +445,8 @@ button.top-cta-button.btn-user{
   border: none;
   border-radius: 10px;
   background-color: #01464c;
-  height: 7rem;
-  width: 20rem;
+  height: 9vh;
+  width: 25vh;
   font-size: 2rem;
   color: white;
   vertical-align: middle;
