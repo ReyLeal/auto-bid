@@ -233,7 +233,7 @@ a.clickable:hover { text-decoration:none; }
   margin-top: 1.2rem;
 }
 a.new-class {
-  color: rgb(174, 188, 225);
+  color: white;
 }
 .col-md-3.new-class-div {
   font-size: 1.75rem;
@@ -264,6 +264,7 @@ span.pull-right {
 h3.panel-title {
   position: relative;
   top: 9px;
+  color: white;
 }
 td {
   text-align: left;
@@ -286,4 +287,12 @@ a.button-that-I-hate {
   background: transparent;
   padding: 0!important;
   color: #01464c!important;
+}
+
+i.glyphicon-minus:before{
+  color:white;
+}
+
+.glyphicon-plus:before{
+  color:white;
 }
