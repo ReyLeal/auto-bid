@@ -2,6 +2,7 @@ class AuctionsController < ApplicationController
   before_filter :authorize
   def index
     @auctions = Auction.where(user_id: params[:user_id])
+    @auction = Auction.new
   end
 
   def new
