@@ -17,7 +17,7 @@
     <%= f.select :miles_from, ['Select Dealership Range (in miles)',5,10,25,50], placeholder: "Dealership Distance" %><br/>
     <%= f.text_field :color , placeholder: "Color", class:"auction-form"%><br/>
     <%= f.text_area :features , placeholder: "Features", class:"auction-form"%><br/>
-    <%= f.text_field :max_price, placeholder: "Maximum Price", class:"auction-form" %><br/>
+    <%= f.number_field :max_price, placeholder: "Maximum Price", class:"auction-form" %><br/>
     <%= f.text_field :address , placeholder: "Address", class:"auction-form"%><br/>
     <%= f.date_field :expiration_date, placeholder: "Expiration Date", class:"auction-form" %><br/>
     <%= f.submit "Submit", class:"auc-form-btn btn2" %> <a href="/"><button type="button" class="auc-form-btn btn2"name="button">Back</button></a>

@@ -10,13 +10,19 @@
         <span class="pull-right "><i class="glyphicon glyphicon-minus"></i></span>
       </div>
       <div class="panel-body">
-        <div class="col-md-4 panel-info">
+        <div class="col-md-2 panel-info">
+          <%= f.year %>
+        </div>
+        <div class="col-md-2 panel-info">
           <%= f.make %>
         </div>
-        <div class="col-md-4 panel-info">
+        <div class="col-md-2 panel-info">
           <%= f.model %>
         </div>
-        <div class="col-md-4 new-class-div">
+        <div class="col-md-3 panel-info">
+          Maximum Price: $<%= f.max_price %>
+        </div>
+        <div class="col-md-3 new-class-div">
           <%= link_to 'Show', user_auction_path(f.user_id, f.id), class:"new-class"  %>
         </div>
       </div>

@@ -28,9 +28,7 @@
           <% if current_user %>
           <%= button_to "Logout", '/logout', method: :get, class:"btn hvr-shutter-out-horizontal" %>
           <% elsif current_dealer %>
-          <%= link_to logout_dealer_path do %>
-          <button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button>
-          <% end %>
+          <%= button_to "Logout", '/logout_dealer', method: :get, class:"btn hvr-shutter-out-horizontal" %>
         </li>
         <% end %>
         <% end %>

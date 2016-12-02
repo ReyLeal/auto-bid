@@ -1,6 +1,5 @@
 class AuctionsController < ApplicationController
   before_filter :authorize
-
   def index
     @auctions = Auction.where(user_id: params[:user_id])
   end
@@ -40,6 +39,7 @@ class AuctionsController < ApplicationController
   end
 
   private
+
   def auction_params
     params.require(:auction).permit(:max_price, :title, :year, :make, :model, :miles_from, :address, :color, :features, :expiration_date, :user_id)
   end

@@ -204,9 +204,7 @@ a#back {
 a.clickable { color: inherit; }
 a.clickable:hover { text-decoration:none; }
 
-.panel-center {
-  margin: 5rem 50rem;
-}
+
 .panel-heading.clickable {
   background-color: #002023;
 }
@@ -237,7 +235,7 @@ a.clickable:hover { text-decoration:none; }
 a.new-class {
   color: rgb(174, 188, 225);
 }
-.col-md-4.new-class-div {
+.col-md-3.new-class-div {
   font-size: 1.75rem;
   height: 5rem;
   width: 10rem;
