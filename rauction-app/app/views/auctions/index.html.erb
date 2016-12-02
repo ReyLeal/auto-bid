@@ -3,8 +3,8 @@
   <%= render partial: "header" %>
 
 <% if @auctions != nil %>
-  <div class="panel-center container ">
-  <% @auctions.first.each do |f| %>
+  <div class="panel-center ">
+  <% @auctions.each do |f| %>
       <div class="panel panel-warning">
         <div class="panel-heading clickable">
           <h3 class="panel-title"><%= f.title.capitalize %></h3>
@@ -42,8 +42,6 @@
     </div> -->
 
   </div>
-
-  <%= render partial: "bot-about-us-pictures" %>
 
   <%= render partial: "footer" %>
 
