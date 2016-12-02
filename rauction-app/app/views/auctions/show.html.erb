@@ -6,12 +6,6 @@
 
   <div class="show-auction-info text-center">
 
-    <% if @auction.user_id = current_user %>
-    <%= link_to 'Delete Auction', user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
-    <%= link_to 'Back', user_auctions_url(current_user), id:"back" %>
-    <% end %>
-
-
       <div class="auction-show container">
         <h1><%= @auction.title.capitalize%></h1>
         <h5><%= @auction.year%>
@@ -55,6 +49,12 @@
           </tbody>
         </table>
       </div>
+
+      <% if @auction.user_id = current_user %>
+      <%= link_to 'Delete Auction', user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
+      <%= link_to 'Back', user_auctions_url(current_user), id:"back" %>
+      <% end %>
+
     </div>
   </div>
 

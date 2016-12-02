@@ -23,7 +23,7 @@ li.logo a {
 li.logo  {
   margin-top: 1rem;
   margin-left: 2rem;
-  background-image: url(temp-logo);
+  background-image: url(logo-color-2.png);
   height: 4.5rem;
   width: 7rem;
   background-size: contain;
@@ -542,4 +542,9 @@ span.sp3 {
 .footer-home {
   position: relative;
   top: 100vh;
+}
+
+.vcenter-text{
+  text-align: justify;
+  padding: 0rem 2rem;
 }
