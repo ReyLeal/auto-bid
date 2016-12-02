@@ -3,6 +3,7 @@ class AuctionsController < ApplicationController
 
   def index
     @auctions = Auction.where(user_id: params[:user_id])
+    @auction = Auction.new
   end
 
   def new

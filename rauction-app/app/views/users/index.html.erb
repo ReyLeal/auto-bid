@@ -11,7 +11,7 @@
     <div class="list-current text-center cleafix" >
       <div class="sign-up-top text-center">
         <div class="font-a-user">
-          <i class="fa fa-user" aria-hidden="true"></i>
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
           <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModaledit">
@@ -22,7 +22,7 @@
 
       <div class="create-auction text-center">
         <div class="font-a-user">
-          <i class="fa fa-check-square-o" aria-hidden="true"></i>
+          <i class="fa fa-gavel" aria-hidden="true"></i>
         </div>
         <div class="text-top">
           <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModalauction">
@@ -33,7 +33,7 @@
 
       <div class="wait text-center">
         <div class="font-a-user">
-          <i class="fa fa-magic" aria-hidden="true"></i>
+          <i class="fa fa-binoculars" aria-hidden="true"></i>
         </div>
         <div class="text-top">
           <%=link_to "<button class='top-cta-button btn-user' type='button'>View Auctions</button>".html_safe, user_auctions_url(current_user)%>
@@ -56,7 +56,7 @@
     <div class="list-current text-center cleafix" >
       <div class="sign-up-top text-center">
         <div class="font-a-dealer">
-          <i class="fa fa-user" aria-hidden="true"></i>
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
           <button type="button" class="top-cta-button btn-user" data-toggle="modal" data-target="#myModaleditdealer">
@@ -67,7 +67,7 @@
 
       <div class="wait text-center">
         <div class="font-a-dealer">
-          <i class="fa fa-magic" aria-hidden="true"></i>
+          <i class="fa fa-binoculars" aria-hidden="true"></i>
         </div>
         <div class="text-top">
           <%=link_to "<button class='top-cta-button btn-user' type='button'>View Auctions</button>".html_safe, "/dealers/#{current_dealer.id}/auctions"%>

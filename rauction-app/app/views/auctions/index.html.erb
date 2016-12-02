@@ -2,7 +2,7 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "header" %>
 
-<% if @auctions != nil %>
+<% if @auctions.length > 0 %>
   <div class="panel-center ">
   <% @auctions.each do |f| %>
       <div class="panel panel-warning">
@@ -24,25 +24,34 @@
         </div>
       <% end %>
       <% else %>
-      <div class="">
-        You havent posted any auctions yet!!
+      <div class="bot-box text-center">
+        <h3>It looks like you haven't created an auction yet</h3>
+        <h4>Let's change that</h4>
+        <button type="button" class="top-cta-button empty-auc" data-toggle="modal" data-target="#myModalauction">
+        Create Auction
+        </button></a>
       </div>
       <% end %>
 
     </div>
 
-
-      <!-- <div class="auctions-index text-center">
-      <%# @auctions.each do |f| %>
-      <%# link_to user_auction_path(current_user, f.id), class:"col-md-3 new-class list-group-item" do %>
-
-      <%# end %>
-      <%# end %>
-      <a href="/"><button id="back" type="button">Back</button></a>
-    </div> -->
-
   </div>
 
   <%= render partial: "footer" %>
 
-</div>
+  <div id="myModalauction" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Auction</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "auctions/form" %>
+        </div>
+
+      </div>
+    </div>
+  </div>
