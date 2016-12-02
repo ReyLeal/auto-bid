@@ -16,7 +16,6 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Year</th>
                   <th>Make</th>
                   <th>Model</th>
@@ -26,12 +25,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
                   <td><%= f.year%></td>
                   <td><%= f.make%></td>
                   <td><%= f.model%></td>
-                  <td><%= f.max_price%></td>
-                  <td><%= f.expiration_date %></td>
+                  <td>$<%= f.max_price%></td>
+                  <td><%= time_tag (f.expiration_date).to_date %></td>
                 </tr>
               </tbody>
             </table>

@@ -26,13 +26,17 @@
       <ul class="nav nav-pills">
         <li role="presentation" class="active">
           <% if current_user %>
-          <%= button_to "Logout", '/logout', method: :get, class:"btn hvr-shutter-out-horizontal" %>
+          <%= link_to logout_path, class:"button-that-I-hate" do  %>
+          <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
+          <% end %>
           <% elsif current_dealer %>
-          <%= button_to "Logout", '/logout_dealer', method: :get, class:"btn hvr-shutter-out-horizontal" %>
+          <%= link_to '/logout_dealer', class:"button-that-I-hate" do  %>
+          <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
+          <% end %>
+          <% end %>
         </li>
-        <% end %>
-        <% end %>
       </ul>
+      <% end %>
     </div>
   </nav>
 </div>
