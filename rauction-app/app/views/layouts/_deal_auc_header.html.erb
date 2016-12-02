@@ -1,51 +1,44 @@
+
+<!-- <div class="top-current"> -->
 <div class="top-image">
+
   <nav class="navbar-fixed-top">
 
-    <% if current_user %>
-    <div class="col-md-11">
+    <div class="col-sm-10">
       <ul class="nav nav-pills">
         <li class="logo" role="presentation"><a href="/"></a></li>
       </ul>
     </div>
-    <div class="col-md-1">
+    <% unless current_user || current_dealer %>
+    <!-- Button trigger modal -->
+    <div class="col-sm-2">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active "><a href="/logout"><button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button></a></li>
-      </ul>
-    </div>
-    <% elsif current_dealer %>
-    <div class="col-md-11">
-      <ul class="nav nav-pills">
-        <li class="logo" role="presentation"><a href="/"></a></li>
-      </ul>
-    </div>
-    <div class="col-md-1">
-      <ul class="nav nav-pills">
-        <li role="presentation" class="active "><a href="/logout_dealer"><button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button></a></li>
+        <li class="login-register">
+          <button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModallogin"> Login </button>
+        </li>
+        <li class="login-register">
+          <button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModalregister"> Register </button>
+        </li>
       </ul>
     </div>
     <% else %>
-    <div class="col-md-10">
+    <div class="col-md-1">
       <ul class="nav nav-pills">
-        <li class="logo" role="presentation"><a href="/"></a></li>
+        <li role="presentation" class="active">
+          <% if current_user %>
+          <%= button_to "Logout", '/logout', method: :get, class:"btn hvr-shutter-out-horizontal" %>
+          <% elsif current_dealer %>
+          <%= link_to logout_dealer_path do %>
+          <button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button>
+          <% end %>
+        </li>
+        <% end %>
+        <% end %>
       </ul>
     </div>
-    <div class="col-md-2">
-      <ul class="nav nav-pills">
-
-        <!-- Button trigger modal -->
-        <li><button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModallogin">
-          Login
-        </button></li>
-
-        <li><button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModalregister">
-          Register
-        </button></li>
-
-      </ul>
-    </div>
-    <% end %>
   </nav>
 </div>
+
 
 <div class="modal fade" id="myModalregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -62,7 +55,7 @@
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane fade in active" id="A"><%=render partial: "users/form"%></div>
+          <div class="tab-pane fade in active" id="A"><%= render partial: "users/form"%></div>
           <div class="tab-pane fade" id="B"><%= render partial: "dealers/form" %></div>
           <div style="clear:both !important;"></div>
         </div>
@@ -89,3 +82,4 @@
 
   </div>
 </div>
+<!-- </div> -->
