@@ -3,14 +3,14 @@
 
 <nav class="navbar-fixed-top">
 
-  <div class="col-md-10">
+  <div class="col-sm-10">
     <ul class="nav nav-pills">
       <li class="logo" role="presentation"><a href="/"></a></li>
     </ul>
   </div>
   <% unless current_user || current_dealer %>
   <!-- Button trigger modal -->
-  <div class="col-md-2">
+  <div class="col-sm-2">
     <ul class="nav nav-pills">
       <li class="login-register">
         <button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModallogin"> Login </button>
@@ -25,9 +25,7 @@
         <ul class="nav nav-pills">
           <li role="presentation" class="active">
             <% if current_user %>
-              <%= link_to logout_path do %>
-                <button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button>
-              <% end %>
+            <%= button_to "Logout", '/logout', method: :get, class:"btn hvr-shutter-out-horizontal" %>
             <% elsif current_dealer %>
               <%= link_to logout_dealer_path do %>
                 <button type="button" class="btn hvr-shutter-out-horizontal" name="button">Logout</button>
