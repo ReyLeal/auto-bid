@@ -5,6 +5,9 @@ body {
 }
 #home-container {
   padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,1);
 }
 .container {
   height: 100%;
@@ -371,7 +374,7 @@ button.btn.hvr-shutter-out-horizontal  {
 .list-current{
   height:100vh;
   width: 20%;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(0,0,0,0.25);
   margin: 0 auto;
   position: absolute;
   padding-top: 8rem;
@@ -396,7 +399,7 @@ button.btn.hvr-shutter-out-horizontal  {
 .font-a-user {
   font-size: 10vh;
   padding-top: 2rem;
-  color: #01464c;
+  color: #ECEFF1;
   opacity: 1;
   margin: 0 auto;
 }
@@ -449,11 +452,11 @@ button.top-cta-button.btn-user{
   text-align: center;
   border: none;
   border-radius: 10px;
-  background-color: #01464c;
+  background-color: #ECEFF1;
   height: 9vh;
   width: 25vh;
   font-size: 2rem;
-  color: white;
+  color: #01464c;
   vertical-align: middle;
   outline: none;
 }
@@ -494,6 +497,7 @@ span.cb-slideshow-logout {
    left: 0px;
    position: absolute;
    color: transparent;
+   background-color: black!important;
    background-size: cover;
    background-position: 50% 50%;
    background-repeat: none;
@@ -515,7 +519,7 @@ span.sp3 {
 }
 
 @keyframes imageAnimation {
-  0% { opacity: 0; animation-timing-function: ease-in; }
+  0% { opacity: 0; animation-timing-function: initial; }
   16% { opacity: 1; animation-timing-function: ease-out; }
   33% { opacity: 1 }
   50% { opacity: 0 }
@@ -547,4 +551,7 @@ span.sp3 {
 .vcenter-text{
   text-align: justify;
   padding: 0rem 2rem;
+}
+.slideshow-div {
+  background-color: black!important;
 }

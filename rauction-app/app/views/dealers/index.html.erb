@@ -26,7 +26,7 @@
                 <td><%= f.make%></td>
                 <td><%= f.model%></td>
                 <td>$<%= f.max_price%></td>
-                <td><%= select_date(f.expiration_date, order: [:month, :day, :year]) %></td>
+                <td><%= time_tag (f.expiration_date).to_date %></td>
               </tr>
             </tbody>
           </table>

@@ -4,10 +4,11 @@
 
   <% if current_user %>
   <div class="top-current text-center">
-    <span class="cb-slideshow-login sp1">Image 01</span>
-    <span class="cb-slideshow-login sp2">Image 02</span>
-    <span class="cb-slideshow-login sp3">Image 03</span>
-
+    <div class="slideshow-div">
+      <span class="cb-slideshow-login sp1">Image 01</span>
+      <span class="cb-slideshow-login sp2">Image 02</span>
+      <span class="cb-slideshow-login sp3">Image 03</span>
+    </div>
     <div class="list-current text-center cleafix" >
       <div class="sign-up-top text-center">
         <div class="font-a-user">
@@ -91,58 +92,58 @@
     <p class="welcome"> Auto-Bid </p>
   </div>
 
-    <div class="top text-center">
-      <h3>Find Your Dream Car</h3>
-      <h4>Sit back and let us do the work for you</h4>
-      <p class="p-home">
-        We created a very easy and convenient way to search for cars without even leaving your house
-      </p>
-    </div>
+  <div class="top text-center">
+    <h3>Find Your Dream Car</h3>
+    <h4>Sit back and let us do the work for you</h4>
+    <p class="p-home">
+      We created a very easy and convenient way to search for cars without even leaving your house
+    </p>
+  </div>
 
-    <div class="list">
-      <div class="sign-up col-md-4 text-center">
-        <div class="font-a">
-          <i class="fa fa-user" aria-hidden="true"></i>
-        </div>
-        <div class="text">
-          Sign up to start using our services
-        </div>
+  <div class="list">
+    <div class="sign-up col-md-4 text-center">
+      <div class="font-a">
+        <i class="fa fa-user" aria-hidden="true"></i>
       </div>
-
-      <div class="create-auction col-md-4 text-center">
-        <div class="font-a">
-          <i class="fa fa-check-square-o" aria-hidden="true"></i>
-        </div>
-        <div class="text">
-          Create an auction for the car you want
-        </div>
-      </div>
-
-      <div class="wait col-md-4 text-center">
-        <div class="font-a">
-          <i class="fa fa-magic" aria-hidden="true"></i>
-        </div>
-        <div class="text">
-          Relax while your local dealers compete to give you the best price
-        </div>
+      <div class="text">
+        Sign up to start using our services
       </div>
     </div>
 
+    <div class="create-auction col-md-4 text-center">
+      <div class="font-a">
+        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      </div>
+      <div class="text">
+        Create an auction for the car you want
+      </div>
+    </div>
 
-    <div class="start text-center">
-      Start Looking for your dream car
-      <button type="button" class="top-cta-button home-b" data-toggle="modal" data-target="#myModalregister">
+    <div class="wait col-md-4 text-center">
+      <div class="font-a">
+        <i class="fa fa-magic" aria-hidden="true"></i>
+      </div>
+      <div class="text">
+        Relax while your local dealers compete to give you the best price
+      </div>
+    </div>
+  </div>
+
+
+  <div class="start text-center">
+    Start Looking for your dream car
+    <button type="button" class="top-cta-button home-b" data-toggle="modal" data-target="#myModalregister">
       Register
-      </button></a>
-    </div>
+    </button></a>
+  </div>
 
 
-    <%= render partial: "bot-about-us-pictures" %>
-    <div class="clearfix footer-home">
-      <%= render partial: "footer" %>
+  <%= render partial: "bot-about-us-pictures" %>
+  <div class="clearfix footer-home">
+    <%= render partial: "footer" %>
 
-    </div>
-    <% end %>
+  </div>
+  <% end %>
 
 
 </div>
