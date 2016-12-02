@@ -20,18 +20,20 @@
       </li>
     </ul>
   </div>
-    <% else %>
-      <div class="col-md-1">
-        <ul class="nav nav-pills">
-          <li role="presentation" class="active">
-            <% if current_user %>
-            <%= button_to "Logout", '/logout', method: :get, class:"btn hvr-shutter-out-horizontal" %>
-            <% elsif current_dealer %>
-            <%= button_to "Logout", '/logout_dealer', method: :get, class:"btn hvr-shutter-out-horizontal" %>
-          </li>
-            <% end %>
+  <% else %>
+  <div class="col-md-1">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active">
+        <% if current_user %>
+        <%= link_to logout_path, class:"button-that-I-hate" do  %>
+        <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
         <% end %>
-        </ul>
+        <% elsif current_dealer %>
+        <%= button_to "Logout", '/logout_dealer', method: :get, class:"btn hvr-shutter-out-horizontal" %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
   </div>
 </nav>
 
@@ -60,21 +62,21 @@
 </div>
 
 
-  <div id="myModallogin" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+<div id="myModallogin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Login</h4>
-        </div>
-        <div class="modal-body">
-          <%= render "sessions/form" %>
-        </div>
-
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <%= render "sessions/form" %>
       </div>
 
     </div>
+
   </div>
+</div>
 <!-- </div> -->
