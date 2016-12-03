@@ -4,16 +4,22 @@
   <%= render partial: "layouts/deal_auc_header" %>
 
 
-  <div class="show-auction-info text-center">
+  <div class="show-auction-info col-md-12 text-center">
 
       <div class="auction-show container">
         <div class="borderbottom"><h1><%= @auction.title.capitalize%></h1></div>
         <h5><%= @auction.year%>
         <%= @auction.make%> |
         <%= @auction.model%> |
+<<<<<<< HEAD
         <%= @auction.max_price%> |
         <%= @auction.color%> |
         <%= @auction.features unless nil%></h5>
+=======
+        <a class="top-cta-button empty-auc" data-toggle="modal" data-target="#myModalauctionshow">
+        View More
+        </a></h5>
+>>>>>>> 6f0d9e1ea35a5188fafe7850f3f161a2f978ee20
         <table class="table table-hover">
           <thead>
             <tr>
@@ -62,4 +68,39 @@
 
 <%= render partial: "footer" %>
 <% end %>
+</div>
+
+<div id="myModalauctionshow" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= @auction.title.capitalize%> </h4>
+      </div>
+      <div class="modal-body">
+        <ul class="auc_modal">
+          <li class="auc_show">year: <%= @auction.year%></li><br>
+          <hr>
+          <li class="auc_show">make: <%= @auction.make%></li><br>
+          <hr>
+          <li class="auc_show">model: <%= @auction.model%></li><br>
+          <hr>
+          <li class="auc_show">miles_from: <%= @auction.miles_from%></li><br>
+          <hr>
+          <li class="auc_show">color: <%= @auction.color%></li><br>
+          <hr>
+          <li class="auc_show">features: <%= @auction.features%></li><br>
+          <hr>
+          <li class="auc_show">max_price: <%= @auction.max_price%></li><br>
+          <hr>
+          <li class="auc_show">address: <%= @auction.address%></li><br>
+          <hr>
+          <li class="auc_show">expiration_date: <%= @auction.expiration_date%></li><br>
+          <hr>
+      </ul>
+
+    </div>
+  </div>
 </div>

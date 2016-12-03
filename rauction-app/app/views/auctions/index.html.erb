@@ -41,7 +41,9 @@
         <% end %>
 
       </div>
-      
+        <div>
+          <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, '/', id:"back" %>
+        </div>
 
       <% else %>
       <div class="bot-box text-center">
@@ -51,7 +53,9 @@
         Create Auction
         </button></a>
       </div>
-
+      <div>
+        <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, '/', id:"back" %>
+      </div>
       <% end %>
 
   </div>

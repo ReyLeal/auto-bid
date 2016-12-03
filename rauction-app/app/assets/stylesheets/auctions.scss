@@ -296,3 +296,24 @@ i.glyphicon-minus:before{
 .glyphicon-plus:before{
   color:white;
 }
+ li.auc_show{
+   color: #01464c;
+   height: 4rem;
+   font-size: 2rem;
+   margin-top: -.5rem;
+   margin-left: 2rem;
+   border: none;
+   width: 30%;
+   border-radius: 10px;
+  //  background-color:#01464c;
+  //  color:white;
+ }
+
+.auc_modal{
+    text-align: center;
+    padding-left: 0;
+}
+
+a.top-cta-button.empty-auc{
+  cursor: default;
+}
