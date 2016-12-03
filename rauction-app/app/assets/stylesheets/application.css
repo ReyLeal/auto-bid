@@ -13,13 +13,7 @@
  *= require_tree .
  *= require_self
  */
- .clearfix:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
- }
+
  body {
    background-color: #ECEFF1
    }

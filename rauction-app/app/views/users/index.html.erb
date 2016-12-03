@@ -1,14 +1,14 @@
+<%= render partial: "layouts/header" %>
+
 <div id="home-container">
-  <%= render partial: "layouts/header" %>
 
 
   <% if current_user %>
   <div class="top-current text-center">
-    <div class="slideshow-div">
-      <span class="cb-slideshow-login sp1">Image 01</span>
-      <span class="cb-slideshow-login sp2">Image 02</span>
-      <span class="cb-slideshow-login sp3">Image 03</span>
-    </div>
+    <span class="cb-slideshow-login sp1">Image 01</span>
+    <span class="cb-slideshow-login sp2">Image 02</span>
+    <span class="cb-slideshow-login sp3">Image 03</span>
+
     <div class="list-current text-center cleafix" >
       <div class="sign-up-top text-center">
         <div class="font-a-user">
@@ -89,7 +89,10 @@
     <span class="cb-slideshow-logout sp2">Image 02</span>
     <span class="cb-slideshow-logout sp3">Image 03</span>
 
-    <p class="welcome"> Auto-Bid </p>
+    <div class="welcome">
+      <p id="welcome-msg"> Auto-Bid</p>
+    </div>
+
   </div>
 
   <div class="top text-center">
@@ -145,55 +148,53 @@
   </div>
   <% end %>
 
+  <div id="myModaledit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-</div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Profile</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "users/form" %>
+        </div>
 
-<div id="myModaledit" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Edit Profile</h4>
       </div>
-      <div class="modal-body">
-        <%= render "users/form" %>
-      </div>
-
     </div>
   </div>
-</div>
-<div id="myModaleditdealer" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div id="myModaleditdealer" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Edit Profile</h4>
-      </div>
-      <div class="modal-body">
-        <%= render "dealers/form" %>
-      </div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit Profile</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "dealers/form" %>
+        </div>
 
+      </div>
     </div>
   </div>
-</div>
 
-<div id="myModalauction" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div id="myModalauction" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Create Auction</h4>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Auction</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "auctions/form" %>
+        </div>
+
       </div>
-      <div class="modal-body">
-        <%= render "auctions/form" %>
-      </div>
-
     </div>
   </div>
 </div>
