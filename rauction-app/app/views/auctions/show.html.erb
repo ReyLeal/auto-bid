@@ -11,15 +11,9 @@
         <h5><%= @auction.year%>
         <%= @auction.make%> |
         <%= @auction.model%> |
-<<<<<<< HEAD
-        <%= @auction.max_price%> |
-        <%= @auction.color%> |
-        <%= @auction.features unless nil%></h5>
-=======
         <a class="top-cta-button empty-auc" data-toggle="modal" data-target="#myModalauctionshow">
         View More
         </a></h5>
->>>>>>> 6f0d9e1ea35a5188fafe7850f3f161a2f978ee20
         <table class="table table-hover">
           <thead>
             <tr>
@@ -81,23 +75,23 @@
       </div>
       <div class="modal-body">
         <ul class="auc_modal">
-          <li class="auc_show">year: <%= @auction.year%></li><br>
+          <li class="auc_show">Year: <%= @auction.year%></li><br>
           <hr>
-          <li class="auc_show">make: <%= @auction.make%></li><br>
+          <li class="auc_show">Make: <%= @auction.make%></li><br>
           <hr>
-          <li class="auc_show">model: <%= @auction.model%></li><br>
+          <li class="auc_show">Model: <%= @auction.model%></li><br>
           <hr>
-          <li class="auc_show">miles_from: <%= @auction.miles_from%></li><br>
+          <li class="auc_show">Miles From: <%= @auction.miles_from%></li><br>
           <hr>
-          <li class="auc_show">color: <%= @auction.color%></li><br>
+          <li class="auc_show">Color: <%= @auction.color%></li><br>
           <hr>
-          <li class="auc_show">features: <%= @auction.features%></li><br>
+          <li class="auc_show">Features: <%= @auction.features%></li><br>
           <hr>
-          <li class="auc_show">max_price: <%= @auction.max_price%></li><br>
+          <li class="auc_show">Max Price: <%= @auction.max_price%></li><br>
           <hr>
-          <li class="auc_show">address: <%= @auction.address%></li><br>
+          <li class="auc_show">Address: <%= @auction.address%></li><br>
           <hr>
-          <li class="auc_show">expiration_date: <%= @auction.expiration_date%></li><br>
+          <li class="auc_show">Expiration Date: <%= time_tag (@auction.expiration_date).to_date%></li><br>
           <hr>
       </ul>
 
