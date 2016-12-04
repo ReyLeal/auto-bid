@@ -1,4 +1,4 @@
-<% if Time.now < @auction.expiration_date.to_time %>
+<% if Time.now.to_i < @auction.expiration_date.to_time.to_i %>
 <div class="container-fluid" id="home-container">
   <% if current_user || current_dealer %>
   <%= render partial: "layouts/deal_auc_header" %>
@@ -13,7 +13,7 @@
         <%= @auction.model%> |
         <%= @auction.max_price%> |
         <%= @auction.color%> |
-        <%= @auction.features unless nil%></h5>
+
         <table class="table table-hover"  id="messages">
           <thead>
             <tr>
@@ -96,4 +96,4 @@
       </div>
     </div>
   </div>
-<% end %>
+  <% end %>
