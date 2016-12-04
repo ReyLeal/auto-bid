@@ -84,19 +84,19 @@ $(document).ready(function() {
   });
 });
 
-// $('#new_auction').validate({
-//   debug: true,
-//   rules: {
-//     "auction[title]": {required: true},
-//     "auction[year]": {required: true},
-//     "auction[make]": {required: true},
-//     "auction[model]": {required: true},
-//     "auction[miles_from]": {required: true},
-//     "auction[color]": {required: true},
-//     "auction[features]": {required: true},
-//     "auction[max_price]": {required: true},
-//     "auction[address]": {required: true},
-//     "auction[expiration_date]": {required: true}
-//
-//   }
-// });
+$('#new_auction').validate({
+  debug: true,
+  rules: {
+    "auction[title]": {required: true},
+    "auction[year]": {required: true},
+    "auction[make]": {required: true},
+    "auction[model]": {required: true},
+    "auction[miles_from]": {required: true},
+    "auction[color]": {required: true},
+    "auction[features]": {required: true},
+    "auction[max_price]": {required: true},
+    "auction[address]": {required: true},
+    "auction[expiration_date]": {required: true}
+
+  }
+});

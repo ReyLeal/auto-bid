@@ -338,6 +338,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 button.top-cta-button.home-b{
   background-color: #01464c;
+  margin: 2rem 2rem;
+
 }
 
 button.btn.hvr-shutter-out-horizontal  {
@@ -424,7 +426,7 @@ button.btn.hvr-shutter-out-horizontal  {
   color: #ECEFF1;
   text-shadow: 2px 2px 1px #00001E;
   font-weight: bold;
-  width: 67%;
+  // width: 67%;
   left: 2em;
 }
 
@@ -555,19 +557,7 @@ span.sp3 {
   padding: 0rem 2rem;
 }
 
-button.top-cta-button.btn-user-auc{
 
-  text-align: center;
-  border: none;
-  border-radius: 10px;
-  background-color: #002023;
-  height:9vh;
-  width: 40vh;
-  font-size: 2rem;
-  color: #ECEFF1;
-  vertical-align: middle;
-  outline: none;
-}
 
 .logo-white{
   height: 17rem;
@@ -586,4 +576,72 @@ button.top-cta-button.btn-user-auc{
  .auc-back{
    padding-bottom: 7rem;
    padding-top: 2rem;
+   text-align: center;
  }
+
+.contact-us-footer {
+  padding-top: 4rem;
+}
+
+.about-us-footer {
+  padding-top: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer-div.col-md-12.vcenter.text-center {
+  height: 100%;
+  min-height: 25rem;
+}
+div#home-container {
+text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  li.logo {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1.5rem;
+  }
+  p#welcome-msg {
+    font-size: 90px;
+  }
+  .welcome {
+    font-size: 60px;
+  }
+  p#welcome-msg {
+    font-size: 60px;
+  }
+  .list-current {
+    background-color: transparent;
+    min-width: 100vw;
+  }
+  button.top-cta-button.btn-user.edit {
+    position: fixed;
+    bottom: 0;
+    border-right: solid black .1rem;
+  }
+  button.top-cta-button.btn-user.view {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  button.top-cta-button.btn-user.create {
+    position: fixed;
+    bottom: 0;
+    right: 33.33vw;
+    border-right: solid black .1rem;
+  }
+  button.top-cta-button.btn-user {
+    border-radius: 0;
+    height: 8rem;
+    width: 33.33vw;
+    background-color: #01464D;
+    color: #ECEFF1;
+  }
+  .font-a-user {
+    visibility: hidden;
+  }
+}

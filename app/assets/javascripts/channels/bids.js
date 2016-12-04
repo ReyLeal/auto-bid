@@ -34,7 +34,7 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
 
   renderBid: function(data) {
     var d = new Date();
-    return "<tbody><td>$" + data.bid + "</td> <td>" + data.company + "</td><td>" + data.dealer + "</td><td>" + timeSince(d) + "</tbody>"
+    return "<tbody><td>$" + data.bid + "</td> <td>" + data.company + "</td><td>" + data.dealer + "</td><td>" + data.email + "</td><td>" + timeSince(d) + "</td></tbody>"
   }
 
 });

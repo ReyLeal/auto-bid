@@ -295,24 +295,50 @@ i.glyphicon-minus:before{
 .glyphicon-plus:before{
   color:white;
 }
- li.auc_show{
-   color: #01464c;
-   height: 4rem;
-   font-size: 2rem;
-   margin-top: -.5rem;
-   margin-left: 2rem;
-   border: none;
-   width: 30%;
-   border-radius: 10px;
+li.auc_show{
+  color: #01464c;
+  height: 4rem;
+  font-size: 2rem;
+  margin-top: -.5rem;
+  margin-left: 2rem;
+  border: none;
+  width: 30%;
+  border-radius: 10px;
   //  background-color:#01464c;
   //  color:white;
- }
+}
 
 .auc_modal{
-    text-align: center;
-    padding-left: 0;
+  text-align: center;
+  padding-left: 0;
+}
+button.top-cta-button.btn-user-auc{
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #002023;
+  height: 5rem;
+  width: 20rem;
+  font-size: 1.5rem;
+  color: #ECEFF1;
+  vertical-align: middle;
+  outline: none;
+  margin: 5rem 2rem;
 }
 
 a.top-cta-button.empty-auc{
   cursor: pointer;
+}
+.auction-details{
+  font-size: 1.75rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  button.top-cta-button.btn-user-auc {
+    height: 5.5rem;
+    width: 10rem;
+    margin: 5rem 2rem;
+    font-size: 1.5rem;
+  }
 }

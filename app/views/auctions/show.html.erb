@@ -1,4 +1,3 @@
-<% if Time.now.to_i < @auction.expiration_date.to_time.to_i %>
 <div class="container-fluid" id="home-container">
   <% if current_user || current_dealer %>
   <%= render partial: "layouts/deal_auc_header" %>
@@ -8,11 +7,12 @@
 
     <div class="auction-show container">
       <div class="borderbottom"><h1><%= @auction.title.capitalize%></h1></div>
-      <h5><%= @auction.year%>
+      <div class="auction-details"> <%= @auction.year%>
         <%= @auction.make%> |
         <%= @auction.model%> |
         <%= @auction.max_price%> |
         <%= @auction.color%> |
+        Espires in: <%= distance_of_time_in_words(Time.now, @auction.expiration_date.to_time)%></div>
 
         <table class="table table-hover"  id="messages">
           <thead>
@@ -20,6 +20,7 @@
               <th>Bid Amount</th>
               <th>Company Name</th>
               <th>Dealer Name</th>
+              <th>Email</th>
               <th>Time</th>
             </tr>
           </thead>
@@ -29,8 +30,9 @@
             </tr>
           </tbody>
         </table>
+        <% if current_dealer %>
         <%= render partial: 'bids/bid_form', locals: {bid: @bid, auction: @auction}%>
-
+        <% end %>
 
         <% if @auction.user_id = current_user %>
         <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Delete Auction</button>".html_safe,user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
@@ -43,7 +45,7 @@
     </div>
   </div>
 
-  <%= render partial: "footer" %>
+  <%= render partial: "layouts/footer" %>
   <% end %>
 </div>
 
@@ -96,4 +98,3 @@
       </div>
     </div>
   </div>
-  <% end %>
