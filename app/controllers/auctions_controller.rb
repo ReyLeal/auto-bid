@@ -1,5 +1,5 @@
 class AuctionsController < ApplicationController
-  before_filter :authorize
+  before_action :authorize
   def index
     @auctions = Auction.where(user_id: params[:user_id])
     @auction = Auction.new
@@ -30,6 +30,8 @@ class AuctionsController < ApplicationController
 
   def show
     @auction = Auction.find(params[:id])
+    @bid = Bid.new
+    @bids = Bid.where(auction_id: @auction.id)
   end
 
   def destroy

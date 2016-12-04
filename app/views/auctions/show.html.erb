@@ -1,4 +1,4 @@
-
+<% if Time.now < @auction.expiration_date.to_time %>
 <div class="container-fluid" id="home-container">
   <% if current_user || current_dealer %>
   <%= render partial: "layouts/deal_auc_header" %>
@@ -6,54 +6,31 @@
 
   <div class="show-auction-info col-md-12 text-center">
 
-      <div class="auction-show container">
-        <div class="borderbottom"><h1><%= @auction.title.capitalize%></h1></div>
-        <h5><%= @auction.year%>
+    <div class="auction-show container">
+      <div class="borderbottom"><h1><%= @auction.title.capitalize%></h1></div>
+      <h5><%= @auction.year%>
         <%= @auction.make%> |
         <%= @auction.model%> |
-<<<<<<< HEAD
         <%= @auction.max_price%> |
         <%= @auction.color%> |
         <%= @auction.features unless nil%></h5>
-=======
-        <a class="top-cta-button empty-auc" data-toggle="modal" data-target="#myModalauctionshow">
-        View More
-        </a></h5>
->>>>>>> 6f0d9e1ea35a5188fafe7850f3f161a2f978ee20
-        <table class="table table-hover">
+        <table class="table table-hover"  id="messages">
           <thead>
             <tr>
-              <th>#</th>
+              <th>Bid Amount</th>
               <th>Company Name</th>
-              <th>Company Dealer Name</th>
-              <th>Current Bid</th>
+              <th>Dealer Name</th>
               <th>Time</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>Anna</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>Debbie</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>Anna</td>
-              <td>John</td>
+              <%= render partial: 'bids/bid'%>
             </tr>
           </tbody>
         </table>
+        <%= render partial: 'bids/bid_form', locals: {bid: @bid, auction: @auction}%>
+
 
         <% if @auction.user_id = current_user %>
         <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Delete Auction</button>".html_safe,user_auction_url, method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %>
@@ -66,9 +43,24 @@
     </div>
   </div>
 
-<%= render partial: "footer" %>
-<% end %>
+  <%= render partial: "footer" %>
+  <% end %>
 </div>
+
+
+<!-- <div class="panel panel-default">
+<%# if @auction.bids.any? %>
+<div class="panel-body" id="messages">
+<%# render partial: 'bids/bid', collection: @auction.bids%>
+</div>
+<%#else%>
+<div class="panel-body hidden" id="messages">
+</div>
+<%#end%>
+</div> -->
+
+
+
 
 <div id="myModalauctionshow" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -99,8 +91,9 @@
           <hr>
           <li class="auc_show">expiration_date: <%= @auction.expiration_date%></li><br>
           <hr>
-      </ul>
+        </ul>
 
+      </div>
     </div>
   </div>
-</div>
+<% end %>

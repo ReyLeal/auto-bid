@@ -77,3 +77,9 @@ $(document).ready(function () {
   $('.panel-heading span.clickable').click();
   $('.panel div.clickable').click();
 });
+
+$(document).ready(function() {
+  $('input#bid_bid_amount').click(function() {
+    $('input#bid_bid_amount').val('')
+  });
+});

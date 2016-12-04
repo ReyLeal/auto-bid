@@ -167,7 +167,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .auction-show.container {
   background-color: white;
-  height: 40vh;
   min-height: 40rem;
   padding-top: 5rem;
 }
@@ -179,9 +178,9 @@ a#back {
 }
 .show-auction-info.text-center {
   color: black;
-  height: 100%;
   min-height: 40vh;
   background-color: #ECEFF1;
+  padding-bottom: 5rem;
 }
 
 .clickable {

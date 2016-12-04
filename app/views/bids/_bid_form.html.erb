@@ -1,0 +1,9 @@
+
+<%=form_for @bid, remote: true, authenticity_token: true do |f|%>
+
+  <%= f.number_field :bid_amount, class: "form-control", data: {textarea: "bid"}%>
+  <%= f.hidden_field :auction_id, value: params[:id] %>
+  <%= f.hidden_field :dealer_id, value: current_dealer.id %>
+  <%= f.hidden_field :user_id, value: params[:user_id] %>
+  <%= f.submit "Post Bid", class: "btn btn-primary", data: {send: "bid"}%>
+<%end%>

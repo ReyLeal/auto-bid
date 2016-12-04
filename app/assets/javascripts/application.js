@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+// app/assets/javascripts/application.js
+//= require_tree ./channels
 
 // var a = $(".nav").offset().top;
 //

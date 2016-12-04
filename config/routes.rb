@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
+  mount ActionCable.server => '/cable'
 
   # get 'users/index'
-  #
+  resources :bids
   # get 'users/new'
   resources :users
 
