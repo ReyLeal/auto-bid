@@ -41,7 +41,7 @@ $(document).on('turbolinks:load', function() {
   })
 
   function makeAjaxRequestForMakes(make, year) {
-    $.get('http://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
+    $.get('https://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
       parseModel(data);
     });
   }
