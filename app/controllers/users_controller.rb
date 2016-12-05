@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
 
+
   def index
-    @user = User.find_by(@current_user)
-    @auction = Auction.new
-  end
+     @user = User.find_by(@current_user) || User.new
+     @dealer = Dealer.new
+     @auction = Auction.new
+   end
 
   def new
     @user = User.new
@@ -23,6 +25,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   def update
     @user = User.find(params[:id])
 
@@ -32,6 +35,7 @@ class UsersController < ApplicationController
       render '/'
     end
   end
+
 
   def show
     @user= User.find(params[:id])

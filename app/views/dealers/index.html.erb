@@ -40,9 +40,13 @@
     </div>
   </div>
   <% end %>
+  <% if @distances[idx].nil? %>
+  <h3 class="auctions-indx-heading">It looks like there are no auctions in your area at the time</h3>
   <% end %>
   <% end %>
-  <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, '/', id:"back" %>
+  <% end %>
+
+  <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, root_path, id:"back" %>
 
 </div>
 

@@ -307,8 +307,10 @@ li.auc_show{
   border: none;
   width: 30%;
   border-radius: 10px;
-  //  background-color:#01464c;
-  //  color:white;
+}
+button.top-cta-button.btn-user-auc.back-btn {
+  width: 10rem;
+  margin-top: 0;
 }
 
 .auc_modal{
@@ -348,7 +350,7 @@ button.top-cta-button.btn-user-auc.btn-delete {
   width: 11rem;
   font-size: 1.4rem;
 }
-h1.auctions-indx-heading {
+.auctions-indx-heading {
   color: #01464c;
 }
 @media only screen and (max-width: 600px) {
