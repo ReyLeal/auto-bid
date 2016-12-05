@@ -23,11 +23,13 @@ ActiveRecord::Schema.define(version: 20161130012438) do
     t.text     "features"
     t.datetime "expiration_date"
     t.integer  "user_id"
+    t.integer  "dealer_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "year"
+    t.index ["dealer_id"], name: "index_auctions_on_dealer_id"
     t.index ["user_id"], name: "index_auctions_on_user_id"
   end
 
