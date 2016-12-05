@@ -1,9 +1,9 @@
+production:
+  adapter: redis
+  url: redis://redistogo:dc86d0fcd28c8b8e9e14469fa504c697@crestfish.redistogo.com:10235/
+  
 development:
   adapter: async
 
 test:
   adapter: async
-
-production:
-  adapter: redis
-  url: redis://localhost:6379/1

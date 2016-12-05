@@ -1,8 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.web_socket_server_url = "wss://https://auto-bid.herokuapp.com/cable"
   # Code is not reloaded between requests.
   config.cache_classes = true
+  config.action_cable.allowed_request_origins = ['https://auto-bid.herokuapp.com', 'http://auto-bid.herokuapp.com']
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

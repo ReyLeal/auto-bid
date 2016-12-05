@@ -5,7 +5,7 @@ class BidsController < ApplicationController
     @bid = Bid.new(bid_params)
     @auction = Auction.find(@bid.auction_id)
     @bid.dealer = current_dealer
-    render :bad_request if @bid.bid_amount == 0
+    render :bad_request if @bid.bid_amount <= 0
     if @auction.bids.empty? &&
       @bid.bid_amount <= @auction.max_price &&
       @bid.save
