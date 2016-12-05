@@ -29,12 +29,20 @@ function timeSince(date) {
 App.bids = App.cable.subscriptions.create('BidsChannel', {
   received: function(data) {
     $("#messages").removeClass('hidden')
-    return $('#messages').prepend(this.renderBid(data));
+    $('#messages').prepend(this.renderBid(data));
+    $('#auc-delete-button').prepend(this.renderButton(data));
+    $('input#bid_bid_amount').val('');
   },
+
+
 
   renderBid: function(data) {
     var d = new Date();
-    return "<tbody><td>$" + data.bid + "</td> <td>" + data.company + "</td><td>" + data.dealer + "</td><td>" + data.email + "</td><td>" + timeSince(d) + "</td></tbody>"
+    return "<tbody><td>$" + data.bid + "</td> <td>" + data.company + "</td><td>" + data.dealer +
+    "</td><td>" + data.email + "</td><td>" + timeSince(d) + "</td><td id='auc-delete-button'>" + "</td></tbody>";
+  },
+  renderButton: function(data) {
+    return "<td>" + data.delete+  "</td>" ;
   }
 
 });

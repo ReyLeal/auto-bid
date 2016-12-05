@@ -1,44 +1,47 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "layouts/deal_auc_header" %>
 
+
+  <h1 class="auctions-indx-heading">Current Auctions</h1>
+  <% @auctions.each_with_index do |f, idx| %>
+  <% if @distances[idx] <= f.miles_from %>
+  <% unless Time.now.to_i > f.expiration_date.to_time.to_i %>
   <div class="panel-center col-md-12">
-    <% @auctions.each_with_index do |f, idx| %>
-    <% if @distances[idx] <= f.miles_from %>
     <div class="panel col-md-6 col-md-offset-3 panel-warning">
       <div class="panel-heading clickable">
         <h3 class="panel-title"><%= f.title.capitalize %></h3>
-          <span class="pull-right "><i class="glyphicon glyphicon-minus"></i></span>
-        </div>
-        <div class="panel-body">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>Make</th>
-                <th>Model</th>
-                <th>Max Price </th>
-                <th>Expiration Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><%= f.year%></td>
-                <td><%= f.make%></td>
-                <td><%= f.model%></td>
-                <td>$<%= f.max_price%></td>
-                <td><%= time_tag (f.expiration_date).to_date %></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="col-md-3 new-class-div">
-            <%= link_to 'Show', user_auction_path(f.user_id, f.id), class:"new-class"  %>
-          </div>
+        <span class="pull-right "><i class="glyphicon glyphicon-minus"></i></span>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Max Price </th>
+              <th>Expiration Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.year%></td>
+              <td><%= f.make%></td>
+              <td><%= f.model%></td>
+              <td>$<%= f.max_price%></td>
+              <td><%= time_tag (f.expiration_date).to_date %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="col-md-3 new-class-div">
+          <%= link_to 'Show', user_auction_path(f.user_id, f.id), class:"new-class"  %>
         </div>
       </div>
-    <% end %>
-    <% end %>
+    </div>
   </div>
-
+  <% end %>
+  <% end %>
+  <% end %>
 </div>
 
 
