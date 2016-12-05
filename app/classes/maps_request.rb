@@ -10,4 +10,4 @@ class MapsRequest
                 ['rows'].first['elements'].first['distance']['text']
   end
 end
-puts MapsRequest.new('25.8010000', '-80.3150568', '25.8044250', '-80.3150600').distance
+# puts MapsRequest.new('25.8010000', '-80.3150568', '25.8044250', '-80.3150600').distance
