@@ -57,7 +57,7 @@ a:hover {
 }
 
 .top-image {
-  background-image: url(Viper.jpg);
+  background-image: image-url(Viper.jpg);
   height: 60vh;
   max-width: 100%;
   background-size: cover;
@@ -112,7 +112,7 @@ button.top-cta-button.marg-left {
   height: 30vh;
 }
 .carsss {
-  background-image: url(BMW.jpeg);
+  background-image: image-url(BMW.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -474,7 +474,7 @@ button.top-cta-button.btn-user{
 }
 .cb-slideshow:after {
     content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
+    background: transparent image-url(../images/pattern.png) repeat top left;
 }
 
  span.cb-slideshow-login {
@@ -509,14 +509,14 @@ span.cb-slideshow-logout {
 }
 
 span.sp1 {
-    background-image: url(green-bmw.jpeg);
+    background-image: image-url(green-bmw.jpeg);
 }
 span.sp2 {
-    background-image: url(car2.jpg);
+    background-image: image-url(car2.jpg);
     animation-delay: 6s;
 }
 span.sp3 {
-    background-image: url(car1.jpg);
+    background-image: image-url(car1.jpg);
     animation-delay: 12s;
 }
 
