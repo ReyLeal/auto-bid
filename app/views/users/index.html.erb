@@ -60,7 +60,7 @@
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <button type="button" class="top-cta-button btn-user edit" data-toggle="modal" data-target="#myModaleditdealer">
+          <button type="button" class="top-cta-button btn-user edit-dealer" data-toggle="modal" data-target="#myModaleditdealer">
             Edit
           </button></a>
         </div>
@@ -71,7 +71,7 @@
           <i class="fa fa-binoculars" aria-hidden="true"></i>
         </div>
         <div class="text-top">
-          <%=link_to "<button class='top-cta-button btn-user view' type='button'>View Auctions</button>".html_safe, "/dealers/#{current_dealer.id}/auctions"%>
+          <%=link_to "<button class='top-cta-button btn-user view-dealer' type='button'>View Auctions</button>".html_safe, "/dealers/#{current_dealer.id}/auctions"%>
         </div>
       </div>
     </div>
