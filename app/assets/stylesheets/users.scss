@@ -142,7 +142,6 @@ footer {
     height: 35rem;
 }
 .col-centered {
-    // display:inline-block;
     float:none;
     text-align:left;
     margin-right:-4px;
@@ -233,7 +232,6 @@ img{
 
 .social-buttons{
   font-size: 3rem;
-  // display:block;
   padding: 1rem;
   list-style: none
 }
@@ -488,7 +486,7 @@ button.top-cta-button.btn-user{
     color: transparent;
     background-size: cover;
     background-position: 50% 50%;
-    background-repeat: none;
+    background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
     animation: imageAnimation 18s linear infinite 0s ;
@@ -504,7 +502,7 @@ span.cb-slideshow-logout {
    background-color: black!important;
    background-size: cover;
    background-position: 50% 50%;
-   background-repeat: none;
+   background-repeat: no-repeat;
    opacity: 0;
    z-index: 0;
    animation: imageAnimation 18s linear infinite 0s ;
@@ -532,7 +530,6 @@ span.sp3 {
 
 .welcome{
   font-size: 80px;
-  // background-color: rgba(255,255,255,0.5);
   left: 0;
   right: 0;
   margin-left: auto;
