@@ -24,9 +24,11 @@ class BidsController < ApplicationController
   private
 
   def delete_link
-    "<td><a data-confirm='Are you sure?' id='destroy' rel='nofollow' data-method='delete'
-    href='http://localhost:3000/bids/2?auction_id=2&amp;bid_id=330&amp;user_id=2'><button
-    class='top-cta-button btn-user-auc btn-delete' type='button'>Delete Bid</button></a></td>"
+      first_half_link = "<a data-confirm='Are you sure?' id='destroy' rel='nofollow' \
+      data-method='delete' href='http://localhost:3000/bids/2?auction_id=2&amp;bid_id=330&amp;user_id=2'>"
+      first_half_link += "<button class='top-cta-button btn-user-auc btn-delete' type='button'>Delete Bid</button>" if current_dealer
+      first_half_link += "</a>"
+      first_half_link
     end
 
     def bid_params
@@ -34,12 +36,12 @@ class BidsController < ApplicationController
     end
 
     def return_bid
-      ActionCable.server.broadcast 'bids',
-      bid: @bid.bid_amount,
+      mikes_var = {bid: @bid.bid_amount,
       dealer: @bid.dealer.dealer_name.capitalize,
       company: @bid.dealer.company_name.capitalize,
-      email: @bid.dealer.email,
-      delete: delete_link
+      email: @bid.dealer.email}
+      mikes_var.merge!(delete: delete_link) if current_dealer == @bid.dealer
       head :ok
+      ActionCable.server.broadcast 'bids', mikes_var
     end
   end

@@ -1,4 +1,14 @@
 $(document).on('turbolinks:load', function() {
+  $.ajax({
+    type:"GET",
+    url:"/auctions/current_dealer"
+  }).done(function(data){
+    console.log(data);
+    if(data["current_dealer"] !== true) {
+      $("#auc-delete-button ").css("display", "none");
+      console.log(data);
+    }
+  });
   console.log("document is loaded");
   carYear = ""
 

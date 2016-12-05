@@ -32,9 +32,17 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
     $('#messages').prepend(this.renderBid(data));
     $('#auc-delete-button').prepend(this.renderButton(data));
     $('input#bid_bid_amount').val('');
+    $.ajax({
+      type:"GET",
+      url:"/auctions/current_dealer"
+    }).done(function(data){
+      console.log(data);
+      if(data["current_dealer"] !== true) {
+        $("#auc-delete-button ").css("display", "none");
+        console.log(data);
+      }
+    });
   },
-
-
 
   renderBid: function(data) {
     var d = new Date();
@@ -44,5 +52,4 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
   renderButton: function(data) {
     return "<td>" + data.delete+  "</td>" ;
   }
-
 });

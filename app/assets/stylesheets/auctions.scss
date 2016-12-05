@@ -180,9 +180,12 @@ a#back {
   color: black;
   min-height: 40vh;
   background-color: #ECEFF1;
-  padding-bottom: 5rem;
 }
-
+form#new_bid{
+  padding-bottom: 5rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
 .clickable {
   cursor: pointer;
 }

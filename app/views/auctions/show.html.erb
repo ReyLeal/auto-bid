@@ -30,6 +30,13 @@
           </thead>
           <tbody>
             <tr>
+              <% if @auction.bids.empty? %>
+              <td id="placeholder-bid">No bids have been posted yet.</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <% end %>
               <%= render partial: 'bids/bid'%>
             </tr>
           </tbody>

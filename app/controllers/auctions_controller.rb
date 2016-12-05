@@ -36,6 +36,9 @@ class AuctionsController < ApplicationController
       render :file => 'public/404.html', :status => :not_found, :layout => false
     end
   end
+  def is_current_dealer
+    render json: {current_dealer: !!current_dealer}
+  end
 
   def destroy
     @auction = Auction.find(params[:id])
