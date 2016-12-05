@@ -37,7 +37,7 @@ class AuctionsController < ApplicationController
     end
   end
   def is_current_dealer
-    render json: {current_dealer: !!current_dealer}
+    render json: {current_dealer: current_dealer}
   end
 
   def destroy
