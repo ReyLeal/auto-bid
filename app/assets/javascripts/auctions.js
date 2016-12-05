@@ -19,7 +19,7 @@ $(document).on('turbolinks:load', function() {
   });
 
   function makeAjaxRequest(year) {
-    $.get('http://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,  function(data) {
+    $.get('https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,  function(data) {
       parseMake(data);
     });
   }
