@@ -30,7 +30,6 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
   received: function(data) {
     $("#messages").removeClass('hidden')
     $('#messages').prepend(this.renderBid(data));
-    $('#auc-delete-button').prepend(this.renderButton(data));
     $('input#bid_bid_amount').val('');
     $.ajax({
       type:"GET",
@@ -40,6 +39,8 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
       if(data["current_dealer"] !== true) {
         $("#auc-delete-button ").css("display", "none");
         console.log(data);
+      } else {
+        $('#auc-delete-button').prepend(this.renderButton(data));
       }
     });
   },
