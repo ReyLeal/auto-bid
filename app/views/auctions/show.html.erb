@@ -37,7 +37,6 @@
         <% if current_dealer %>
         <%= render partial: 'bids/bid_form', locals: {bid: @bid, auction: @auction}%>
         <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, "/dealers/#{current_dealer.id}/auctions", id:"back" %>
-        <%#= button_tag 'Back', redirect_to :back, class: 'top-cta-button btn-user-auc' %>
 
         <% end %>
 
