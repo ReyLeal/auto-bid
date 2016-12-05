@@ -42,7 +42,7 @@ class AuctionsController < ApplicationController
 
   def destroy
     @auction = Auction.find(params[:id])
-    @auction.destroy
+     @auction.destroy
     redirect_to user_auctions_url
   end
 
