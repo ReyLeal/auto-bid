@@ -1,9 +1,26 @@
+<% if current_dealer %>
 <% @auction.bids.reverse_each do |bid| %>
+<tr>
+  <td>$<%= bid.bid_amount %></td>
+  <td><%= current_dealer.company_name.capitalize %></td>
+  <td><%= current_dealer.dealer_name.capitalize %></td>
+  <td><%= current_dealer.email %></td>
+  <td><%= time_ago_in_words(bid.created_at).capitalize %></td>
+  <td id="auc-delete-button"><% if bid.dealer_id == current_dealer.id %><%= link_to "<button class='top-cta-button btn-user-auc btn-delete'
+    type='button'>Delete Bid</button>".html_safe,bid_url(bid_id: bid.id, auction_id: @auction.id, user_id: @auction.user_id),
+    method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %><% end %></td>
+  </tr>
+  <% end %>
+  <% end %>
+
+  <% if current_user %>
+  <% @auction.bids.reverse_each do |bid| %>
   <tr>
     <td>$<%= bid.bid_amount %></td>
-    <td><%= current_dealer.company_name.capitalize %></td>
-    <td><%= current_dealer.dealer_name.capitalize %></td>
-    <td><%= current_dealer.email %></td>
+    <td><%= bid.dealer.company_name.capitalize %></td>
+    <td><%= bid.dealer.dealer_name.capitalize %></td>
+    <td><%= bid.dealer.email %></td>
     <td><%= time_ago_in_words(bid.created_at).capitalize %></td>
   </tr>
-<% end %>
+  <% end %>
+  <% end %>

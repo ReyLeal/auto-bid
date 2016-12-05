@@ -10,12 +10,12 @@
       <div class="auction-details"> <%= @auction.year%>
         <%= @auction.make%> |
         <%= @auction.model%> |
-        <%= @auction.max_price%> |
-        <%= @auction.color%> |
-        <a class="top-cta-button empty-auc" data-toggle="modal" data-target="#myModalauctionshow">
-        View More
-      </a> |
-        Espires in: <%= distance_of_time_in_words(Time.now, @auction.expiration_date.to_time)%></div>
+        Max Price $<%= @auction.max_price%> |
+        <%= @auction.color.capitalize%> |
+        Espires in: <%= distance_of_time_in_words(Time.now, @auction.expiration_date.to_time)%> |
+        <button type="button" class="top-cta-button btn-user-auc view-more" data-toggle="modal" data-target="#myModalauctionshow">
+          View More
+        </a></div>
 
         <table class="table table-hover"  id="messages">
           <thead>
@@ -25,6 +25,7 @@
               <th>Dealer Name</th>
               <th>Email</th>
               <th>Time</th>
+              <% if current_dealer %><th>Actions</th><% end %>
             </tr>
           </thead>
           <tbody>
@@ -53,18 +54,6 @@
 </div>
 
 
-<!-- <div class="panel panel-default">
-<%# if @auction.bids.any? %>
-<div class="panel-body" id="messages">
-<%# render partial: 'bids/bid', collection: @auction.bids%>
-</div>
-<%#else%>
-<div class="panel-body hidden" id="messages">
-</div>
-<%#end%>
-</div> -->
-
-
 
 
 <div id="myModalauctionshow" class="modal fade" role="dialog">
@@ -74,27 +63,25 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><%= @auction.title.capitalize%> </h4>
+        <h4 class="modal-title">Auction Information </h4>
       </div>
       <div class="modal-body">
         <ul class="auc_modal">
-          <li class="auc_show">year: <%= @auction.year%></li><br>
+          <li class="auc_show">Vehicle Year: <%= @auction.year%></li><br>
           <hr>
-          <li class="auc_show">make: <%= @auction.make%></li><br>
+          <li class="auc_show">Vehicle Make: <%= @auction.make%></li><br>
           <hr>
-          <li class="auc_show">model: <%= @auction.model%></li><br>
+          <li class="auc_show">Vehicle Model: <%= @auction.model%></li><br>
           <hr>
-          <li class="auc_show">miles_from: <%= @auction.miles_from%></li><br>
+          <li class="auc_show">Vehicle Color: <%= @auction.color.capitalize %></li><br>
+          <% unless @auction.features.blank? %><hr>
+          <li class="auc_show">Features: <%= @auction.features%></li><br> <% end %>
           <hr>
-          <li class="auc_show">color: <%= @auction.color%></li><br>
+          <li class="auc_show">Auction Radius: <%= @auction.miles_from%> Miles</li><br>
           <hr>
-          <li class="auc_show">features: <%= @auction.features%></li><br>
+          <li class="auc_show">Max Price: $<%= @auction.max_price%></li><br>
           <hr>
-          <li class="auc_show">max_price: <%= @auction.max_price%></li><br>
-          <hr>
-          <li class="auc_show">address: <%= @auction.address%></li><br>
-          <hr>
-          <li class="auc_show">expiration_date: <%= @auction.expiration_date%></li><br>
+          <li class="auc_show">Expiration Date: <%= time_tag (@auction.expiration_date).to_date%></li><br>
           <hr>
         </ul>
 

@@ -32,7 +32,7 @@ class AuctionsController < ApplicationController
     @auction = Auction.find(params[:id])
     @bid = Bid.new
     @bids = Bid.where(auction_id: @auction.id)
-    if Time.now.to_i > @auction.expiration_date.to_time.to_i
+    if current_dealer && Time.now.to_i > @auction.expiration_date.to_time.to_i
       render :file => 'public/404.html', :status => :not_found, :layout => false
     end
   end

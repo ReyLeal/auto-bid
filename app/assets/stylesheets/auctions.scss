@@ -334,6 +334,20 @@ a.top-cta-button.empty-auc{
   font-weight: bold;
   padding-bottom: 2rem;
 }
+.top-cta-button.btn-user-auc.view-more {
+  height: 3rem;
+  width: 11rem;
+  font-size: 1.4rem;
+}
+button.top-cta-button.btn-user-auc.btn-delete {
+  margin: 0;
+  height: 3rem;
+  width: 11rem;
+  font-size: 1.4rem;
+}
+h1.auctions-indx-heading {
+  color: #01464c;
+}
 @media only screen and (max-width: 600px) {
   button.top-cta-button.btn-user-auc {
     height: 5.5rem;

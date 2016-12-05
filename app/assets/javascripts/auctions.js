@@ -78,11 +78,6 @@ $(document).ready(function () {
   $('.panel div.clickable').click();
 });
 
-$(document).ready(function() {
-  $('input#bid_bid_amount').click(function() {
-    $('input#bid_bid_amount').val('')
-  });
-});
 
 $('#new_auction').validate({
   debug: true,
