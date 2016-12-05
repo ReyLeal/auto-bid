@@ -21,6 +21,7 @@ production:
   <<: *default
   database: my_database_production
 
+host: localhost
 
 
 
