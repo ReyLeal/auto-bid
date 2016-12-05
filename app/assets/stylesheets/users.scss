@@ -511,7 +511,7 @@ span.cb-slideshow-logout {
 }
 
 span.sp1 {
-    background-image: url(BMW.jpeg);
+    background-image: url(green-bmw.jpeg);
 }
 span.sp2 {
     background-image: url(car2.jpg);
@@ -598,8 +598,68 @@ span.sp3 {
 div#home-container {
 text-align: center;
 }
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
+  li.logo {
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1.5rem;
+  }
+  p#welcome-msg {
+    font-size: 110px;
+  }
+  .welcome {
+    font-size: 90px;
+  }
+  p#welcome-msg {
+    font-size: 90px;
+  }
+  .list-current {
+    background-color: transparent;
+    min-width: 100vw;
+  }
+  button.top-cta-button.btn-user.edit {
+    position: fixed;
+    bottom: 0;
+    border-right: solid black .1rem;
+  }
+  button.top-cta-button.btn-user.view {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  button.top-cta-button.btn-user.create {
+    position: fixed;
+    bottom: 0;
+    right: 33.33vw;
+    border-right: solid black .1rem;
+  }
+  button.top-cta-button.btn-user {
+    border-radius: 0;
+    height: 15vh;
+    width: 33.33vw;
+    background-color: #01464D;
+    color: #ECEFF1;
+  }
+  .font-a-user {
+    visibility: hidden;
+  }
+  .font-a-dealer {
+    visibility: hidden;
+  }
+  button.top-cta-button.btn-user.edit-dealer {
+    position: fixed;
+    bottom: 0;
+    border-right: solid black .1rem;
+    width: 50vw;
+  }
+  button.top-cta-button.btn-user.view-dealer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 500px) {
   li.logo {
     height: 6rem;
     width: 6rem;
@@ -636,12 +696,27 @@ text-align: center;
   }
   button.top-cta-button.btn-user {
     border-radius: 0;
-    height: 8rem;
+    height: 15vh;
     width: 33.33vw;
     background-color: #01464D;
     color: #ECEFF1;
   }
   .font-a-user {
     visibility: hidden;
+  }
+  .font-a-dealer {
+    visibility: hidden;
+  }
+  button.top-cta-button.btn-user.edit-dealer {
+    position: fixed;
+    bottom: 0;
+    border-right: solid black .1rem;
+    width: 50vw;
+  }
+  button.top-cta-button.btn-user.view-dealer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50vw;
   }
 }
