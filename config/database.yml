@@ -11,17 +11,17 @@ default: &default
 
 development:
   <<: *default
-  database: my_database_development
+  database: auto_bid_development
 
 test:
   <<: *default
-  database: my_database_test
+  database: auto_bid_test
 
 production:
   <<: *default
-  database: my_database_production
+  database: auto_bid_production
 
-host: localhost
+# host: localhost
 
 
 

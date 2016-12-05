@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161130012438) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "auctions", force: :cascade do |t|
     t.integer  "max_price"
     t.string   "title"
@@ -29,8 +32,8 @@ ActiveRecord::Schema.define(version: 20161130012438) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "year"
-    t.index ["dealer_id"], name: "index_auctions_on_dealer_id"
-    t.index ["user_id"], name: "index_auctions_on_user_id"
+    t.index ["dealer_id"], name: "index_auctions_on_dealer_id", using: :btree
+    t.index ["user_id"], name: "index_auctions_on_user_id", using: :btree
   end
 
   create_table "bids", force: :cascade do |t|
@@ -41,9 +44,9 @@ ActiveRecord::Schema.define(version: 20161130012438) do
     t.integer  "dealer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["auction_id"], name: "index_bids_on_auction_id"
-    t.index ["dealer_id"], name: "index_bids_on_dealer_id"
-    t.index ["user_id"], name: "index_bids_on_user_id"
+    t.index ["auction_id"], name: "index_bids_on_auction_id", using: :btree
+    t.index ["dealer_id"], name: "index_bids_on_dealer_id", using: :btree
+    t.index ["user_id"], name: "index_bids_on_user_id", using: :btree
   end
 
   create_table "dealers", force: :cascade do |t|
@@ -70,4 +73,9 @@ ActiveRecord::Schema.define(version: 20161130012438) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "auctions", "dealers"
+  add_foreign_key "auctions", "users"
+  add_foreign_key "bids", "auctions"
+  add_foreign_key "bids", "dealers"
+  add_foreign_key "bids", "users"
 end
