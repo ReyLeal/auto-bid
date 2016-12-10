@@ -1,10 +1,7 @@
-
+// BELOW IS A FUNCTION FOR ADDING "0 SECONDS AGO".... TYPE LOGIC WHEN A BID IS POSTED.
 function timeSince(date) {
-
   var seconds = Math.floor((new Date() - date) / 1000);
-
   var interval = Math.floor(seconds / 31536000);
-
   if (interval > 1) {
     return interval + " years";
   }
@@ -26,11 +23,14 @@ function timeSince(date) {
   }
   return Math.floor(seconds) + " seconds";
 }
+// BELOW IS THE ACTION CABLE JAVASCRIPT USED TO APPEND THE DEALERS BID AMOUNT, DEALERS NAME
+// DEALERS EMAIL DEALERS COMPANY, EXC...
 App.bids = App.cable.subscriptions.create('BidsChannel', {
   received: function(data) {
     $("#messages").removeClass('hidden')
     $('#messages').prepend(this.renderBid(data));
     $('input#bid_bid_amount').val('');
+    // USED THIS AJAX CALL TO ONLY DISPLAY THE DELETE BUTTON ON THE OCCASION THAT THE CURRENT DEALER WHO POSTED THE BID IS THE PERSON LOGGED IN.
     $.ajax({
       type:"GET",
       url:"/auctions/current_dealer"
@@ -44,7 +44,6 @@ App.bids = App.cable.subscriptions.create('BidsChannel', {
       }
     });
   },
-
   renderBid: function(data) {
     var d = new Date();
     return "<tbody><td>$" + data.bid + "</td> <td>" + data.company + "</td><td>" + data.dealer +

@@ -1,23 +1,18 @@
 class AuctionsController < ApplicationController
   before_action :authorize
+
   def index
     @auctions = Auction.where(user_id: params[:user_id])
     @auction = Auction.new
   end
-
   def new
     @auction = Auction.new
   end
-
   def dealer_index
     @auctions = Auction.all
-
   end
-
   def dealer_show
-
   end
-
   def create
     @auction = Auction.new(auction_params)
     @auction.user = current_user
@@ -27,7 +22,6 @@ class AuctionsController < ApplicationController
       redirect_to '/'
     end
   end
-
   def show
     @auction = Auction.find(params[:id])
     @bid = Bid.new
@@ -39,10 +33,9 @@ class AuctionsController < ApplicationController
   def is_current_dealer
     render json: {current_dealer: !!current_dealer}
   end
-
   def destroy
     @auction = Auction.find(params[:id])
-     @auction.destroy
+    @auction.destroy
     redirect_to user_auctions_url
   end
 

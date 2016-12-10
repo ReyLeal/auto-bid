@@ -1,3 +1,4 @@
+// EVERYTHING BELOW IS A JS FUNCTION TO APPEND THE CARQUERY API INTO A FORM.
 $(document).on('turbolinks:load', function() {
   $.ajax({
     type:"GET",
@@ -11,19 +12,18 @@ $(document).on('turbolinks:load', function() {
   });
   console.log("document is loaded");
   carYear = ""
-
   $('select#auction_year').on('change', function() {
     var inputYear = $('select#auction_year')[0].value
     carYear = inputYear
     makeAjaxRequest(inputYear);
   });
-
+  // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
   function makeAjaxRequest(year) {
     $.get('https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,  function(data) {
       parseMake(data);
     });
   }
-
+  // BELOW WE ARE DOING THE PARSEMAKE FUNCTION TO PARSE THE RESPONSE FROM THE MAKEAJAXREQUEST FUNCTION.
   function parseMake(carMakes) {
     var optionsHtml = "";
     var displayName;
@@ -33,18 +33,17 @@ $(document).on('turbolinks:load', function() {
     });
     $('select#auction_make').empty().append(optionsHtml);
   }
-
-
   $('select#auction_make').on('change', function() {
     var inputMake = $('select#auction_make')[0].value
     makeAjaxRequestForMakes(inputMake, carYear);
   })
-
+  // ABOVE WE ARE USING THE CARYEAR GLOBAL VARIABLE TO PASS IN THE SELECTED YEAR AS A PARAMITER.
   function makeAjaxRequestForMakes(make, year) {
     $.get('https://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
       parseModel(data);
     });
   }
+  // BELOW WE ARE USING THE PARSEMAKE FUNCTION AGAIN TO PARSE THE RESPONSE OF THE ABOVE JSON OBJECT CONTAININT THE LIST OF MAKES FOR THE GIVEN MODEL.
   function parseModel(carModels) {
     var optionsHtml = "";
     var modelName;
@@ -54,10 +53,8 @@ $(document).on('turbolinks:load', function() {
     });
     $('select#auction_model').empty().append(optionsHtml);
   }
-
 });
-
-
+// EVERYTHING BELOW IS A JS FUNCTION TO CREATE A SLIDE EFFECT ON OUR LOGIN/LOGOUT/REGISTER BUTTONS.
 
 $(document).on('click', '.panel-heading span.clickable', function (e) {
   var $this = $(this);
@@ -88,7 +85,7 @@ $(document).ready(function () {
   $('.panel div.clickable').click();
 });
 
-
+// BELOW WE ARE CREATING VALIDATION FOR THE FORM USED TO CREATE A NEW AUCTION.
 $('#new_auction').validate({
   debug: true,
   rules: {
