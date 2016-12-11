@@ -2,7 +2,6 @@ require 'httparty'
 require 'nokogiri'
 # THE CLASS BELOW GETS THE HTTPARTY JSON RESPONSE AND PARSES IT TO GET THE MILES IN BETWEEN
 # TWO DESTINATIONS USING THE DESTINATIONS LATITUDE AND LONGITUDE
-GOOGLE_MAPS_MATRIX_API_KEY = ENV["GOOGLE_MAPS_MATRIX_API_KEY"]
 class MapsRequest
   attr_accessor :distance
   def initialize(orgLatitude, orgLongitude, destLatitude, destLongitude)
