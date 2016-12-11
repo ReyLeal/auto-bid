@@ -1,8 +1,5 @@
-
 <!-- <div class="top-current"> -->
-
 <nav class="navbar-fixed-top">
-
   <div class="col-xs-4 col-sm-8 col-md-10 col-lg-10">
     <ul class="nav nav-pills">
       <li class="logo" role="presentation"><a href="/"></a></li>
@@ -25,11 +22,11 @@
     <ul class="nav nav-pills">
       <li role="presentation" class="active">
         <% if current_user %>
-        <%= link_to logout_path, class:"button-that-I-hate" do  %>
+        <%= link_to logout_path, class:"logout-path-button" do  %>
         <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
         <% end %>
         <% elsif current_dealer %>
-        <%= link_to '/logout_dealer', class:"button-that-I-hate" do  %>
+        <%= link_to '/logout_dealer', class:"logout-path-button" do  %>
         <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
         <% end %>
         <% end %>
@@ -38,7 +35,6 @@
     <% end %>
   </div>
 </nav>
-
 <div class="modal fade" id="myModalregister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -51,7 +47,6 @@
           <li class="nav active user-reg"><a class="user-reg" href="#A" data-toggle="tab">User Registration</a></li>
           <li class="nav dealer-reg"><a class="user-reg" href="#B" data-toggle="tab">Dealer Registration</a></li>
         </ul>
-
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane fade in active" id="A"><%= render partial: "users/form"%></div>
@@ -62,11 +57,8 @@
     </div>
   </div>
 </div>
-
-
 <div id="myModallogin" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -76,9 +68,7 @@
       <div class="modal-body">
         <%= render "sessions/form" %>
       </div>
-
     </div>
-
   </div>
 </div>
 <!-- </div> -->

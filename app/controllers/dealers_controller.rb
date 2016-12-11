@@ -3,6 +3,8 @@ class DealersController < ApplicationController
   def index
     @auctions = Auction.all
     @dealer = Dealer.find(params[:id])
+    # below the @distances variable is created to call the MapsRequest class created in classes/maps_request.rb
+    # Mapsrequest makes a request to the google maps matrix api that takes two points on a map and returns distance between them in miles.
     @distances = @auctions.map do |auct|
       MapsRequest.new(auct.latitude, auct.longitude, @dealer.latitude, @dealer.longitude).distance.delete(",").split(" ").first.to_f
     end
@@ -19,7 +21,7 @@ class DealersController < ApplicationController
        session[:dealer_id] = @dealer.id
        redirect_to '/'
      else
-       redirect_to '/register'
+       redirect_to '/'
      end
   end
 

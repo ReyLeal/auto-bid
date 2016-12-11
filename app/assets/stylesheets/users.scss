@@ -1,27 +1,33 @@
-body {
+body
+{
   height: 100%;
   color: rgb(174, 188, 225);
   font-family: 'Lora', serif;
 }
-#home-container {
+#home-container
+{
   padding: 0;
-
 }
-.container {
+.container
+{
   height: 100%;
   padding: 0;
 }
-nav {
+// NAVBAR ************************************************************************************************************************
+nav
+{
   background-color: #ECEFF1;
   height: 6rem;
   color: rgb(1, 70, 76);
 }
-li.logo a {
+li.logo a
+{
   height: 9rem;
   width: 9rem;
   margin-top: 1rem;
 }
-li.logo  {
+li.logo
+{
   margin-top: 0.5rem;
   margin-left: 4rem;
   background-image: image-url('logo-color-2.png');
@@ -30,33 +36,39 @@ li.logo  {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
-a.nav-link:hover{
+a.nav-link:hover
+{
   color: #01464c;
 }
-.signup {
+.signup
+{
   vertical-align: middle;
   height: 4rem;
   background-color: #01464c;
   color: rgb(174, 188, 225);
 }
-.nav-pills li a:hover {
+.nav-pills li a:hover
+{
   background-color: transparent;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover
+{
   background-color: rgb(1, 70, 76);
 }
 
-a.nav-link {
+a.nav-link
+{
   color: #01464c;
 }
-a:hover {
+a:hover
+{
   text-decoration: none;
   color: white;
 }
 
-.top-image {
+.top-image
+{
   background-image: image-url('Viper.jpg');
   height: 60vh;
   max-width: 100%;
@@ -68,7 +80,8 @@ a:hover {
   color: rgb(1, 70, 76);
 }
 
-button.btn.btn-primary.btn-lg{
+button.btn.btn-primary.btn-lg
+{
   text-align: center;
   border: none;
   border-radius: 4px;
@@ -81,7 +94,8 @@ button.btn.btn-primary.btn-lg{
 
 }
 
-button.top-cta-button {
+button.top-cta-button
+{
   text-align: center;
   border: none;
   border-radius: 10px;
@@ -93,7 +107,8 @@ button.top-cta-button {
   vertical-align: middle;
   outline: none;
 }
-button.top-cta-button.marg-left {
+button.top-cta-button.marg-left
+{
   text-align: center;
   border: none;
   border-radius: 10px;
@@ -105,62 +120,75 @@ button.top-cta-button.marg-left {
   vertical-align: middle;
   outline: none;
 }
-.car-photo-display-top {
+// TOP IMAGE ************************************************************************************************************
+.car-photo-display-top
+{
   height: 30vh;
 }
-.car-photo-display-bot {
+.car-photo-display-bot
+{
   height: 30vh;
 }
-.carsss {
+.carsss
+{
   background-image: image-url('BMW.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 30vh;
 }
-
-.car-photo-display-top.col-md-12 {
+.car-photo-display-top.col-md-12
+{
   padding: 0;
 }
-.car-photo-display-bot.col-md-12 {
+.car-photo-display-bot.col-md-12
+{
   padding: 0;
 }
-button.marg-left {
+button.marg-left
+{
   margin-left: 2rem;
 }
-footer {
+// FOOTER ************************************************************************************************
+footer
+{
   position: absolute;
   bottom: 0;
 }
-.footer-div {
+.footer-div
+{
   background-color: rgb(0, 32, 35);
   color: rgb(102, 142, 146);
   height: 20rem;
 }
-.row-centered {
-    text-align:center;
-    height: 35rem;
+.row-centered
+{
+  text-align:center;
+  height: 35rem;
 }
-.col-centered {
-    float:none;
-    text-align:left;
-    margin-right:-4px;
+.col-centered
+{
+  float:none;
+  text-align:left;
+  margin-right:-4px;
 }
-
-input {
+input
+{
   width: 100%
 }
-
-li{
+// LOGGED IN USER HOME PAGE *****************************************************************************
+li
+{
   display: inline;
 }
 
-.font-a-user {
+.font-a-user
+{
   font-size: 130px;
   color: rgb(174, 188, 225);
 }
-
-.top{
+.top
+{
   height: 100%;
   min-height:15rem;
   margin: 5rem 0;
@@ -172,7 +200,8 @@ li{
   top: 100vh;
 }
 
-.list{
+.list
+{
   height:100%;
   min-height: 45rem;
   background-color: rgb(0, 32, 35);
@@ -183,11 +212,13 @@ li{
   top: 100vh;
 }
 
-.text{
+.text
+{
   font-size: 25px;
 }
 
-.start{
+.start
+{
   font-size:30px;
   height: 100%;
   min-height:15rem;
@@ -202,14 +233,16 @@ li{
   top: 100vh;
 }
 
-.home-b{
+.home-b
+{
   height:6rem;
   margin-left: 10rem;
   text-decoration: none;
   color: white;
 }
-
-img{
+// MEET OUR TEAM SECTION ****************************************************************
+img
+{
   height: 18rem;
   width: 13rem;
   max-height: 25rem;
@@ -218,7 +251,8 @@ img{
   margin-bottom: 2rem;
 }
 
-.team{
+.team
+{
   font-size: 2rem;
   height:100%;
   min-height: 45rem;
@@ -230,25 +264,30 @@ img{
   top: 100vh;
 }
 
-.social-buttons{
+.social-buttons
+{
   font-size: 3rem;
   padding: 1rem;
   list-style: none
 }
 
-#twitter{
+#twitter
+{
   color:#1da1f2;
 }
 
-#linkedin{
+#linkedin
+{
   color:#4875B4;
 }
 
-#github{
+#github
+{
   color:black;
 }
-
-input#user_name{
+// USER SIGNUP MODAL ***************************************************************
+input#user_name
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -257,7 +296,8 @@ input#user_name{
   background-color: white;
 }
 
-input#user_email{
+input#user_email
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -266,7 +306,8 @@ input#user_email{
   background-color: white;
 }
 
-input#user_password{
+input#user_password
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -276,7 +317,8 @@ input#user_password{
 }
 
 
-input#user_password_confirmation{
+input#user_password_confirmation
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -285,94 +327,109 @@ input#user_password_confirmation{
   background-color: white;
 }
 
-.modal-body{
+.modal-body
+{
   background-color: white;
 }
 
-.modal-header{
+.modal-header
+{
   font-size: 30px;
 }
 
-button.close{
+button.close
+{
   font-size: 50px;
   padding-bottom: 7rem;
   padding-left: 10rem;
   outline: none;
 }
 
-.modal-title{
+.modal-title
+{
   color:#002023;
   font-size: 30px;
   padding-top: 1rem;
 }
 
-input::-webkit-input-placeholder {
-   color: #01464c;
-   padding-left: 6px;
+input::-webkit-input-placeholder
+{
+  color: #01464c;
+  padding-left: 6px;
 }
 
-.user-reg{
+.user-reg
+{
   color: #01464c;
 }
 
-.dealer-reg{
+.dealer-reg
+{
   color: #01464c;
 }
 
-li.btn.btn-primary.btn-lg{
+li.btn.btn-primary.btn-lg
+{
   display: inline;
 }
 
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus{
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus
+{
   -webkit-text-fill-color:#01464c;
 }
 
-.btn-primary{
+.btn-primary
+{
   background-image: none;
   background-image: none;
   background-image: none;
   background-color: #002023;
 }
 
-button.top-cta-button.home-b{
+button.top-cta-button.home-b
+{
   background-color: #01464c;
   margin: 2rem 2rem;
-
 }
 
-button.btn.hvr-shutter-out-horizontal  {
+button.btn.hvr-shutter-out-horizontal
+{
   color: inherit;
   height: 6rem;
 }
 
-.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+{
   padding-right: 0;
   padding-left: 0;
 }
 
-.p-home{
+.p-home
+{
   font-size: 20px;
 }
 
-.h4, h4{
+.h4, h4
+{
   font-size: 25px;
 }
 
-.h3, h3{
+.h3, h3
+{
   font-size: 33px;
   padding-bottom: 2rem;
-
 }
 
-.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active{
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active
+{
   outline: none;
 }
-.hvr-shutter-out-horizontal {
+.hvr-shutter-out-horizontal
+{
   height: 6rem;
 }
-
-
-.list-current{
+.list-current
+{
   height:100vh;
   width: 20%;
   min-width: 30rem;
@@ -382,7 +439,8 @@ button.btn.hvr-shutter-out-horizontal  {
   padding-top: 8rem;
 }
 
-.text-top{
+.text-top
+{
   text-align: center;
   border: none;
   border-radius: 10px;
@@ -398,7 +456,8 @@ button.btn.hvr-shutter-out-horizontal  {
   align-items: center;
 }
 
-.font-a-user {
+.font-a-user
+{
   font-size: 10vh;
   padding-top: 2rem;
   color: #ECEFF1;
@@ -406,12 +465,14 @@ button.btn.hvr-shutter-out-horizontal  {
   margin: 0 auto;
 }
 
-.font-a{
+.font-a
+{
   font-size: 130px;
   color: rgb(174, 188, 225);
 }
 
-.font-a-dealer {
+.font-a-dealer
+{
   font-size: 10vh;
   padding-top: 6rem;
   color: #ECEFF1;
@@ -419,7 +480,8 @@ button.btn.hvr-shutter-out-horizontal  {
   margin: 0 auto;
 }
 
-.welcome{
+.welcome
+{
   font-size: 85px;
   color: #ECEFF1;
   text-shadow: 2px 2px 1px #00001E;
@@ -428,16 +490,19 @@ button.btn.hvr-shutter-out-horizontal  {
   left: 2em;
 }
 
-h4.modal-title{
+h4.modal-title
+{
   color:#01464c;
 }
 
-.user-form-btn{
+.user-form-btn
+{
   background-color:#01464c;
   color:white;
 }
-
-.btn2{
+// Button for user (logged in) ********************************************************************************
+.btn2
+{
   height: 4rem;
   font-size: 2rem;
   margin-top: 2rem;
@@ -446,11 +511,13 @@ h4.modal-title{
   border-radius: 10px;
 
 }
-.btn-user{
+.btn-user
+{
   width: 10rem;
 }
 
-button.top-cta-button.btn-user{
+button.top-cta-button.btn-user
+{
   text-align: center;
   border: none;
   border-radius: 10px;
@@ -464,60 +531,68 @@ button.top-cta-button.btn-user{
 }
 
 .cb-slideshow,
-.cb-slideshow:after {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
+.cb-slideshow:after
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
 }
-.cb-slideshow:after {
-    content: '';
-    background: transparent image-url('../images/pattern.png') repeat top left;
-}
-
- span.cb-slideshow-login {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    opacity: 0;
-    z-index: 0;
-    animation: imageAnimation 18s linear infinite 0s ;
+// Slideshow for user/dealer home page ************************************************************************
+.cb-slideshow:after
+{
+  content: '';
+  background: transparent image-url('../images/pattern.png') repeat top left;
 }
 
-span.cb-slideshow-logout {
-   width: 100%;
-   height: 100vh;
-   top: 0px;
-   left: 0px;
-   position: absolute;
-   color: transparent;
-   background-color: black!important;
-   background-size: cover;
-   background-position: 50% 50%;
-   background-repeat: no-repeat;
-   opacity: 0;
-   z-index: 0;
-   animation: imageAnimation 18s linear infinite 0s ;
+span.cb-slideshow-login
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 18s linear infinite 0s ;
 }
 
-span.sp1 {
-    background-image: image-url('green-bmw.jpeg');
+span.cb-slideshow-logout
+{
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  color: transparent;
+  background-color: black!important;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 18s linear infinite 0s ;
 }
-span.sp2 {
-    background-image: image-url('car2.jpg');
-    animation-delay: 6s;
+
+span.sp1
+{
+  background-image: image-url('green-bmw.jpeg');
 }
-span.sp3 {
-    background-image: image-url('car1.jpg');
-    animation-delay: 12s;
+span.sp2
+{
+  background-image: image-url('car2.jpg');
+  animation-delay: 6s;
+}
+span.sp3
+{
+  background-image: image-url('car1.jpg');
+  animation-delay: 12s;
 }
 
 @keyframes imageAnimation {
@@ -527,7 +602,7 @@ span.sp3 {
   50% { opacity: 0 }
   100% { opacity: 0 }
 }
-
+// Welcome banner for user/dealer (logged in) ******************************************************************
 .welcome{
   font-size: 80px;
   left: 0;
@@ -553,9 +628,7 @@ span.sp3 {
   text-align: justify;
   padding: 0rem 2rem;
 }
-
-
-
+// Auto-bid logo for footer ********************************************************************************
 .logo-white{
   height: 17rem;
   width: 17rem;
@@ -566,16 +639,15 @@ span.sp3 {
   margin-top: 2rem;
   margin-left: -2rem;
 }
- #back{
-   padding-left: 1rem;
- }
-
- .auc-back{
-   padding-bottom: 7rem;
-   padding-top: 2rem;
-   text-align: center;
- }
-
+#back{
+  padding-left: 1rem;
+}
+.auc-back{
+  padding-bottom: 7rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+// More Footer  styling ************************************************************************************
 .contact-us-footer {
   padding-top: 4rem;
 }
@@ -593,8 +665,9 @@ span.sp3 {
   min-height: 25rem;
 }
 div#home-container {
-text-align: center;
+  text-align: center;
 }
+// Media query for larger (1050px) screens ************************************************************************************
 @media only screen and (max-width: 1050px) {
   li.logo {
     height: 6rem;
@@ -656,6 +729,7 @@ text-align: center;
     width: 50vw;
   }
 }
+// Media query for mobile screens under 500px. *****************************************************************************
 @media only screen and (max-width: 500px) {
   li.logo {
     height: 6rem;

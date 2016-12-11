@@ -1,24 +1,21 @@
-.auctions-row.row-centered.clearfix.auction {
+.auctions-row.row-centered.clearfix.auction
+{
   height: 100%;
   padding: 5rem;
   background-color: #002023;
   color: rgb(174, 188, 225);
 }
-.col-md-4.col-centered.clearfix {
+.col-md-4.col-centered.clearfix
+{
   text-align: center;
 }
-input#auction_title {
-  height: 5rem;
-  font-size: 2rem;
-  border: none;
-  color: #01464c;
-  border-bottom: solid;
-  background-color: white;
-}
-.container-fluid {
+.container-fluid
+{
   padding: 0;
 }
-select#auction_year {
+// create auction drop downs ************************************************************************************************
+select#auction_year
+{
   border: none;
   height: 5rem;
   font-size: 2rem;
@@ -29,7 +26,8 @@ select#auction_year {
   border-radius: 0px;
   width: 100%;
 }
-select#auction_make {
+select#auction_make
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -39,7 +37,8 @@ select#auction_make {
   background-color: white;
   width: 100%;
 }
-select#auction_model {
+select#auction_model
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -50,7 +49,8 @@ select#auction_model {
   background-color: white;
   width: 100%;
 }
-select#auction_miles_from {
+select#auction_miles_from
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -60,7 +60,8 @@ select#auction_miles_from {
   background-color: white;
   width: 100%;
 }
-input#auction_color {
+input#auction_color
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -69,7 +70,8 @@ input#auction_color {
   border-bottom: solid;
   background-color: white;
 }
-input#auction_address {
+input#auction_address
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -77,7 +79,8 @@ input#auction_address {
   border-bottom: solid;
   background-color: white;
 }
-textarea#auction_features {
+textarea#auction_features
+{
   height: 5rem;
   font-size: 2rem;
   width: 100%;
@@ -88,19 +91,25 @@ textarea#auction_features {
   resize: none;
   padding-top: 1rem;
 }
-input:focus {
+// Removing border on focus ************************************************************************************************
+input:focus
+{
   outline: none;
   border-bottom: solid white!important;
 }
-select:focus {
+select:focus
+{
   outline: none;
   border-bottom: solid white!important;
 }
-textarea:focus {
+textarea:focus
+{
   outline: none;
   border-bottom: solid white!important;
 }
-input#auction_expiration_date {
+// create auction  ************************************************************************************************
+input#auction_expiration_date
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -108,7 +117,8 @@ input#auction_expiration_date {
   border-bottom: solid;
   background-color: white;
 }
-input#auction_max_price {
+input#auction_max_price
+{
   height: 5rem;
   font-size: 2rem;
   border: none;
@@ -116,7 +126,17 @@ input#auction_max_price {
   border-bottom: solid;
   background-color: white;
 }
-.auc-form-btn {
+input#auction_title
+{
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  color: #01464c;
+  border-bottom: solid;
+  background-color: white;
+}
+.auc-form-btn
+{
   height: 4rem;
   font-size: 2rem;
   margin-top: 2rem;
@@ -126,7 +146,8 @@ input#auction_max_price {
   background-color:#01464c;
   color:white;
 }
-#back-new {
+#back-new
+{
   height: 4rem;
   font-size: 2rem;
   margin-top: -.5rem;
@@ -137,107 +158,133 @@ input#auction_max_price {
   background-color:#01464c;
   color:white;
 }
-
-input.auction-form::-webkit-input-placeholder {
+input.auction-form::-webkit-input-placeholder
+{
   color: #01464c;
   padding-left: 6px;
 }
-textarea::-webkit-input-placeholder {
+textarea::-webkit-input-placeholder
+{
   color: #01464c;
   padding-left: 6px;
 }
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus
+{
   -webkit-text-fill-color: rgb(174, 188, 225);
   -webkit-box-shadow: rgb(174, 188, 225);
   transition: background-color 5000s ease-in-out 0s;
 }
-#back-new:focus{
+#back-new:focus
+{
   outline: none;
 }
-
-.auction{
+.auction
+{
   color: rgb(1, 70, 76);
 }
-.auctions-index {
+.auctions-index
+{
   padding-top: 5rem;
   padding-bottom: 5rem;
   min-height: 10rem;
   background-color: white;
   color: black;
 }
-.auction-show.container {
+.auction-show.container
+{
   background-color: white;
   min-height: 40rem;
   padding-top: 5rem;
 }
-a#destroy {
+// Show auction buttons ************************************************************************************************
+a#destroy
+{
   color: black;
 }
-a#back {
+a#back
+{
   color: black;
 }
-.show-auction-info.text-center {
+.show-auction-info.text-center
+{
   color: black;
   min-height: 40vh;
   background-color: #ECEFF1;
 }
-form#new_bid{
+form#new_bid
+{
   padding-bottom: 5rem;
   max-width: 30rem;
   margin: 0 auto;
 }
-.clickable {
+.clickable
+{
   cursor: pointer;
 }
-.panel-row {
+.panel-row
+{
   display: block;
 }
-
-.clickable .glyphicon {
+.clickable .glyphicon
+{
   padding: 6px 12px;
   border-radius: 4px
 }
-
-.panel-heading span {
+.panel-heading span
+{
   margin-top: -23px;
   font-size: 15px;
   margin-right: -9px;
 }
-a.clickable { color: inherit; }
-a.clickable:hover { text-decoration:none; }
-
-
-.panel-heading.clickable {
+a.clickable
+{
+  color: inherit;
+}
+a.clickable:hover
+{
+  text-decoration:none;
+}
+// View Auction *****************************************************************************
+.panel-heading.clickable
+{
   background-color: #002023;
 }
-.panel-warning {
+.panel-warning
+{
   margin-top: 3rem;
   color: #002023;
   background-color: rgb(200, 202, 203);
 }
-.panel-warning>.panel-heading {
+.panel-warning>.panel-heading
+{
   color: rgb(174, 188, 225);
   background-image: none;
 }
-.panel.panel-warning {
+.panel.panel-warning
+{
   border-radius: 12px;
 }
-.panel-heading.clickable.panel-collapsed {
+.panel-heading.clickable.panel-collapsed
+{
   border-radius: 12px;
 
 }
-.panel-heading.clickable {
+.panel-heading.clickable
+{
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-.panel-info {
+.panel-info
+{
   font-size: 1.75rem;
   margin-top: 1.2rem;
 }
-a.new-class {
+a.new-class
+{
   color: white;
 }
-.col-md-3.new-class-div {
+.col-md-3.new-class-div
+{
   font-size: 1.75rem;
   height: 5rem;
   width: 10rem;
@@ -249,34 +296,42 @@ a.new-class {
   text-align: center;
   padding-top: 1.2rem;
 }
-nav.navbar-fixed-top {
+// Navbar for Auction pages ************************************************************************************
+nav.navbar-fixed-top
+{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.2);
 }
-.auction-shadow {
+.auction-shadow
+{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,.5),0 6px 20px 0 rgba(0,0,0,.2);
 }
 
-.nav-pills.auc-p li a:hover {
+.nav-pills.auc-p li a:hover
+{
   background-color: transparent;
 }
-span.pull-right {
+span.pull-right
+{
   position: relative;
   top: -10px;
 }
-h3.panel-title {
+h3.panel-title
+{
   position: relative;
   top: 9px;
   color: white;
 }
-td {
+td
+{
   text-align: left;
 }
-
-.empty-auc{
+.empty-auc
+{
   margin-bottom: 3rem;
 }
 
-.bot-box{
+.bot-box
+{
   color:#01464c;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -285,20 +340,24 @@ td {
   margin-bottom: 7rem;
 }
 
-a.button-that-I-hate {
+a.logout-path-button
+{
   background: transparent;
   padding: 0!important;
   color: #01464c!important;
 }
 
-i.glyphicon-minus:before{
+i.glyphicon-minus:before
+{
   color:white;
 }
 
-.glyphicon-plus:before{
+.glyphicon-plus:before
+{
   color:white;
 }
-li.auc_show{
+li.auc_show
+{
   color: #01464c;
   height: 4rem;
   font-size: 2rem;
@@ -308,16 +367,19 @@ li.auc_show{
   width: 30%;
   border-radius: 10px;
 }
-button.top-cta-button.btn-user-auc.back-btn {
+button.top-cta-button.btn-user-auc.back-btn
+{
   width: 10rem;
   margin-top: 0;
 }
 
-.auc_modal{
+.auc_modal
+{
   text-align: center;
   padding-left: 0;
 }
-button.top-cta-button.btn-user-auc{
+button.top-cta-button.btn-user-auc
+{
   text-align: center;
   border: none;
   border-radius: 10px;
@@ -331,30 +393,37 @@ button.top-cta-button.btn-user-auc{
   margin: 5rem 2rem;
 }
 
-a.top-cta-button.empty-auc{
+a.top-cta-button.empty-auc
+{
   cursor: pointer;
 }
-.auction-details{
+.auction-details
+{
   font-size: 1.75rem;
   font-weight: bold;
   padding-bottom: 2rem;
 }
-.top-cta-button.btn-user-auc.view-more {
+.top-cta-button.btn-user-auc.view-more
+{
   height: 3rem;
   width: 11rem;
   font-size: 1.4rem;
 }
-button.top-cta-button.btn-user-auc.btn-delete {
+button.top-cta-button.btn-user-auc.btn-delete
+{
   margin: 0;
   height: 3rem;
   width: 11rem;
   font-size: 1.4rem;
 }
-.auctions-indx-heading {
+.auctions-indx-heading
+{
   color: #01464c;
 }
-@media only screen and (max-width: 600px) {
-  button.top-cta-button.btn-user-auc {
+@media only screen and (max-width: 600px)
+{
+  button.top-cta-button.btn-user-auc
+  {
     height: 5.5rem;
     width: 10rem;
     margin: 5rem 2rem;

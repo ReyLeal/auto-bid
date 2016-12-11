@@ -1,33 +1,25 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "layouts/header" %>
+  <h1 id="edit">Edit</h1>
+  <div class="col-md-4">
+    <button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModaledit">
+      Login
+    </button>
+  </div>
+  <div id="myModaledit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 id="edit">Edit Profile</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "sessions/form" %>
+        </div>
 
-
-    <h1 id="edit">Edit</h1>
-    <div class="col-md-4">
-      <button type="button" class="btn hvr-shutter-out-horizontal" data-toggle="modal" data-target="#myModaledit">
-        Login
-      </button>
-    </div>
-
-
-
-
-<div id="myModaledit" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 id="edit">Edit Profile</h4>
       </div>
-      <div class="modal-body">
-        <%= render "sessions/form" %>
-      </div>
-
     </div>
   </div>
-</div>
-
-<%= render partial: "layouts/footer" %>
+  <%= render partial: "layouts/footer" %>
 </div>

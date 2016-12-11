@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
   get 'sessions/create'
-
   get 'sessions/destroy'
 
   mount ActionCable.server => '/cable'
-  # get 'users/index'
+  
   resources :bids
   resources :dealers
-  # get 'users/new'
+  # Nested routes for users and auctions.
   resources :users
   resources :users do
     resources :auctions

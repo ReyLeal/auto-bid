@@ -1,6 +1,5 @@
 <div class="">
 <%= form_for :dealer, url: '/dealers' do |f| %>
-
   <%= f.text_field :dealer_name, placeholder: "Full Name" %>
   <%= f.text_field :company_name, placeholder: "Company Name" %>
   <%= f.text_field :address, placeholder: "Address" %>
@@ -8,6 +7,5 @@
   <%= f.password_field :password, placeholder: "Password" %>
   <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
   <%= f.submit "Submit", class:"btn2 user-form-btn" %>
-
 <% end %>
 </div>

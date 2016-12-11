@@ -1,11 +1,12 @@
 <div class="container-fluid" id="home-container">
   <%= render partial: "layouts/deal_auc_header" %>
-
-
-
+  <!-- This first if statement is used to determine if there are any auctions availible -->
   <% if @auctions.length > 0 %>
   <h1 class='auctions-indx-heading'>Current Auctions</h1>
+  <!-- This next each loop iterates through every auction in our database -->
   <% @auctions.each do |f| %>
+  <!-- This next unless statement takes into account the auction expiration date and says that if the expiration date is less
+       than the current day, dont display this expired auction under current auctions-->
   <% unless Time.now.to_i > f.expiration_date.to_time.to_i %>
   <div class="panel-center col-md-12">
     <div class="panel col-md-6 col-md-offset-3 panel-warning">
@@ -22,7 +23,6 @@
               <th>Model</th>
               <th>Max Price </th>
               <th>Expiration Date</th>
-
             </tr>
           </thead>
           <tbody>
@@ -43,7 +43,7 @@
   </div>
   <% end %>
   <% end %>
-
+<!-- Below we do another each loop, with another unless statement that will only display expired auctions -->
   <h1 class="auctions-indx-heading">Expired Auctions</h1>
   <% @auctions.each do |f| %>
   <% unless Time.now.to_i < f.expiration_date.to_time.to_i %>
@@ -62,7 +62,6 @@
               <th>Model</th>
               <th>Max Price </th>
               <th>Expired On</th>
-
             </tr>
           </thead>
           <tbody>
@@ -83,11 +82,11 @@
   </div>
   <% end %>
   <% end %>
-
   <div class= "auc-back">
     <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, '/', id:"back" %>
   </div>
-
+  <!-- This is the closing tag for the first if statement that says
+       "If there are no auctions in this users account, display this" -->
   <% else %>
   <div class="bot-box text-center">
     <h3>It looks like you haven't created an auction yet</h3>
@@ -100,14 +99,10 @@
     <%= link_to "<button class='top-cta-button btn-user-auc' type='button'>Back</button>".html_safe, '/', id:"back" %>
   </div>
   <% end %>
-
 </div>
-
 <%= render partial: "layouts/footer" %>
-
 <div id="myModalauction" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -117,7 +112,6 @@
       <div class="modal-body">
         <%= render "auctions/form" %>
       </div>
-
     </div>
   </div>
 </div>

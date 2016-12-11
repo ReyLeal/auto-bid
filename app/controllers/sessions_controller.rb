@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def new
   end
-
+  # Sessions create is the method used to log in. 
   def create
     user = User.find_by_email(params[:email])
     dealer = Dealer.find_by_email(params[:email])

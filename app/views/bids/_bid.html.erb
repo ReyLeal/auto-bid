@@ -1,3 +1,5 @@
+<!-- There is a sepecific form that will be displayed if there
+is a current dealer, and a seperate form for current users. -->
 <% if current_dealer %>
 <% @auction.bids.reverse_each do |bid| %>
 <tr>
@@ -11,9 +13,7 @@
     method: :delete, data: { confirm: 'Are you sure?' }, id:"destroy" %><% end %></td>
   </tr>
   <% end %>
-  <% end %>
-
-  <% if current_user %>
+  <% elsif current_user %>
   <% @auction.bids.reverse_each do |bid| %>
   <tr>
     <td>$<%= bid.bid_amount %></td>

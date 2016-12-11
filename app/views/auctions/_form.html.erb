@@ -1,13 +1,13 @@
 <div class="auction">
-
+  <!-- Used a while loop to populate our array of years between 2016-1941 -->
   <% year_array = ['Year'] %>
   <% year = 2016 %>
   <% while year >= 1940 do%>
   <%  year_array << year %>
   <% year -= 1 %>
   <% end %>
-
-
+<!-- Below are the erb tags containing the form to create auctions. You can see the
+validations for this form in the auction model -->
   <div class="auction-all clearfix">
     <%= form_for @auction do |f| %>
     <%= f.text_field :title, placeholder: "Title", class:"auction-form" %><br/>
@@ -22,8 +22,5 @@
     <%= f.date_field :expiration_date, placeholder: "Expiration Date", class:"auction-form" %><br/>
     <%= f.submit "Submit", class:"auc-form-btn btn2" %> <a href="/"><button type="button" class="auc-form-btn btn2"name="button">Back</button></a>
     <% end %>
-
-
   </div>
-
 </div>

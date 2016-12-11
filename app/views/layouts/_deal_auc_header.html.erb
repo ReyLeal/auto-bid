@@ -26,11 +26,11 @@
       <ul class="nav nav-pills">
         <li role="presentation" class="active">
           <% if current_user %>
-          <%= link_to logout_path, class:"button-that-I-hate" do  %>
+          <%= link_to logout_path, class:"logout-path-button" do  %>
           <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
           <% end %>
           <% elsif current_dealer %>
-          <%= link_to '/logout_dealer', class:"button-that-I-hate" do  %>
+          <%= link_to '/logout_dealer', class:"logout-path-button" do  %>
           <button type="button" class="btn hvr-shutter-out-horizontal" > Logout </button>
           <% end %>
           <% end %>
