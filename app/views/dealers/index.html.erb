@@ -1,11 +1,9 @@
 <%= render partial: "layouts/deal_auc_header" %>
 
 <h1 class="auctions-indx-heading">Current Auctions</h1>
-<!-- We used each_with_index because we passed in the index to distances to determine if the distance
-between the dealer and our auction was less or equal to the auctions specified range-->
+
 <% @auctions.each_with_index do |f, idx| %>
 <% if @distances[idx] <= f.miles_from %>
-<!-- Below we used the same unless statement that we used in our auctions/index page to determine af auctions have already expired -->
 <% unless Time.now.to_i > f.expiration_date.to_time.to_i %>
 <div class="panel-center col-md-12">
   <div class="panel col-md-6 col-md-offset-3 panel-warning">
@@ -41,8 +39,7 @@ between the dealer and our auction was less or equal to the auctions specified r
   </div>
 </div>
 <% end %>
-<!-- below, we determined that if there were no auctions in the dealers area, we would put a statement
-     letting the dealer know that there are currently no auctions in there area -->
+
 <% if @distances[idx].nil? %>
 <h3 class="auctions-indx-heading">It looks like there are no auctions in your area at the time</h3>
 <% end %>
