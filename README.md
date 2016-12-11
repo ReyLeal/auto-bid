@@ -22,13 +22,13 @@ As developers, we had fun experimenting with API's that were new to us, and with
 
 Below I will walk you through beoth the user experience, and the dealers experience:
 
-USER: 
+###USER: 
 A user who has never registered starts off on our home page where they can learn more about Auto-bid and can register with us.
 Once a user has an account, their landing page gives them 3 options to choose from (Edit account, create auction, view their current auctions).
 The create auction form lets them input information about their desired car such as the year make and modal (which are fields that are populated by the CarQuery API). We also have the user fill out their address and a range of miles in which to notify dealers of their new auction.
 The user can then choose to see their newly created auction, and with the power of Action Cable, they can see bids come in live without the need to refresh their page. (We decided to use Action Cable for this because we wanted to try it out since it is so new. It was a challenge, but as a team we did learn a lot in the process. Action Cable is normally used for live chats, but we decided that it would be interesting if we used it for our bid system instead.)
 
-DEALER:
+###DEALER:
 When a dealer is logged in, they can choose to view actions in his area, or edit his account.
 When the dealer decides to view actions in their area, we used the google maps matrix API to make sure that the auctions that are shown are only auctions that he is in range for (If an auction specified 25 miles as its range, then only dealers within 25 miles of the auction will have be able to view that auction.)
 The dealer can then view information about each auction such as the cars year, make, and model that the user is looking to purchase. As well as the max price that the user is willing to pay.
