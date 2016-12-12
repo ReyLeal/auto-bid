@@ -22,11 +22,10 @@ $(document).on('turbolinks:load', function() {
     $.ajax(
       type: 'GET',
       datatype: 'jsonp',
-      url: 'https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,
-      function(data) {
-        parseMake(data);
-      }
-    );
+      url: 'https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year
+    ).done(function(data) {
+      parseMake(data);
+    });
   }
   // BELOW WE ARE DOING THE PARSEMAKE FUNCTION TO PARSE THE RESPONSE FROM THE MAKEAJAXREQUEST FUNCTION.
   function parseMake(carMakes) {
