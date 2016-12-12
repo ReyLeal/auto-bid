@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   mount ActionCable.server => '/cable'
-  
+
   resources :bids
   resources :dealers
   # Nested routes for users and auctions.
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
   get '/dealers/:id/auctions' => 'dealers#index'
   get '/auctions/current_dealer'=> 'auctions#is_current_dealer'
+  get '/auctions/api_key' => 'auctions#edmunds_key'
   post '/auctions' => 'auctions#create'
   root "users#index"
   get '/signup' => 'users#new'

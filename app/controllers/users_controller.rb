@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  skip_before_filter :verify_authenticity_token, :only => [:update]
 
   def index
      @user = User.find_by(@current_user) || User.new

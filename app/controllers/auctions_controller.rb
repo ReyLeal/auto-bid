@@ -1,5 +1,6 @@
 class AuctionsController < ApplicationController
   before_action :authorize
+  skip_before_filter :verify_authenticity_token, :only => [:update]
 
   def index
     @auctions = Auction.where(user_id: params[:user_id])
@@ -34,6 +35,9 @@ class AuctionsController < ApplicationController
   end
   def is_current_dealer
     render json: {current_dealer: !!current_dealer}
+  end
+  def edmunds_key
+    render json: {edmunds_key: ENV['EDMUNDS_API_KEY']}
   end
   def destroy
     @auction = Auction.find(params[:id])

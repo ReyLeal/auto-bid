@@ -4,10 +4,8 @@ $(document).on('turbolinks:load', function() {
     type:"GET",
     url:"/auctions/current_dealer"
   }).done(function(data){
-    console.log(data);
     if(data["current_dealer"] !== true) {
       $("#auc-delete-button ").css("display", "none");
-      console.log(data);
     }
   });
   console.log("document is loaded");
@@ -17,22 +15,26 @@ $(document).on('turbolinks:load', function() {
     carYear = inputYear
     makeAjaxRequest(inputYear);
   });
+  $.ajax({
+    type: "GET",
+    url:"/auctions/api_key"
+  }).done(function(data) {
+    console.log(data);
+    edmunds_api_key = data;
+  });
   // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
   function makeAjaxRequest(year) {
-    $.ajax({
-      type: 'GET',
-      datatype: 'jsonp',
-      url: 'https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year
-    }).done(function(data) {
+    $.get('https://api.edmunds.com/api/vehicle/v2/makes?state=used&year='+ year + '&view=full&fmt=json&api_key=3qu8hzz7yrbexjw8ykmt6hwx',  function(data) {
       parseMake(data);
+      console.log(data)
     });
   }
   // BELOW WE ARE DOING THE PARSEMAKE FUNCTION TO PARSE THE RESPONSE FROM THE MAKEAJAXREQUEST FUNCTION.
   function parseMake(carMakes) {
     var optionsHtml = "";
     var displayName;
-    carMakes['Makes'].forEach(function(eachCar) {
-      displayName = eachCar.make_display
+    carMakes['makes'].forEach(function(eachCar) {
+      displayName = eachCar.name
       optionsHtml += ("<option value='" + displayName + "'>" + displayName + "</option>");
     });
     $('select#auction_make').empty().append(optionsHtml);
@@ -43,17 +45,18 @@ $(document).on('turbolinks:load', function() {
   })
   // ABOVE WE ARE USING THE CARYEAR GLOBAL VARIABLE TO PASS IN THE SELECTED YEAR AS A PARAMITER.
   function makeAjaxRequestForMakes(make, year) {
-    $.get('https://www.carqueryapi.com/api/0.3/?cmd=getModels&make=' + make + '&year=' + year, function(data){
+    $.get('https://api.edmunds.com/api/vehicle/v2/' + make + '/models?state=used&year=' + year + '&category=Sedan&view=basic&fmt=json&api_key=3qu8hzz7yrbexjw8ykmt6hwx',  function(data) {
       parseModel(data);
+      console.log(data)
     });
   }
   // BELOW WE ARE USING THE PARSEMAKE FUNCTION AGAIN TO PARSE THE RESPONSE OF THE ABOVE JSON OBJECT CONTAININT THE LIST OF MAKES FOR THE GIVEN MODEL.
   function parseModel(carModels) {
     var optionsHtml = "";
     var modelName;
-    carModels['Models'].forEach(function(eachCar) {
-      modelName = eachCar.model_name
-      optionsHtml += ("<option value='" + modelName + "'>" + modelName + "</option>");
+      carModels['models'].forEach(function(eachModel) {
+        modelName = eachModel.name
+        optionsHtml += ("<option value='" + modelName + "'>" + modelName + "</option>");
     });
     $('select#auction_model').empty().append(optionsHtml);
   }
