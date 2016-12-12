@@ -19,11 +19,11 @@ $(document).on('turbolinks:load', function() {
   });
   // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
   function makeAjaxRequest(year) {
-    $.ajax(
+    $.ajax({
       type: 'GET',
       datatype: 'jsonp',
       url: 'https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year
-    ).done(function(data) {
+    }).done(function(data) {
       parseMake(data);
     });
   }
