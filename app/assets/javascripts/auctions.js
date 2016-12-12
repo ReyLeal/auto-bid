@@ -20,12 +20,13 @@ $(document).on('turbolinks:load', function() {
   // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
   function makeAjaxRequest(year) {
     $.ajax(
-      type: 'get',
+      type: 'GET',
       datatype: 'jsonp',
       url: 'https://www.carqueryapi.com/api/0.3/?cmd=getMakes&year=' + year,
       function(data) {
-      parseMake(data);
-    });
+        parseMake(data);
+      }
+    );
   }
   // BELOW WE ARE DOING THE PARSEMAKE FUNCTION TO PARSE THE RESPONSE FROM THE MAKEAJAXREQUEST FUNCTION.
   function parseMake(carMakes) {
