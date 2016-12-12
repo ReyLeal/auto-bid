@@ -1,2 +1,1 @@
-development:
 GOOGLE_MAPS_MATRIX_API_KEY = 'AIzaSyAbs34ta5k34QdfBQUf-6nR0x5I5GMnWqY'
