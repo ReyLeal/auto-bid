@@ -1,1 +1,7 @@
-GOOGLE_MAPS_MATRIX_API_KEY = 'AIzaSyAbs34ta5k34QdfBQUf-6nR0x5I5GMnWqY'
+AWS::S3::Base.establish_connection!(
+  :secret_access_key => ENV['S3_SECRET']
+)
+AWS::S3::Base.establish_connection!(
+  :access_key_id     => ENV['S3_KEY'],
+  :secret_access_key => ENV['S3_SECRET']
+)
