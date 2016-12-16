@@ -19,6 +19,7 @@ $(document).on('turbolinks:load', function() {
     type: "GET",
     url:"/auctions/api_key"
   }).done(function(data) {
+    console.log(data);
     edmunds_api_key = data;
   });
   // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
