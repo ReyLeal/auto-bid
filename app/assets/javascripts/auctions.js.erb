@@ -19,14 +19,12 @@ $(document).on('turbolinks:load', function() {
     type: "GET",
     url:"/auctions/api_key"
   }).done(function(data) {
-    console.log(data);
     edmunds_api_key = data;
   });
   // ABOVE WE MADE A GLOBAL VARIABLE FOR CARYEAR TO USE IT BELOW IN AN OUT OF SCOPE FUNCTION.
   function makeAjaxRequest(year) {
-    $.get('https://api.edmunds.com/api/vehicle/v2/makes?state=used&year='+ year + '&view=full&fmt=json&api_key=3qu8hzz7yrbexjw8ykmt6hwx',  function(data) {
+    $.get("https://api.edmunds.com/api/vehicle/v2/makes?state=used&year="+ year + "&view=full&fmt=json&api_key=" + edmunds_api_key ,  function(data) {
       parseMake(data);
-      console.log(data)
     });
   }
   // BELOW WE ARE DOING THE PARSEMAKE FUNCTION TO PARSE THE RESPONSE FROM THE MAKEAJAXREQUEST FUNCTION.
@@ -45,9 +43,8 @@ $(document).on('turbolinks:load', function() {
   })
   // ABOVE WE ARE USING THE CARYEAR GLOBAL VARIABLE TO PASS IN THE SELECTED YEAR AS A PARAMITER.
   function makeAjaxRequestForMakes(make, year) {
-    $.get('https://api.edmunds.com/api/vehicle/v2/' + make + '/models?state=used&year=' + year + '&category=Sedan&view=basic&fmt=json&api_key=3qu8hzz7yrbexjw8ykmt6hwx',  function(data) {
+    $.get("https://api.edmunds.com/api/vehicle/v2/" + make + "/models?state=used&year=" + year + "&category=Sedan&view=basic&fmt=json&api_key=" + edmunds_api_key ,  function(data) {
       parseModel(data);
-      console.log(data)
     });
   }
   // BELOW WE ARE USING THE PARSEMAKE FUNCTION AGAIN TO PARSE THE RESPONSE OF THE ABOVE JSON OBJECT CONTAININT THE LIST OF MAKES FOR THE GIVEN MODEL.
